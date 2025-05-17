@@ -153,6 +153,12 @@ export default function OneShopHome() {
             >
               Kontakt
             </a>
+            <a
+  href="/impressum"
+  className="text-green-800 font-medium hover:underline"
+>
+  Impressum
+</a>
           </div>
         </div>
       </nav>
@@ -390,6 +396,11 @@ export default function OneShopHome() {
             +43 699 174 32 373
           </a>
         </p>
+        <p className="mt-2">
+  <a href="/impressum" className="underline hover:text-green-600">
+    Impressum
+  </a>
+</p>
       </footer>
     </main>
   );
