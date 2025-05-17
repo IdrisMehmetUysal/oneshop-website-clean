@@ -1,9 +1,22 @@
 import React from "react";
+import { Helmet } from "react-helmet-async";
 
 export default function Impressum() {
   return (
     <div className="flex flex-col min-h-screen bg-white text-green-900 scroll-smooth">
       {/* Header */}
+
+      <Helmet>
+  <title>Impressum | One 1 Shop</title>
+  <meta
+    name="description"
+    content="Offizielle Kontaktdaten und rechtliche Informationen zu One 1 Shop Handy Service in St. Pölten."
+  />
+  <meta name="robots" content="index, follow" />
+  <link rel="canonical" href="https://www.one1shop.at/impressum" />
+</Helmet>
+
+
       <nav className="sticky top-0 z-50 bg-white/90 backdrop-blur-md shadow-md">
         <div className="max-w-7xl mx-auto flex justify-between items-center px-6 py-4">
           <div>
