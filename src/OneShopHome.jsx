@@ -85,25 +85,24 @@ const GoogleReviews = () => {
 };
 
 export default function OneShopHome() {
-
   const [navOpen, setNavOpen] = useState(false);
 
   const [showHint, setShowHint] = useState(false);
 
-useEffect(() => {
-  const showTimeout = setTimeout(() => {
-    setShowHint(true);
-  }, 15000); // nach 15 Sekunden
+  useEffect(() => {
+    const showTimeout = setTimeout(() => {
+      setShowHint(true);
+    }, 15000); // nach 15 Sekunden
 
-  const hideTimeout = setTimeout(() => {
-    setShowHint(false);
-  }, 25000); // nach insgesamt 25 Sekunden
+    const hideTimeout = setTimeout(() => {
+      setShowHint(false);
+    }, 25000); // nach insgesamt 25 Sekunden
 
-  return () => {
-    clearTimeout(showTimeout);
-    clearTimeout(hideTimeout);
-  };
-}, []);
+    return () => {
+      clearTimeout(showTimeout);
+      clearTimeout(hideTimeout);
+    };
+  }, []);
 
   const settings = {
     dots: true, // Zeigt Punkte zur Navigation an
@@ -192,47 +191,47 @@ useEffect(() => {
               className="h-16"
             />
           </div>
-{/* Mobile Toggle Button */}
-<div className="md:hidden">
-  <button
-    onClick={() => setNavOpen(!navOpen)}
-    className="text-green-800 focus:outline-none"
-  >
-    {navOpen ? (
-      // X Icon
-      <svg
-        className="w-7 h-7"
-        fill="none"
-        stroke="currentColor"
-        viewBox="0 0 24 24"
-        xmlns="http://www.w3.org/2000/svg"
-      >
-        <path
-          strokeLinecap="round"
-          strokeLinejoin="round"
-          strokeWidth={2}
-          d="M6 18L18 6M6 6l12 12"
-        />
-      </svg>
-    ) : (
-      // Burger Icon
-      <svg
-        className="w-7 h-7"
-        fill="none"
-        stroke="currentColor"
-        viewBox="0 0 24 24"
-        xmlns="http://www.w3.org/2000/svg"
-      >
-        <path
-          strokeLinecap="round"
-          strokeLinejoin="round"
-          strokeWidth={2}
-          d="M4 6h16M4 12h16M4 18h16"
-        />
-      </svg>
-    )}
-  </button>
-</div>
+          {/* Mobile Toggle Button */}
+          <div className="md:hidden">
+            <button
+              onClick={() => setNavOpen(!navOpen)}
+              className="text-green-800 focus:outline-none"
+            >
+              {navOpen ? (
+                // X Icon
+                <svg
+                  className="w-7 h-7"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth={2}
+                    d="M6 18L18 6M6 6l12 12"
+                  />
+                </svg>
+              ) : (
+                // Burger Icon
+                <svg
+                  className="w-7 h-7"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth={2}
+                    d="M4 6h16M4 12h16M4 18h16"
+                  />
+                </svg>
+              )}
+            </button>
+          </div>
 
           <div className="space-x-6 hidden md:block">
             <a
@@ -262,49 +261,47 @@ useEffect(() => {
           </div>
 
           {/* Mobile Menu */}
-<AnimatePresence>
-  {navOpen && (
-    <motion.div
-      key="mobile-menu"
-      initial={{ opacity: 0, y: -20 }}
-      animate={{ opacity: 1, y: 0 }}
-      exit={{ opacity: 0, y: -20 }}
-      transition={{ duration: 0.3, ease: "easeInOut" }}
-      className="md:hidden absolute top-full left-0 w-full bg-white shadow-md z-40 py-6 space-y-4 text-center"
-    >
-      <a
-        href="#leistungen"
-        onClick={() => setNavOpen(false)}
-        className="block text-green-800 font-medium hover:underline"
-      >
-        Leistungen
-      </a>
-      <a
-        href="#produkte"
-        onClick={() => setNavOpen(false)}
-        className="block text-green-800 font-medium hover:underline"
-      >
-        Produkte
-      </a>
-      <a
-        href="#kontakt"
-        onClick={() => setNavOpen(false)}
-        className="block text-green-800 font-medium hover:underline"
-      >
-        Kontakt
-      </a>
-      <a
-        href="/impressum"
-        onClick={() => setNavOpen(false)}
-        className="block text-green-800 font-medium hover:underline"
-      >
-        Impressum
-      </a>
-    </motion.div>
-  )}
-</AnimatePresence>
-)}
-
+          <AnimatePresence>
+            {navOpen && (
+              <motion.div
+                key="mobile-menu"
+                initial={{ opacity: 0, y: -20 }}
+                animate={{ opacity: 1, y: 0 }}
+                exit={{ opacity: 0, y: -20 }}
+                transition={{ duration: 0.3, ease: "easeInOut" }}
+                className="md:hidden absolute top-full left-0 w-full bg-white shadow-md z-40 py-6 space-y-4 text-center"
+              >
+                <a
+                  href="#leistungen"
+                  onClick={() => setNavOpen(false)}
+                  className="block text-green-800 font-medium hover:underline"
+                >
+                  Leistungen
+                </a>
+                <a
+                  href="#produkte"
+                  onClick={() => setNavOpen(false)}
+                  className="block text-green-800 font-medium hover:underline"
+                >
+                  Produkte
+                </a>
+                <a
+                  href="#kontakt"
+                  onClick={() => setNavOpen(false)}
+                  className="block text-green-800 font-medium hover:underline"
+                >
+                  Kontakt
+                </a>
+                <a
+                  href="/impressum"
+                  onClick={() => setNavOpen(false)}
+                  className="block text-green-800 font-medium hover:underline"
+                >
+                  Impressum
+                </a>
+              </motion.div>
+            )}
+          </AnimatePresence>
         </div>
       </nav>
 
@@ -355,7 +352,9 @@ useEffect(() => {
           transition={{ duration: 0.6 }}
           className="max-w-6xl mx-auto text-center"
         >
-          <h2 className="text-3xl md:text-4xl font-bold mb-10">Unsere Leistungen</h2>
+          <h2 className="text-3xl md:text-4xl font-bold mb-10">
+            Unsere Leistungen
+          </h2>
 
           <div className="grid grid-cols-1 md:grid-cols-4 gap-10">
             <div>
@@ -421,7 +420,9 @@ useEffect(() => {
 
       <section id="produkte" className="py-24 px-4 bg-white">
         <div className="max-w-6xl mx-auto text-center">
-          <h2 className="text-3xl md:text-4xl font-bold mb-10">Unsere Produkte</h2>
+          <h2 className="text-3xl md:text-4xl font-bold mb-10">
+            Unsere Produkte
+          </h2>
 
           <motion.div
             initial={{ opacity: 0, y: 50 }}
@@ -463,7 +464,9 @@ useEffect(() => {
 
       <section id="partner" className="py-24 px-4 bg-green-50">
         <div className="max-w-6xl mx-auto text-center">
-          <h2 className="text-3xl md:text-4xl font-bold mb-10">Unsere Partner</h2>
+          <h2 className="text-3xl md:text-4xl font-bold mb-10">
+            Unsere Partner
+          </h2>
           <div className="flex justify-center gap-10 items-center flex-wrap">
             <img src="/images/partner1.png" alt="Partner 1" className="h-20" />
             <img src="/images/partner2.png" alt="Partner 2" className="h-20" />
@@ -533,10 +536,11 @@ useEffect(() => {
       </section>
 
       <GoogleReviews />
-
       <section id="standort" className="py-24 px-4 bg-white">
         <div className="max-w-6xl mx-auto text-center">
-          <h2 className="text-3xl md:text-4xl font-bold mb-10">Unser Standort</h2>
+          <h2 className="text-3xl md:text-4xl font-bold mb-10">
+            Unser Standort
+          </h2>
           <p className="mb-10 text-green-800">
             Komm vorbei und lass dich beraten – wir freuen uns auf dich!
           </p>
@@ -571,58 +575,67 @@ useEffect(() => {
         </div>
       </section>
 
+      <footer className="relative text-sm text-white bg-green-900 py-10 px-4">
+        <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-6 text-center md:text-left">
+          {/* Branding */}
+          <div>
+            <h4 className="text-lg font-semibold mb-2">One1Shop</h4>
+            <p>PREMIUM HANDY SHOP IN ST. PÖLTEN</p>
+            <p>© {new Date().getFullYear()} Alle Rechte vorbehalten</p>
+          </div>
 
-<footer className="relative text-sm text-white bg-green-900 py-10 px-4">
-    <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-6 text-center md:text-left">
-    
-    {/* Branding */}
-    <div>
-      <h4 className="text-lg font-semibold mb-2">One1Shop</h4>
-      <p>PREMIUM HANDY SHOP IN ST. PÖLTEN</p>
-      <p>© {new Date().getFullYear()} Alle Rechte vorbehalten</p>
-    </div>
+          {/* Kontakt */}
+          <div>
+            <h4 className="text-lg font-semibold mb-2">Kontakt</h4>
+            <p>📍 Bahnhofplatz 15, St. Pölten</p>
+            <p>
+              📞{" "}
+              <a
+                href="tel:+4369917432373"
+                className="underline hover:text-green-300"
+              >
+                +43 699 174 32 373
+              </a>
+            </p>
+          </div>
 
-    {/* Kontakt */}
-    <div>
-      <h4 className="text-lg font-semibold mb-2">Kontakt</h4>
-      <p>📍 Bahnhofplatz 15, St. Pölten</p>
-      <p>📞 <a href="tel:+4369917432373" className="underline hover:text-green-300">+43 699 174 32 373</a></p>
-    </div>
+          {/* Rechtliches */}
+          <div>
+            <h4 className="text-lg font-semibold mb-2">Rechtliches</h4>
+            <p>
+              <a href="/impressum" className="underline hover:text-green-300">
+                Impressum
+              </a>
+            </p>
+            <p>
+              <a href="/datenschutz" className="underline hover:text-green-300">
+                Datenschutz
+              </a>
+            </p>
 
-    {/* Rechtliches */}
-    <div>
-      <h4 className="text-lg font-semibold mb-2">Rechtliches</h4>
-      <p>
-        <a href="/impressum" className="underline hover:text-green-300">Impressum</a>
-      </p>
-      <p>
-        <a href="/datenschutz" className="underline hover:text-green-300">Datenschutz</a>
-      </p>
-
-      <div className="mt-8 flex justify-end">
-<motion.a
-  href="https://wa.me/4367761614355"
-  target="_blank"
-  rel="noopener noreferrer"
-  initial={{ scale: 1 }}
-  animate={{ 
-    y: [0, -10, 0], 
-    rotate: [0, -2, 2, -2, 0], 
-    scale: [1, 1.05, 1]
-  }}
-  transition={{ repeat: Infinity, duration: 2 }}
-className="relative md:absolute md:top-16 md:right-6 mt-6 md:mt-0 mx-auto bg-white border border-green-700 text-green-800 px-5 py-4 rounded-full shadow-lg text-sm font-bold hover:scale-110 hover:bg-green-100 transition z-20 text-center leading-tight">
-  <div className="text-base">🚀 High-End Webdesign</div>
-  <div className="text-sm">smart, modern & wow – schreib mir.</div>
-</motion.a>
-</div>
-    </div>
-  </div>
-
-  
-
-  
-</footer>
+            <div className="mt-8 flex justify-end">
+              <motion.a
+                href="https://wa.me/4367761614355"
+                target="_blank"
+                rel="noopener noreferrer"
+                initial={{ scale: 1 }}
+                animate={{
+                  y: [0, -10, 0],
+                  rotate: [0, -2, 2, -2, 0],
+                  scale: [1, 1.05, 1],
+                }}
+                transition={{ repeat: Infinity, duration: 2 }}
+                className="relative md:absolute md:top-16 md:right-6 mt-6 md:mt-0 mx-auto bg-white border border-green-700 text-green-800 px-5 py-4 rounded-full shadow-lg text-sm font-bold hover:scale-110 hover:bg-green-100 transition z-20 text-center leading-tight"
+              >
+                <div className="text-base">🚀 High-End Webdesign</div>
+                <div className="text-sm">
+                  smart, modern & wow – schreib mir.
+                </div>
+              </motion.a>
+            </div>
+          </div>
+        </div>
+      </footer>
 
       <CookieConsent
         location="bottom"
@@ -641,19 +654,16 @@ className="relative md:absolute md:top-16 md:right-6 mt-6 md:mt-0 mx-auto bg-whi
         Benutzerfreundlichkeit und zur Einbindung von Diensten wie Google Maps.
       </CookieConsent>
 
-
-
-{showHint && (
-  <motion.div
-    initial={{ opacity: 0, y: 20 }}
-    animate={{ opacity: 1, y: 0 }}
-    exit={{ opacity: 0, y: 20 }}
-    className="fixed bottom-24 left-4 z-40 bg-white border border-green-700 text-green-800 px-4 py-3 rounded-xl shadow-lg text-sm"
-  >
-    Tolle Angebote warten auf dich ✌️
-  </motion.div>
-)}
-
+      {showHint && (
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          exit={{ opacity: 0, y: 20 }}
+          className="fixed bottom-24 left-4 z-40 bg-white border border-green-700 text-green-800 px-4 py-3 rounded-xl shadow-lg text-sm"
+        >
+          Tolle Angebote warten auf dich ✌️
+        </motion.div>
+      )}
     </main>
   );
 }
