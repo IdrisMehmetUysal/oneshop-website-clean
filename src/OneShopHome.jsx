@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import { Wrench, Gamepad2, Cpu, Smartphone } from "lucide-react";
-import { motion } from "framer-motion";
 import Modal from "./Modal"; // Produkt-Modal-Komponente
 import Slider from "react-slick"; // Slick-Import in React
 import "slick-carousel/slick/slick.css"; // Slick Carousel CSS
@@ -263,21 +262,47 @@ useEffect(() => {
           </div>
 
           {/* Mobile Menu */}
-{navOpen && (
-  <div className="md:hidden mt-4 space-y-4 text-center">
-    <a href="#leistungen" onClick={() => setNavOpen(false)} className="block text-green-800 font-medium hover:underline">
-      Leistungen
-    </a>
-    <a href="#produkte" onClick={() => setNavOpen(false)} className="block text-green-800 font-medium hover:underline">
-      Produkte
-    </a>
-    <a href="#kontakt" onClick={() => setNavOpen(false)} className="block text-green-800 font-medium hover:underline">
-      Kontakt
-    </a>
-    <a href="/impressum" onClick={() => setNavOpen(false)} className="block text-green-800 font-medium hover:underline">
-      Impressum
-    </a>
-  </div>
+<AnimatePresence>
+  {navOpen && (
+    <motion.div
+      key="mobile-menu"
+      initial={{ opacity: 0, y: -20 }}
+      animate={{ opacity: 1, y: 0 }}
+      exit={{ opacity: 0, y: -20 }}
+      transition={{ duration: 0.3, ease: "easeInOut" }}
+      className="md:hidden absolute top-full left-0 w-full bg-white shadow-md z-40 py-6 space-y-4 text-center"
+    >
+      <a
+        href="#leistungen"
+        onClick={() => setNavOpen(false)}
+        className="block text-green-800 font-medium hover:underline"
+      >
+        Leistungen
+      </a>
+      <a
+        href="#produkte"
+        onClick={() => setNavOpen(false)}
+        className="block text-green-800 font-medium hover:underline"
+      >
+        Produkte
+      </a>
+      <a
+        href="#kontakt"
+        onClick={() => setNavOpen(false)}
+        className="block text-green-800 font-medium hover:underline"
+      >
+        Kontakt
+      </a>
+      <a
+        href="/impressum"
+        onClick={() => setNavOpen(false)}
+        className="block text-green-800 font-medium hover:underline"
+      >
+        Impressum
+      </a>
+    </motion.div>
+  )}
+</AnimatePresence>
 )}
 
         </div>
