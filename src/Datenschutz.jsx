@@ -1,5 +1,7 @@
 import React from "react";
 import { Helmet } from "react-helmet-async";
+import Footer from "./Footer";
+
 
 export default function Datenschutz() {
   return (
@@ -70,33 +72,7 @@ export default function Datenschutz() {
       </main>
 
       {/* Footer */}
-      <footer className="text-center text-sm text-green-800 py-6 bg-green-50">
-        <p>©️ {new Date().getFullYear()} OneShop – Alle Rechte vorbehalten</p>
-        <p className="mt-2 font-semibold">
-          PREMIUM HANDY SHOP in ST.PÖLTEN •{" "}
-          <a
-            href="tel:+4369917432373"
-            className="underline hover:text-green-600"
-          >
-            +43 699 174 32 373
-          </a>
-        </p>
-        <p className="mt-2">
-          <a
-            href="/impressum"
-            className="underline hover:text-green-600 transition-colors duration-300"
-          >
-            Impressum
-          </a>{" "}
-          ·{" "}
-          <a
-            href="/datenschutz"
-            className="underline hover:text-green-600 transition-colors duration-300"
-          >
-            Datenschutz
-          </a>
-        </p>
-      </footer>
+      <Footer />
     </div>
   );
 }
