@@ -8,7 +8,7 @@ export default function Footer() {
         {/* Branding */}
         <div>
           <h4 className="text-lg font-semibold mb-2">One1Shop</h4>
-          <p>PREMIUM HANDY SHOP IN ST. PÖLTEN</p>
+          <p>Ihr Fachhandel in St. Pölten</p>
           <p>© {new Date().getFullYear()} Alle Rechte vorbehalten</p>
         </div>
 
@@ -17,7 +17,22 @@ export default function Footer() {
           <h4 className="text-lg font-semibold mb-2">Kontakt</h4>
           <p>📍 Bahnhofplatz 15, St. Pölten</p>
           <p>
-            📞 <a href="tel:+4369917432373" className="underline hover:text-green-300">+43 699 174 32 373</a>
+            📞{" "}
+            <a
+              href="tel:+4369917432373"
+              className="underline hover:text-green-300"
+            >
+              +43 699 174 32 373
+            </a>
+          </p>
+          <p>
+            📧{" "}
+            <a
+              href="mailto:office@one1shop.at"
+              className="underline hover:text-green-300"
+            >
+              office@one1shop.at
+            </a>
           </p>
         </div>
 
@@ -25,10 +40,14 @@ export default function Footer() {
         <div>
           <h4 className="text-lg font-semibold mb-2">Rechtliches</h4>
           <p>
-            <a href="/impressum" className="underline hover:text-green-300">Impressum</a>
+            <a href="/impressum" className="underline hover:text-green-300">
+              Impressum
+            </a>
           </p>
           <p>
-            <a href="/datenschutz" className="underline hover:text-green-300">Datenschutz</a>
+            <a href="/datenschutz" className="underline hover:text-green-300">
+              Datenschutz
+            </a>
           </p>
 
           <div className="mt-8 flex justify-end">

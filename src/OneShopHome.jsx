@@ -253,12 +253,6 @@ export default function OneShopHome() {
             >
               Kontakt
             </a>
-            <a
-              href="/impressum"
-              className="text-green-800 font-medium transition-all duration-300 hover:underline hover:text-green-600"
-            >
-              Impressum
-            </a>
           </div>
 
           {/* Mobile Menu */}
@@ -463,20 +457,27 @@ export default function OneShopHome() {
         </div>
       </section>
 
-      <section id="partner" className="py-24 px-4 bg-green-50">
-        <div className="max-w-6xl mx-auto text-center">
-          <h2 className="text-3xl md:text-4xl font-bold mb-10">
-            Unsere Partner
-          </h2>
-          <div className="flex justify-center gap-10 items-center flex-wrap">
-            <img src="/images/partner1.png" alt="Partner 1" className="h-20" />
-            <img src="/images/partner2.png" alt="Partner 2" className="h-20" />
-            <img src="/images/partner3.png" alt="Partner 3" className="h-20" />
-            <img src="/images/partner4.png" alt="Partner 4" className="h-20" />
-            <img src="/images/partner5.png" alt="Partner 5" className="h-20" />
-          </div>
-        </div>
-      </section>
+     <section id="partner" className="py-24 px-4 bg-green-50">
+  <div className="max-w-6xl mx-auto text-center">
+    <h2 className="text-3xl md:text-4xl font-bold mb-10">
+      Unsere Vertragspartner
+    </h2>
+
+    {/* Erste Reihe: Mobilnetzpartner */}
+    <div className="flex justify-center gap-10 items-center flex-wrap mb-10">
+      <img src="/images/partner1.png" alt="Magenta" className="h-20" />
+      <img src="/images/partner2.png" alt="Drei" className="h-20" />
+      <img src="/images/partner3.png" alt="MTEL" className="h-20" />
+      <img src="/images/partner6-a1.png" alt="A1" className="h-20" />
+    </div>
+
+    {/* Zweite Reihe: Versicherung / Förderungen */}
+    <div className="flex justify-center gap-10 items-center flex-wrap">
+      <img src="/images/partner4-wertgarantie.png" alt="WERTGARANTIE" className="h-20" />
+      <img src="/images/partner5.png" alt="Reparaturbonus" className="h-20" />
+    </div>
+  </div>
+</section>
 
       <section id="kontakt" className="py-24 px-4 bg-white">
         <div className="max-w-3xl mx-auto text-center">
@@ -500,12 +501,20 @@ export default function OneShopHome() {
               rows="5"
               className="p-3 rounded border border-green-300 w-full"
             ></textarea>
-            <button
-              type="submit"
-              className="bg-green-800 text-white px-6 py-3 rounded-full font-semibold shadow-md hover:shadow-lg transition-all duration-300 ease-in-out hover:bg-green-600 hover:scale-105"
+            <a
+              href="https://wa.me/4369917432373?text=Hallo%2C%20ich%20habe%20eine%20Frage%20zu%20einem%20Produkt%20oder%20Reparatur."
+              onClick={(e) => {
+                const isMobile = /iPhone|Android/i.test(navigator.userAgent);
+                if (!isMobile) {
+                  e.preventDefault();
+                  window.location.href =
+                    "mailto:office@one1shop.at?subject=Anfrage%20über%20Website";
+                }
+              }}
+              className="bg-green-800 text-white px-6 py-3 rounded-full font-semibold shadow-md hover:shadow-lg transition-all duration-300 ease-in-out hover:bg-green-600 hover:scale-105 text-center inline-block"
             >
               Absenden
-            </button>
+            </a>
 
             <p className="text-xs text-green-700 mt-2">
               Mit dem Absenden erklärst du dich damit einverstanden, dass deine
