@@ -300,39 +300,75 @@ export default function OneShopHome() {
         </div>
       </nav>
 
-      {/* Header mit Slick Carousel */}
-      <header className="bg-gradient-to-r from-green-800 to-green-500 text-white px-6 py-20 md:py-28">
-        <div className="max-w-7xl mx-auto">
-          <Slider {...settings}>
-            <div>
-              <img
-                src="/images/header1.png"
-                alt="Bild 1"
-                className="w-full h-[200px] md:h-[300px] object-cover rounded-xl shadow-xl"
-              />
+      {/* Hero-Bereich */}
+      <header className="bg-gradient-to-r from-green-800 to-green-500 text-white px-6 py-16 md:py-24">
+        <div className="max-w-7xl mx-auto grid md:grid-cols-2 gap-10 items-center">
+          <div className="text-center md:text-left">
+            <p className="uppercase tracking-[0.2em] text-green-100 text-sm mb-4">
+              One 1 Shop in St. Pölten
+            </p>
+
+            <h1 className="text-4xl md:text-5xl font-bold leading-tight mb-6">
+              Handy Reparatur in St. Pölten – schnell, professionell & alles aus einer Hand
+            </h1>
+
+            <p className="text-lg md:text-xl text-green-50 mb-8 leading-relaxed">
+              Ob iPhone Reparatur, Samsung Reparatur, Datenrettung,
+              Konsolenreparatur oder der Verkauf von neuen, gebrauchten und
+              erneuerten Geräten ♻️ – bei uns bist du rundum betreut.
+            </p>
+
+            <div className="flex flex-wrap justify-center md:justify-start gap-4">
+              <a
+                href="#kontakt"
+                className="bg-white text-green-800 px-6 py-3 rounded-full font-semibold hover:bg-green-100 transition"
+              >
+                Jetzt Kontakt aufnehmen
+              </a>
+
+              <a
+                href="https://wa.me/4369917432373"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="bg-green-900 text-white px-6 py-3 rounded-full font-semibold hover:bg-green-700 transition"
+              >
+                WhatsApp schreiben
+              </a>
             </div>
-            <div>
-              <img
-                src="/images/header2.png"
-                alt="Bild 2"
-                className="w-full h-[200px] md:h-[300px] object-cover rounded-xl shadow-xl"
-              />
-            </div>
-            <div>
-              <img
-                src="/images/header3.png"
-                alt="Bild 3"
-                className="w-full h-[200px] md:h-[300px] object-cover rounded-xl shadow-xl"
-              />
-            </div>
-            <div>
-              <img
-                src="/images/header4.png"
-                alt="Bild 4"
-                className="w-full h-[200px] md:h-[300px] object-cover rounded-xl shadow-xl"
-              />
-            </div>
-          </Slider>
+          </div>
+
+          <div>
+            <Slider {...settings}>
+              <div>
+                <img
+                  src="/images/header1.png"
+                  alt="Handy Reparatur in St. Pölten"
+                  className="w-full h-[220px] md:h-[360px] object-cover rounded-xl shadow-xl"
+                />
+              </div>
+              <div>
+                <img
+                  src="/images/header2.png"
+                  alt="iPhone und Samsung Reparatur in St. Pölten"
+                  className="w-full h-[220px] md:h-[360px] object-cover rounded-xl shadow-xl"
+                />
+              </div>
+              <div>
+                <img
+                  src="/images/header3.png"
+                  alt="Smartphone Verkauf und Zubehör in St. Pölten"
+                  className="w-full h-[220px] md:h-[360px] object-cover rounded-xl shadow-xl"
+                />
+              </div>
+              <div>
+                <img
+                  src="/images/header4.png"
+                  alt="Konsolenreparatur und Service in St. Pölten"
+                  className="w-full h-[220px] md:h-[360px] object-cover rounded-xl shadow-xl"
+                />
+              </div>
+            </Slider>
+          </div>
         </div>
       </header>
 
