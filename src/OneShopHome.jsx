@@ -575,6 +575,30 @@ export default function OneShopHome() {
   </div>
 </section>
 
+      <section className="py-20 px-4 bg-white">
+  <div className="max-w-4xl mx-auto text-center">
+    <h2 className="text-3xl md:text-4xl font-bold mb-6">
+      Wertgarantie für dein Gerät
+    </h2>
+
+    <p className="text-green-800 leading-8 mb-8">
+      Schütze dein Smartphone zusätzlich mit einer passenden Wertgarantie.
+      So bist du bei vielen Schäden besser abgesichert und kannst dein Gerät
+      langfristig mit einem guten Gefühl nutzen. Gerne beraten wir dich auch
+      persönlich direkt bei uns in St. Pölten.
+    </p>
+
+    <a
+      href="HIER_WERTGARANTIE_LINK_EINFUEGEN"
+      target="_blank"
+      rel="noopener noreferrer"
+      className="inline-block bg-green-800 text-white px-8 py-3 rounded-full font-semibold hover:bg-green-700 transition"
+    >
+      Jetzt zur Wertgarantie
+    </a>
+  </div>
+</section>
+
       <section id="kontakt" className="py-24 px-4 bg-white">
         <div className="max-w-3xl mx-auto text-center">
           <h2 className="text-4xl font-bold mb-6">Kontakt</h2>
