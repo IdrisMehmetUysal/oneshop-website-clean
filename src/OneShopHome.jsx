@@ -450,6 +450,32 @@ export default function OneShopHome() {
   </motion.div>
 </section>
 
+
+      <section className="py-20 px-4 bg-green-800 text-white">
+  <div className="max-w-5xl mx-auto text-center">
+
+    <h2 className="text-3xl md:text-4xl font-bold mb-6">
+      Alles rund ums Smartphone – an einem Ort
+    </h2>
+
+    <p className="text-lg text-green-100 leading-8">
+      Unser Ziel ist, dass du nach deinem Besuch auf unserer Website oder in unserem Shop
+      nicht noch woanders suchen musst. Ob Reparatur, Datenrettung, Verkauf, Zubehör,
+      Vertrag oder Beratung – bei One 1 Shop in St. Pölten bekommst du eine rundum Betreuung
+      für fast jedes Anliegen rund um dein Smartphone.
+    </p>
+
+    <div className="mt-8 flex flex-wrap justify-center gap-4">
+      <span className="bg-white/20 px-4 py-2 rounded-full">Reparatur</span>
+      <span className="bg-white/20 px-4 py-2 rounded-full">Datenrettung</span>
+      <span className="bg-white/20 px-4 py-2 rounded-full">Verkauf</span>
+      <span className="bg-white/20 px-4 py-2 rounded-full">Zubehör</span>
+      <span className="bg-white/20 px-4 py-2 rounded-full">Verträge</span>
+    </div>
+
+  </div>
+</section>
+
       
       <section id="reparaturbonus" className="py-24 px-4 bg-yellow-100">
         <div className="max-w-4xl mx-auto text-center">
