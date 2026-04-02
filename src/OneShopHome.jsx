@@ -387,11 +387,14 @@ export default function OneShopHome() {
       Unsere Leistungen in St. Pölten
     </h2>
 
-    <p className="text-green-800 max-w-3xl mx-auto mb-12">
-      Wir sind dein Allrounder rund ums Smartphone. Von Handy Reparatur über
-      Datenrettung bis hin zu Verträgen und dem Verkauf von neuen,
-      gebrauchten und erneuerten Geräten ♻️ – bei uns bekommst du alles aus einer Hand.
-    </p>
+<p className="text-green-800 max-w-3xl mx-auto mb-12">
+  Wir sind dein Allrounder rund ums Smartphone. Von{" "}
+  <a href="/iphone-reparatur-st-poelten" className="underline hover:text-green-600">
+    iPhone Reparatur in St. Pölten
+  </a>{" "}
+  über Datenrettung bis hin zu Verträgen und dem Verkauf von neuen,
+  gebrauchten und erneuerten Geräten ♻️ – bei uns bekommst du alles aus einer Hand.
+</p>
 
     <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
 
