@@ -552,6 +552,13 @@ export default function OneShopHome() {
       Unsere Vertragspartner
     </h2>
 
+    <p className="text-green-800 max-w-3xl mx-auto mb-10 leading-8">
+  Als Partnershop mehrerer Anbieter beraten wir dich nicht nur bei Reparaturen,
+  sondern auch bei passenden Handyverträgen und Zusatzleistungen. Zusätzlich
+  bieten wir mit Wertgarantie eine weitere Möglichkeit, dein Gerät sinnvoll
+  abzusichern – alles direkt bei uns in St. Pölten.
+</p>
+
     {/* Erste Reihe: Mobilnetzpartner */}
     <div className="flex justify-center gap-10 items-center flex-wrap mb-10">
       <img src="/images/partner1.png" alt="Magenta" className="h-20" />
