@@ -372,58 +372,85 @@ export default function OneShopHome() {
         </div>
       </header>
 
-      <section
-        id="leistungen"
-        className="py-24 px-4 bg-gradient-to-b from-white to-green-50"
-      >
-        <motion.div
-          initial={{ opacity: 0, y: 50 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, amount: 0.2 }}
-          transition={{ duration: 0.6 }}
-          className="max-w-6xl mx-auto text-center"
-        >
-          <h2 className="text-3xl md:text-4xl font-bold mb-10">
-            Unsere Leistungen
-          </h2>
+<section
+  id="leistungen"
+  className="py-24 px-4 bg-gradient-to-b from-white to-green-50"
+>
+  <motion.div
+    initial={{ opacity: 0, y: 50 }}
+    whileInView={{ opacity: 1, y: 0 }}
+    viewport={{ once: true, amount: 0.2 }}
+    transition={{ duration: 0.6 }}
+    className="max-w-6xl mx-auto text-center"
+  >
+    <h2 className="text-3xl md:text-4xl font-bold mb-6">
+      Unsere Leistungen in St. Pölten
+    </h2>
 
-          <div className="grid grid-cols-1 md:grid-cols-4 gap-10">
-            <div>
-              <Wrench className="w-12 h-12 mx-auto mb-4 text-green-800" />
-              <h3 className="text-xl font-semibold">
-                Handy & Tablet Reparatur
-              </h3>
-              <p className="text-green-700 mt-2">
-                Displaytausch, Akku, Wasserschaden – schnell & zuverlässig.
-              </p>
-            </div>
-            <div>
-              <Gamepad2 className="w-12 h-12 mx-auto mb-4 text-green-800" />
-              <h3 className="text-xl font-semibold">Konsolen-Service</h3>
-              <p className="text-green-700 mt-2">
-                PlayStation, Xbox, Nintendo – wir machen's wieder fit.
-              </p>
-            </div>
-            <div>
-              <Cpu className="w-12 h-12 mx-auto mb-4 text-green-800" />
-              <h3 className="text-xl font-semibold">Microsoldering</h3>
-              <p className="text-green-700 mt-2">
-                Feinste Lötarbeiten an Platinen und Motherboards vom Profi.
-              </p>
-            </div>
-            <div>
-              <Smartphone className="w-12 h-12 mx-auto mb-4 text-green-800" />
-              <h3 className="text-xl font-semibold">
-                Verkauf: Handys & Laptops
-              </h3>
-              <p className="text-green-700 mt-2">
-                Neue & gebrauchte Geräte – inkl. Beratung & Zubehör.
-              </p>
-            </div>
-          </div>
-        </motion.div>
-      </section>
+    <p className="text-green-800 max-w-3xl mx-auto mb-12">
+      Wir sind dein Allrounder rund ums Smartphone. Von Handy Reparatur über
+      Datenrettung bis hin zu Verträgen und dem Verkauf von neuen,
+      gebrauchten und erneuerten Geräten ♻️ – bei uns bekommst du alles aus einer Hand.
+    </p>
 
+    <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+
+      <div className="bg-white rounded-2xl shadow p-6">
+        <Wrench className="w-12 h-12 mx-auto mb-4 text-green-800" />
+        <h3 className="text-xl font-semibold">Handy Reparatur</h3>
+        <p className="text-green-700 mt-2">
+          iPhone, Samsung und viele weitere Marken. Display, Akku,
+          Ladeprobleme oder Wasserschäden – wir helfen schnell.
+        </p>
+      </div>
+
+      <div className="bg-white rounded-2xl shadow p-6">
+        <Smartphone className="w-12 h-12 mx-auto mb-4 text-green-800" />
+        <h3 className="text-xl font-semibold">Datenrettung</h3>
+        <p className="text-green-700 mt-2">
+          Wir retten Fotos, Kontakte und wichtige Daten auch bei defekten
+          oder beschädigten Smartphones.
+        </p>
+      </div>
+
+      <div className="bg-white rounded-2xl shadow p-6">
+        <Gamepad2 className="w-12 h-12 mx-auto mb-4 text-green-800" />
+        <h3 className="text-xl font-semibold">Konsolen Reparatur</h3>
+        <p className="text-green-700 mt-2">
+          HDMI-Probleme, Überhitzung oder Abschalten – inkl. Service mit neuer
+          Wärmeleitpaste.
+        </p>
+      </div>
+
+      <div className="bg-white rounded-2xl shadow p-6">
+        <Cpu className="w-12 h-12 mx-auto mb-4 text-green-800" />
+        <h3 className="text-xl font-semibold">Microsoldering</h3>
+        <p className="text-green-700 mt-2">
+          Präzise Lötarbeiten auf Platinen und Motherboards vom Profi.
+        </p>
+      </div>
+
+      <div className="bg-white rounded-2xl shadow p-6">
+        <Smartphone className="w-12 h-12 mx-auto mb-4 text-green-800" />
+        <h3 className="text-xl font-semibold">Verkauf & Zubehör</h3>
+        <p className="text-green-700 mt-2">
+          Neue, gebrauchte und erneuerte Smartphones ♻️ sowie Zubehör direkt vor Ort.
+        </p>
+      </div>
+
+      <div className="bg-white rounded-2xl shadow p-6">
+        <Wrench className="w-12 h-12 mx-auto mb-4 text-green-800" />
+        <h3 className="text-xl font-semibold">Verträge & Wertgarantie</h3>
+        <p className="text-green-700 mt-2">
+          Beratung als Partnershop – inklusive Absicherung über Wertgarantie.
+        </p>
+      </div>
+
+    </div>
+  </motion.div>
+</section>
+
+      
       <section id="reparaturbonus" className="py-24 px-4 bg-yellow-100">
         <div className="max-w-4xl mx-auto text-center">
           <h2 className="text-4xl font-bold mb-6">
