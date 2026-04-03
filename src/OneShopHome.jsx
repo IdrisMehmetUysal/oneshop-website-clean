@@ -12,11 +12,11 @@ import Footer from "./Footer";
 
 const GoogleReviews = () => {
   const reviews = [
-    "Top Service, super freundlich und schnelle Reparatur! 🌟",
-    "Sehr empfehlenswert, mein Handy funktioniert wieder perfekt! 📱",
-    "Beste Beratung, top Preise und schnelle Abwicklung. 👍",
-    "Super Team, haben mir sofort geholfen! Danke! 🙌",
-    "Beste Handy-Reparatur in der Stadt – immer wieder gerne! 🔥",
+    "Top Service, super freundlich und schnelle Reparatur! ⭐⭐⭐⭐⭐",
+    "Sehr empfehlenswert, mein Handy funktioniert wieder perfekt! ⭐⭐⭐⭐⭐",
+    "Beste Beratung, top Preise und schnelle Abwicklung. ⭐⭐⭐⭐⭐",
+    "Super Team, haben mir sofort geholfen! Danke! ⭐⭐⭐⭐⭐",
+    "Beste Handy-Reparatur in der Stadt – immer wieder gerne! ⭐⭐⭐⭐⭐",
   ];
 
   const settings = {
@@ -63,20 +63,20 @@ const GoogleReviews = () => {
             ))}
           </Slider>
 
-          <div className="flex flex-col items-center mt-8">
-            <div className="flex items-center gap-2 text-yellow-400 text-3xl">
-              ⭐⭐⭐⭐⭐
-            </div>
-            <p className="text-green-700 text-lg mt-2">
+          <div className="flex flex-col items-center mt-8 gap-4">
+            <p className="text-green-900 font-semibold">
+              ⭐ 5.0 Bewertung auf Google
+            </p>
+            <p className="text-green-700 text-lg">
               5,0 Sterne aus 1115 Bewertungen 🚀
             </p>
             <a
-              href="https://www.google.com/search?q=One+1+Shop+Handy+Service&rlz=1C1GCEV_enAT827AT827&oq=One+1+Shop+Handy+Service&aqs=chrome..69i57j0i512l2j0i22i30l4.4139j0j7&sourceid=chrome&ie=UTF-8#lrd=0x477278aedb1cc14b:0xb890f91911e7f4f5,1,,,"
+              href="https://www.google.com/search?q=One+1+Shop+Handy+Service#lrd=0x477278aedb1cc14b:0xb890f91911e7f4f5,1"
               target="_blank"
               rel="noopener noreferrer"
-              className="mt-6 inline-block bg-gradient-to-r from-green-700 to-green-500 text-white px-8 py-3 rounded-full font-semibold text-lg shadow hover:scale-105 transition-transform duration-300"
+              className="mt-2 inline-block bg-gradient-to-r from-green-700 to-green-500 text-white px-8 py-3 rounded-full font-semibold text-lg shadow hover:scale-105 transition-transform duration-300"
             >
-              Bewertungen ansehen
+              Alle Bewertungen ansehen
             </a>
           </div>
         </div>
@@ -140,17 +140,23 @@ export default function OneShopHome() {
 
   return (
     <main className="min-h-screen text-green-900 overflow-x-hidden scroll-smooth">
-      {/* Reparaturbonus Banner */}
-      <div className="bg-yellow-400 text-black text-center py-3 px-6 font-semibold shadow-md">
-        💸 Reparaturbonus sichern – Spare bis zu 50 % bei Handy- &
-        Laptop-Reparaturen!
-        <a
-          href="#reparaturbonus"
-          className="ml-4 underline hover:text-green-800"
-        >
-          Mehr erfahren
-        </a>
-      </div>
+      {/* Geraete Retter Premie Banner*/}
+<motion.div
+  initial={{ y: -50, opacity: 0 }}
+  animate={{ y: 0, opacity: 1 }}
+  transition={{ duration: 0.5 }}
+  className="bg-yellow-400 text-black text-center py-3 px-6 font-semibold shadow-md"
+>
+  💸 Geräte Retter Prämie sichern – Spare bei Handy- & Laptop-Reparaturen!
+  <a
+    href="https://www.xn--gerte-retter-prmie-ntbm.at/"
+    target="_blank"
+    rel="noopener noreferrer"
+    className="ml-4 underline hover:text-green-800"
+  >
+    Mehr erfahren
+  </a>
+</motion.div>
 
       <Helmet>
         <title>One 1 Shop – Handy Reparatur & Verkauf in St. Pölten</title>
@@ -185,13 +191,13 @@ export default function OneShopHome() {
       {/* Obere Leiste mit Logo und Navigation */}
       <nav className="sticky top-0 z-50 bg-white/90 backdrop-blur-md shadow-md">
         <div className="max-w-7xl mx-auto flex justify-between items-center px-6 py-4">
-          <div>
-            <img
-              src="/images/logo.png"
-              alt="One 1 Shop Logo"
-              className="h-16"
-            />
-          </div>
+<a href="/" className="flex items-center">
+  <img
+    src="/images/logo.png"
+    alt="One 1 Shop Logo"
+    className="h-16"
+  />
+</a>
           {/* Mobile Toggle Button */}
           <div className="md:hidden">
             <button
@@ -307,16 +313,13 @@ export default function OneShopHome() {
             <p className="uppercase tracking-[0.2em] text-green-100 text-sm mb-4">
               One 1 Shop in St. Pölten
             </p>
-
             <h1 className="text-4xl md:text-5xl font-bold leading-tight mb-6">
-              Handy Reparatur in St. Pölten – schnell, professionell & alles aus einer Hand
-            </h1>
+  Handy Reparatur in St. Pölten – iPhone, Samsung, Datenrettung & mehr
+</h1>
 
-            <p className="text-lg md:text-xl text-green-50 mb-8 leading-relaxed">
-              Ob iPhone Reparatur, Samsung Reparatur, Datenrettung,
-              Konsolenreparatur oder der Verkauf von neuen, gebrauchten und
-              erneuerten Geräten ♻️ – bei uns bist du rundum betreut.
-            </p>
+<p className="text-lg md:text-xl text-green-50 mb-8 leading-relaxed">
+  Display kaputt? Akku schwach? Daten verloren? Wir helfen dir schnell und zuverlässig direkt in St. Pölten – von Smartphone-Reparatur bis Datenrettung und Zubehör.
+</p>
 
             <div className="flex flex-wrap justify-center md:justify-start gap-4">
               <a
@@ -372,6 +375,16 @@ export default function OneShopHome() {
         </div>
       </header>
 
+      
+<section className="py-10 px-6 bg-white border-b">
+  <div className="max-w-6xl mx-auto flex flex-wrap justify-center gap-6 text-center text-sm md:text-base text-green-800">
+    <span>⭐ 5.0 Bewertung auf Google</span>
+    <span>📍 Direkt in St. Pölten</span>
+    <span>⚡ Schnelle Reparaturen</span>
+    <span>🔧 Persönliche Beratung</span>
+  </div>
+</section>
+
 <section
   id="leistungen"
   className="py-24 px-4 bg-gradient-to-b from-white to-green-50"
@@ -388,66 +401,107 @@ export default function OneShopHome() {
     </h2>
 
 <p className="text-green-800 max-w-3xl mx-auto mb-12">
-  Wir sind dein Allrounder rund ums Smartphone. Von{" "}
+  Wir sind dein Allrounder rund um Smartphone- und Technik-Service. Von{" "}
   <a href="/iphone-reparatur-st-poelten" className="underline hover:text-green-600">
     iPhone Reparatur in St. Pölten
   </a>{" "}
-  über Datenrettung bis hin zu Verträgen und dem Verkauf von neuen,
-  gebrauchten und erneuerten Geräten ♻️ – bei uns bekommst du alles aus einer Hand.
+  und{" "}
+  <a href="/samsung-reparatur-st-poelten" className="underline hover:text-green-600">
+    Samsung Reparatur in St. Pölten
+  </a>{" "}
+  über{" "}
+  <a href="/datenrettung-st-poelten" className="underline hover:text-green-600">
+    Datenrettung in St. Pölten
+  </a>
+  ,{" "}
+  <a href="/konsolen-reparatur-st-poelten" className="underline hover:text-green-600">
+    Konsolen Reparatur in St. Pölten
+  </a>
+  ,{" "}
+  <a href="/microsoldering-st-poelten" className="underline hover:text-green-600">
+    Microsoldering in St. Pölten
+  </a>
+  ,{" "}
+  <a href="/handy-verkauf-zubehoer-st-poelten" className="underline hover:text-green-600">
+    Handy Verkauf & Zubehör in St. Pölten
+  </a>{" "}
+  sowie{" "}
+  <a href="/handyvertraege-wertgarantie-st-poelten" className="underline hover:text-green-600">
+    Handyverträge & Wertgarantie in St. Pölten
+  </a>{" "}
+  – bei uns bekommst du alles aus einer Hand.
 </p>
 
     <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
 
-      <div className="bg-white rounded-2xl shadow p-6">
-        <Wrench className="w-12 h-12 mx-auto mb-4 text-green-800" />
-        <h3 className="text-xl font-semibold">Handy Reparatur</h3>
-        <p className="text-green-700 mt-2">
-          iPhone, Samsung und viele weitere Marken. Display, Akku,
-          Ladeprobleme oder Wasserschäden – wir helfen schnell.
-        </p>
-      </div>
+<a
+  href="/handy-reparatur-st-poelten"
+  className="block bg-white rounded-2xl shadow p-6 hover:shadow-lg hover:scale-105 transition"
+>
+  <Wrench className="w-12 h-12 mx-auto mb-4 text-green-800" />
+  <h3 className="text-xl font-semibold">Handy Reparatur</h3>
+  <p className="text-green-700 mt-2">
+    iPhone, Samsung und viele weitere Marken. Display, Akku,
+    Ladeprobleme oder Wasserschäden – wir helfen schnell.
+  </p>
+</a>
 
-      <div className="bg-white rounded-2xl shadow p-6">
-        <Smartphone className="w-12 h-12 mx-auto mb-4 text-green-800" />
-        <h3 className="text-xl font-semibold">Datenrettung</h3>
-        <p className="text-green-700 mt-2">
-          Wir retten Fotos, Kontakte und wichtige Daten auch bei defekten
-          oder beschädigten Smartphones.
-        </p>
-      </div>
+<a
+  href="/datenrettung-st-poelten"
+  className="block bg-white rounded-2xl shadow p-6 hover:shadow-lg hover:scale-105 transition"
+>
+  <Smartphone className="w-12 h-12 mx-auto mb-4 text-green-800" />
+  <h3 className="text-xl font-semibold">Datenrettung</h3>
+  <p className="text-green-700 mt-2">
+    Wir retten Fotos, Kontakte und wichtige Daten auch bei defekten
+    oder beschädigten Smartphones.
+  </p>
+</a>
 
-      <div className="bg-white rounded-2xl shadow p-6">
-        <Gamepad2 className="w-12 h-12 mx-auto mb-4 text-green-800" />
-        <h3 className="text-xl font-semibold">Konsolen Reparatur</h3>
-        <p className="text-green-700 mt-2">
-          HDMI-Probleme, Überhitzung oder Abschalten – inkl. Service mit neuer
-          Wärmeleitpaste.
-        </p>
-      </div>
+<a
+  href="/konsolen-reparatur-st-poelten"
+  className="block bg-white rounded-2xl shadow p-6 hover:shadow-lg hover:scale-105 transition"
+>
+  <Gamepad2 className="w-12 h-12 mx-auto mb-4 text-green-800" />
+  <h3 className="text-xl font-semibold">Konsolen Reparatur</h3>
+  <p className="text-green-700 mt-2">
+    HDMI-Probleme, Überhitzung oder Abschalten – inkl. Service mit neuer
+    Wärmeleitpaste.
+  </p>
+</a>
 
-      <div className="bg-white rounded-2xl shadow p-6">
-        <Cpu className="w-12 h-12 mx-auto mb-4 text-green-800" />
-        <h3 className="text-xl font-semibold">Microsoldering</h3>
-        <p className="text-green-700 mt-2">
-          Präzise Lötarbeiten auf Platinen und Motherboards vom Profi.
-        </p>
-      </div>
+<a
+  href="/microsoldering-st-poelten"
+  className="block bg-white rounded-2xl shadow p-6 hover:shadow-lg hover:scale-105 transition"
+>
+  <Cpu className="w-12 h-12 mx-auto mb-4 text-green-800" />
+  <h3 className="text-xl font-semibold">Microsoldering</h3>
+  <p className="text-green-700 mt-2">
+    Präzise Lötarbeiten auf Platinen und Motherboards vom Profi.
+  </p>
+</a>
 
-      <div className="bg-white rounded-2xl shadow p-6">
-        <Smartphone className="w-12 h-12 mx-auto mb-4 text-green-800" />
-        <h3 className="text-xl font-semibold">Verkauf & Zubehör</h3>
-        <p className="text-green-700 mt-2">
-          Neue, gebrauchte und erneuerte Smartphones ♻️ sowie Zubehör direkt vor Ort.
-        </p>
-      </div>
+<a
+  href="/handy-verkauf-zubehoer-st-poelten"
+  className="block bg-white rounded-2xl shadow p-6 hover:shadow-lg hover:scale-105 transition"
+>
+  <Smartphone className="w-12 h-12 mx-auto mb-4 text-green-800" />
+  <h3 className="text-xl font-semibold">Verkauf & Zubehör</h3>
+  <p className="text-green-700 mt-2">
+    Neue, gebrauchte und erneuerte Smartphones ♻️ sowie Zubehör direkt vor Ort.
+  </p>
+</a>
 
-      <div className="bg-white rounded-2xl shadow p-6">
-        <Wrench className="w-12 h-12 mx-auto mb-4 text-green-800" />
-        <h3 className="text-xl font-semibold">Verträge & Wertgarantie</h3>
-        <p className="text-green-700 mt-2">
-          Beratung als Partnershop – inklusive Absicherung über Wertgarantie.
-        </p>
-      </div>
+<a
+  href="/handyvertraege-wertgarantie-st-poelten"
+  className="block bg-white rounded-2xl shadow p-6 hover:shadow-lg hover:scale-105 transition"
+>
+  <Wrench className="w-12 h-12 mx-auto mb-4 text-green-800" />
+  <h3 className="text-xl font-semibold">Verträge & Wertgarantie</h3>
+  <p className="text-green-700 mt-2">
+    Beratung als Partnershop – inklusive Absicherung über Wertgarantie.
+  </p>
+</a>
 
     </div>
   </motion.div>
@@ -456,7 +510,6 @@ export default function OneShopHome() {
 
       <section className="py-20 px-4 bg-green-800 text-white">
   <div className="max-w-5xl mx-auto text-center">
-
     <h2 className="text-3xl md:text-4xl font-bold mb-6">
       Alles rund ums Smartphone – an einem Ort
     </h2>
@@ -475,35 +528,68 @@ export default function OneShopHome() {
       <span className="bg-white/20 px-4 py-2 rounded-full">Zubehör</span>
       <span className="bg-white/20 px-4 py-2 rounded-full">Verträge</span>
     </div>
-
   </div>
 </section>
 
+<section className="py-20 px-6 bg-green-50">
+  <div className="max-w-6xl mx-auto text-center">
+    <h2 className="text-3xl md:text-4xl font-bold mb-12 text-green-900">
+      Deine Vorteile bei One 1 Shop
+    </h2>
+
+    <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+      <div className="bg-white p-6 rounded-2xl shadow">
+        <h3 className="font-semibold text-xl mb-3 text-green-900">⚡ Schnelle Hilfe</h3>
+        <p className="text-green-800">
+          Viele Reparaturen erledigen wir so schnell wie möglich, damit du dein Gerät nicht lange missen musst.
+        </p>
+      </div>
+
+      <div className="bg-white p-6 rounded-2xl shadow">
+        <h3 className="font-semibold text-xl mb-3 text-green-900">🤝 Persönliche Beratung</h3>
+        <p className="text-green-800">
+          Kein anonymer Service – wir nehmen uns Zeit für dich und finden gemeinsam die beste Lösung.
+        </p>
+      </div>
+
+      <div className="bg-white p-6 rounded-2xl shadow">
+  <h3 className="font-semibold text-xl mb-3 text-green-900">📍 Direkt vor Ort</h3>
+  <p className="text-green-800">
+    Kein anonymer Online-Service – wir sind direkt in St. Pölten für dich da und beraten dich persönlich.
+  </p>
+</div>
+    </div>
+  </div>
+</section>
+
+
       
-      <section id="reparaturbonus" className="py-24 px-4 bg-yellow-100">
-        <div className="max-w-4xl mx-auto text-center">
-          <h2 className="text-4xl font-bold mb-6">
-            💸 Reparaturbonus vom Staat
-          </h2>
-          <p className="text-lg text-yellow-900 mb-4">
-            Spare bis zu <strong>50 %</strong> bei deiner Reparatur! Der
-            Reparaturbonus ist ein Förderprogramm, das Reparaturen an
-            elektronischen Geräten günstiger macht.
-          </p>
-          <p className="text-yellow-900 mb-6">
-            Wir sind offizieller Partner – bring dein Gerät vorbei und nutze den
-            Bonus direkt vor Ort. Kein Papierkram, kein Stress.
-          </p>
-          <a
-            href="https://www.reparaturbonus.at"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="bg-yellow-500 hover:bg-yellow-600 text-white px-6 py-3 rounded-full font-semibold"
-          >
-            Jetzt informieren & profitieren
-          </a>
-        </div>
-      </section>
+<section id="geraete-praemie" className="py-24 px-4 bg-yellow-100">
+  <div className="max-w-4xl mx-auto text-center">
+    <h2 className="text-4xl font-bold mb-6">
+      💸 Geräte Retter Prämie vom Staat
+    </h2>
+
+    <p className="text-lg text-yellow-900 mb-4">
+      Spare bei deiner Reparatur bares Geld! Die Geräte Retter Prämie ist ein
+      Förderprogramm, das Reparaturen an elektronischen Geräten unterstützt.
+    </p>
+
+    <p className="text-yellow-900 mb-6">
+      Wir beraten dich direkt vor Ort in St. Pölten und helfen dir dabei, die
+      Prämie optimal zu nutzen – einfach, schnell und ohne Stress.
+    </p>
+
+    <a
+      href="https://www.xn--gerte-retter-prmie-ntbm.at/"
+      target="_blank"
+      rel="noopener noreferrer"
+      className="bg-yellow-500 hover:bg-yellow-600 text-white px-6 py-3 rounded-full font-semibold transition"
+    >
+      Mehr Infos zur Prämie
+    </a>
+  </div>
+</section>
 
       <section id="produkte" className="py-24 px-4 bg-white">
         <div className="max-w-6xl mx-auto text-center">
@@ -573,7 +659,7 @@ export default function OneShopHome() {
     {/* Zweite Reihe: Versicherung / Förderungen */}
     <div className="flex justify-center gap-10 items-center flex-wrap">
       <img src="/images/partner4-wertgarantie.png" alt="WERTGARANTIE" className="h-20" />
-      <img src="/images/partner5.png" alt="Reparaturbonus" className="h-20" />
+      <img src="/images/geraete-praemie.png" alt="Geräte Retter Prämie" className="h-20" />
     </div>
   </div>
 </section>
@@ -592,7 +678,7 @@ export default function OneShopHome() {
     </p>
 
     <a
-      href="HIER_WERTGARANTIE_LINK_EINFUEGEN"
+      href="#kontakt"
       target="_blank"
       rel="noopener noreferrer"
       className="inline-block bg-green-800 text-white px-8 py-3 rounded-full font-semibold hover:bg-green-700 transition"
@@ -603,70 +689,104 @@ export default function OneShopHome() {
 </section>
 
       <section id="kontakt" className="py-24 px-4 bg-white">
-        <div className="max-w-3xl mx-auto text-center">
-          <h2 className="text-4xl font-bold mb-6">Kontakt</h2>
-          <p className="mb-6 text-green-800">
-            Fragen zu Reparaturen, Produkten oder Preisen? Wir sind für dich da!
-          </p>
-          <form className="grid gap-4 text-left">
-            <input
-              type="text"
-              placeholder="Name"
-              className="p-3 rounded border border-green-300 w-full"
-            />
-            <input
-              type="email"
-              placeholder="E-Mail"
-              className="p-3 rounded border border-green-300 w-full"
-            />
-            <textarea
-              placeholder="Nachricht"
-              rows="5"
-              className="p-3 rounded border border-green-300 w-full"
-            ></textarea>
-            <a
-              href="https://wa.me/4369917432373?text=Hallo%2C%20ich%20habe%20eine%20Frage%20zu%20einem%20Produkt%20oder%20Reparatur."
-              onClick={(e) => {
-                const isMobile = /iPhone|Android/i.test(navigator.userAgent);
-                if (!isMobile) {
-                  e.preventDefault();
-                  window.location.href =
-                    "mailto:office@one1shop.at?subject=Anfrage%20über%20Website";
-                }
-              }}
-              className="bg-green-800 text-white px-6 py-3 rounded-full font-semibold shadow-md hover:shadow-lg transition-all duration-300 ease-in-out hover:bg-green-600 hover:scale-105 text-center inline-block"
-            >
-              Absenden
-            </a>
+  <div className="max-w-3xl mx-auto text-center">
+    <h2 className="text-4xl font-bold mb-6">
+      Brauchst du Hilfe mit deinem Gerät?
+    </h2>
 
-            <p className="text-xs text-green-700 mt-2">
-              Mit dem Absenden erklärst du dich damit einverstanden, dass deine
-              angegebenen Daten zur Bearbeitung deiner Anfrage verwendet werden.
-              Weitere Informationen findest du in unserer{" "}
-              <a href="/datenschutz" className="underline hover:text-green-900">
-                Datenschutzerklärung
-              </a>
-              .
-            </p>
-          </form>
-          <div className="flex flex-col md:flex-row justify-center items-center gap-6 mt-10">
-            <a
-              href="tel:+4369917432373"
-              className="bg-green-800 text-white px-6 py-3 rounded-full font-medium hover:bg-green-700"
-            >
-              📞 +43 699 174 32 373
-            </a>
-            <a
-              href="https://wa.me/4369917432373"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="bg-green-600 text-white px-6 py-3 rounded-full font-medium hover:bg-green-500"
-            >
-              💬 WhatsApp schreiben
-            </a>
-          </div>
-        </div>
-      </section>
+    <p className="mb-6 text-green-800 text-lg">
+      Schreib uns jetzt kurz auf WhatsApp oder ruf uns an – wir sagen dir direkt, was möglich ist.
+    </p>
+
+    <div className="bg-green-50 p-6 rounded-xl mb-6 border border-green-100">
+<p className="text-green-900 font-semibold text-lg">
+  ⚡ Schnelle Rückmeldung – wir melden uns so rasch wie möglich
+</p>
+    </div>
+
+    <div className="grid gap-4 text-left">
+      <input
+        id="kontakt-name"
+        type="text"
+        placeholder="Dein Name"
+        className="p-3 rounded border border-green-300 w-full"
+      />
+      <textarea
+        id="kontakt-nachricht"
+        placeholder="Dein Anliegen (z.B. iPhone Display kaputt)"
+        rows="4"
+        className="p-3 rounded border border-green-300 w-full"
+      ></textarea>
+
+<div className="flex flex-col md:flex-row gap-4">
+
+  {/* WhatsApp */}
+  <button
+    onClick={() => {
+      const name = document.getElementById("kontakt-name").value.trim();
+      const nachricht = document.getElementById("kontakt-nachricht").value.trim();
+      const text = `Hallo, ich bin ${name || "ein Kunde"}. ${nachricht || "Ich habe eine Frage."}`;
+      const encoded = encodeURIComponent(text);
+      window.open(`https://wa.me/4369917432373?text=${encoded}`, "_blank");
+    }}
+    className="flex-1 bg-green-800 text-white px-6 py-3 rounded-full font-semibold hover:bg-green-600 transition"
+  >
+    💬 WhatsApp senden
+  </button>
+
+  {/* Mail */}
+  <button
+    onClick={() => {
+      const name = document.getElementById("kontakt-name").value.trim();
+      const nachricht = document.getElementById("kontakt-nachricht").value.trim();
+      const subject = encodeURIComponent("Anfrage über Website");
+      const body = encodeURIComponent(`Name: ${name || "-"}\n\nNachricht:\n${nachricht || "-"}`);
+      window.location.href = `mailto:office@one1shop.at?subject=${subject}&body=${body}`;
+    }}
+    className="flex-1 bg-green-600 text-white px-6 py-3 rounded-full font-semibold hover:bg-green-500 transition"
+  >
+    ✉️ E-Mail senden
+  </button>
+
+</div>
+
+      <p className="text-xs text-green-700 mt-2">
+        Mit dem Absenden erklärst du dich damit einverstanden, dass deine
+        angegebenen Daten zur Bearbeitung deiner Anfrage verwendet werden.
+        Weitere Informationen findest du in unserer{" "}
+        <a href="/datenschutz" className="underline hover:text-green-900">
+          Datenschutzerklärung
+        </a>
+        .
+      </p>
+    </div>
+
+    <div className="flex flex-col md:flex-row justify-center items-center gap-6 mt-10">
+
+  <a
+    href="tel:+4369917432373"
+    className="bg-green-800 text-white px-6 py-3 rounded-full font-medium hover:bg-green-700"
+  >
+    📞 +43 699 174 32 373
+  </a>
+
+  <a
+    href="https://wa.me/4369917432373"
+    target="_blank"
+    rel="noopener noreferrer"
+    className="bg-green-600 text-white px-6 py-3 rounded-full font-medium hover:bg-green-500"
+  >
+    💬 Direkt auf WhatsApp schreiben
+  </a>
+
+</div>
+
+<p className="text-sm text-green-700 mt-4 text-center">
+  ✔️ Kostenlos & unverbindlich • ⚡ Antwort in Minuten • 👨‍🔧 Direkt vom Profi
+</p>
+
+</div>
+</section>
 
       <GoogleReviews />
       <section id="standort" className="py-24 px-4 bg-white">
@@ -737,6 +857,15 @@ export default function OneShopHome() {
           Tolle Angebote warten auf dich ✌️
         </motion.div>
       )}
+
+      <a
+  href="https://wa.me/4369917432373"
+  target="_blank"
+  rel="noopener noreferrer"
+  className="fixed bottom-6 right-6 bg-green-600 text-white px-5 py-3 rounded-full shadow-lg z-50 hover:bg-green-500 transition"
+>
+  💬 WhatsApp
+</a>
     </main>
   );
 }

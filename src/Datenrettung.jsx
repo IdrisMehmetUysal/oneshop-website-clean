@@ -3,25 +3,25 @@ import { Helmet } from "react-helmet-async";
 import { AnimatePresence, motion } from "framer-motion";
 import Footer from "./Footer";
 
-export default function IphoneReparatur() {
+export default function Datenrettung() {
   const [navOpen, setNavOpen] = useState(false);
 
   return (
     <main className="min-h-screen text-green-900 overflow-x-hidden scroll-smooth bg-white">
       <Helmet>
-        <title>iPhone Reparatur St. Pölten | Display, Akku & mehr | One 1 Shop</title>
+        <title>Datenrettung St. Pölten | Fotos, Kontakte & Dateien retten | One 1 Shop</title>
         <meta
           name="description"
-          content="iPhone Reparatur in St. Pölten: Displaytausch, Akkutausch, Ladeprobleme, Wasserschäden und Datenrettung. Schnell, professionell und persönlich bei One 1 Shop."
+          content="Datenrettung in St. Pölten für Smartphones und defekte Geräte. Wir helfen bei Fotos, Kontakten, Dateien, Wasserschäden und Geräten, die nicht mehr richtig starten."
         />
         <meta
           name="keywords"
-          content="iPhone Reparatur St. Pölten, iPhone Display Reparatur St. Pölten, iPhone Akku tauschen St. Pölten, iPhone Wasserschaden St. Pölten, One 1 Shop"
+          content="Datenrettung St. Pölten, Handy Daten retten St. Pölten, Fotos retten Handy St. Pölten, Smartphone Datenrettung St. Pölten, One 1 Shop"
         />
-        <link rel="canonical" href="https://www.one1shop.at/iphone-reparatur-st-poelten" />
+        <meta name="robots" content="index, follow" />
+        <link rel="canonical" href="https://www.one1shop.at/datenrettung-st-poelten" />
       </Helmet>
 
-      {/* Navigation */}
       <nav className="sticky top-0 z-50 bg-white/90 backdrop-blur-md shadow-md">
         <div className="max-w-7xl mx-auto flex justify-between items-center px-6 py-4">
           <a href="/" className="flex items-center">
@@ -134,7 +134,6 @@ export default function IphoneReparatur() {
         </div>
       </nav>
 
-      {/* Hero */}
       <section className="bg-gradient-to-r from-green-800 to-green-500 text-white px-6 py-16 md:py-24">
         <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-10 items-center">
           <div className="text-center md:text-left">
@@ -143,12 +142,13 @@ export default function IphoneReparatur() {
             </p>
 
             <h1 className="text-4xl md:text-5xl font-bold leading-tight mb-6">
-              iPhone Reparatur in St. Pölten
+              Datenrettung in St. Pölten
             </h1>
 
             <p className="text-lg md:text-xl text-green-50 mb-8 leading-relaxed">
-              Ob Displaybruch, schwacher Akku, Ladeprobleme oder Wasserschaden –
-              wir helfen dir schnell, professionell und persönlich direkt vor Ort.
+              Wichtige Fotos, Kontakte oder Dateien verloren? Wir helfen dir bei
+              der Datenrettung von Smartphones und defekten Geräten schnell,
+              diskret und persönlich weiter.
             </p>
 
             <div className="flex flex-wrap justify-center md:justify-start gap-4">
@@ -170,92 +170,94 @@ export default function IphoneReparatur() {
             </div>
           </div>
 
-          <div>
-            <img
-  src="/images/iphone-reparatur.jpg"
-  alt="iPhone Reparatur in St. Pölten"
-  loading="lazy"
-  className="w-full h-[240px] md:h-[380px] object-cover rounded-xl shadow-xl hover:scale-105 transition duration-500"
-/>
-          </div>
+          <motion.div
+  whileHover={{ scale: 1.03 }}
+  transition={{ duration: 0.3 }}
+>
+  <img
+    src="/images/datenrettung.jpg"
+    alt="Datenrettung in St. Pölten"
+    loading="lazy"
+    className="w-full h-[240px] md:h-[380px] object-cover rounded-xl shadow-xl"
+  />
+</motion.div>
         </div>
       </section>
 
-      {/* Intro */}
       <section className="py-20 px-6 bg-white">
         <div className="max-w-5xl mx-auto">
           <h2 className="text-3xl md:text-4xl font-bold mb-6">
-            Schnelle iPhone Reparaturen vom Profi
+            Hilfe bei verlorenen oder nicht erreichbaren Daten
           </h2>
           <p className="text-lg text-green-800 leading-8 mb-6">
-            Wenn du eine zuverlässige iPhone Reparatur in St. Pölten suchst,
-            bist du bei One 1 Shop richtig. Wir reparieren häufige Schäden und
-            Probleme schnell und sauber, damit du dein Gerät so bald wie möglich
-            wieder nutzen kannst.
+            Wenn ein Smartphone nicht mehr startet, einen Wasserschaden hatte
+            oder plötzlich wichtige Inhalte fehlen, ist schnelle Hilfe oft
+            entscheidend. Bei One 1 Shop in St. Pölten unterstützen wir dich
+            bei der Datenrettung von Fotos, Videos, Kontakten und anderen
+            wichtigen Dateien.
           </p>
           <p className="text-lg text-green-800 leading-8">
-            Besonders oft helfen wir bei kaputten Displays, schwachen Akkus,
-            Ladeproblemen, Wasserschäden und allgemeinen Defekten. Auch wenn du
-            dir unsicher bist, was genau kaputt ist, schauen wir uns dein iPhone
-            gerne an und beraten dich persönlich.
+            Nicht jeder Fall ist gleich – deshalb schauen wir uns dein Gerät
+            individuell an und beraten dich ehrlich, welche Schritte sinnvoll
+            sind. Unser Ziel ist es, dir so gut wie möglich beim Retten deiner
+            wichtigen Daten zu helfen.
           </p>
         </div>
       </section>
 
-      {/* Leistungen */}
       <section className="py-20 px-6 bg-green-50">
         <div className="max-w-6xl mx-auto">
           <h2 className="text-3xl md:text-4xl font-bold text-center mb-12">
-            Häufige iPhone Reparaturen
+            Wann Datenrettung sinnvoll sein kann
           </h2>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             <div className="bg-white rounded-2xl shadow p-6">
-              <h3 className="text-xl font-semibold mb-3">Display Reparatur</h3>
+              <h3 className="text-xl font-semibold mb-3">Handy startet nicht mehr</h3>
               <p className="text-green-700 leading-7">
-                Ein gesprungenes oder defektes Display gehört zu den häufigsten
-                Schäden. Wir helfen dir bei der iPhone Display Reparatur in
-                St. Pölten schnell und zuverlässig.
+                Wenn dein Gerät schwarz bleibt, nicht mehr hochfährt oder sich
+                plötzlich ausgeschaltet hat, können sich wichtige Daten oft noch
+                auf dem Gerät befinden.
               </p>
             </div>
 
             <div className="bg-white rounded-2xl shadow p-6">
-              <h3 className="text-xl font-semibold mb-3">Akkutausch</h3>
+              <h3 className="text-xl font-semibold mb-3">Wasserschaden oder Feuchtigkeit</h3>
               <p className="text-green-700 leading-7">
-                Wenn dein Akku schnell leer wird oder dein iPhone plötzlich
-                ausgeht, kann ein Akkutausch die beste Lösung sein.
+                Nach Kontakt mit Wasser ist schnelles Handeln wichtig. Je früher
+                das Gerät geprüft wird, desto besser stehen die Chancen, Inhalte
+                noch zu sichern.
               </p>
             </div>
 
             <div className="bg-white rounded-2xl shadow p-6">
-              <h3 className="text-xl font-semibold mb-3">Ladeprobleme</h3>
+              <h3 className="text-xl font-semibold mb-3">Fotos, Videos oder Kontakte wichtig</h3>
               <p className="text-green-700 leading-7">
-                Wenn dein iPhone nicht mehr richtig lädt oder die Ladebuchse
-                Probleme macht, prüfen wir die Ursache und beheben den Defekt.
+                Oft geht es nicht nur um das Gerät selbst, sondern um Erinnerungen
+                und wichtige persönliche oder berufliche Daten.
               </p>
             </div>
 
             <div className="bg-white rounded-2xl shadow p-6">
-              <h3 className="text-xl font-semibold mb-3">Wasserschaden</h3>
+              <h3 className="text-xl font-semibold mb-3">Defektes oder beschädigtes Smartphone</h3>
               <p className="text-green-700 leading-7">
-                Auch bei Feuchtigkeit oder Wasserschaden ist schnelles Handeln
-                wichtig. Wir schauen uns dein Gerät an und beraten dich ehrlich.
+                Auch bei Displaybruch, technischen Defekten oder anderen Schäden
+                kann geprüft werden, ob eine Datenrettung noch möglich ist.
               </p>
             </div>
           </div>
         </div>
       </section>
 
-      {/* Warum wir */}
       <section className="py-20 px-6 bg-white">
         <div className="max-w-5xl mx-auto text-center">
           <h2 className="text-3xl md:text-4xl font-bold mb-6">
             Warum One 1 Shop?
           </h2>
           <p className="text-lg text-green-800 leading-8 mb-8">
-            Bei uns bekommst du nicht nur eine Reparatur, sondern eine
-            persönliche Betreuung. Wir nehmen uns Zeit für dein Anliegen und
-            helfen dir in St. Pölten schnell, transparent und zuverlässig weiter.
+            Bei sensiblen Daten zählen Vertrauen, Ehrlichkeit und persönliche
+            Betreuung. Wir nehmen uns Zeit für dein Anliegen und helfen dir in
+            St. Pölten so transparent und professionell wie möglich weiter.
           </p>
 
           <div className="flex flex-wrap justify-center gap-4">
@@ -263,10 +265,10 @@ export default function IphoneReparatur() {
               persönliche Beratung
             </span>
             <span className="bg-green-100 text-green-800 px-4 py-2 rounded-full">
-              schnelle Hilfe
+              diskrete Abwicklung
             </span>
             <span className="bg-green-100 text-green-800 px-4 py-2 rounded-full">
-              professionelle Reparatur
+              ehrliche Einschätzung
             </span>
             <span className="bg-green-100 text-green-800 px-4 py-2 rounded-full">
               direkt in St. Pölten
@@ -275,20 +277,23 @@ export default function IphoneReparatur() {
         </div>
       </section>
 
-      {/* Interne Verlinkung */}
       <section className="py-20 px-6 bg-green-50">
         <div className="max-w-5xl mx-auto text-center">
           <h2 className="text-3xl md:text-4xl font-bold mb-6">
             Weitere Leistungen
           </h2>
-          <p className="text-lg text-green-800 leading-8">
-  Neben der iPhone Reparatur in St. Pölten bieten wir auch allgemeine{" "}
-  <a href="/#leistungen" className="underline hover:text-green-600">
+<p className="text-lg text-green-800 leading-8">
+  Neben der Datenrettung in St. Pölten bieten wir auch{" "}
+  <a href="/handy-reparatur-st-poelten" className="underline hover:text-green-600">
     Handy Reparaturen
   </a>
   ,{" "}
-  <a href="/#leistungen" className="underline hover:text-green-600">
-    Datenrettung
+  <a href="/iphone-reparatur-st-poelten" className="underline hover:text-green-600">
+    iPhone Reparaturen
+  </a>
+  ,{" "}
+  <a href="/samsung-reparatur-st-poelten" className="underline hover:text-green-600">
+    Samsung Reparaturen
   </a>
   ,{" "}
   <a href="/konsolen-reparatur-st-poelten" className="underline hover:text-green-600">
@@ -303,15 +308,14 @@ export default function IphoneReparatur() {
         </div>
       </section>
 
-      {/* CTA */}
       <section className="py-20 px-6 bg-white">
         <div className="max-w-4xl mx-auto text-center">
           <h2 className="text-3xl md:text-4xl font-bold mb-6">
-            Jetzt iPhone Reparatur anfragen
+            Jetzt Datenrettung anfragen
           </h2>
           <p className="text-lg text-green-800 leading-8 mb-8">
-            Melde dich bei uns oder komm direkt vorbei. Wir helfen dir gerne
-            weiter und beraten dich persönlich zu deinem iPhone.
+            Wenn dir wichtige Daten fehlen oder dein Gerät Probleme macht, melde
+            dich bei uns. Wir schauen uns deinen Fall gerne persönlich an.
           </p>
 
           <div className="flex flex-wrap justify-center gap-4">

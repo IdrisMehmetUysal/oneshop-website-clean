@@ -3,25 +3,25 @@ import { Helmet } from "react-helmet-async";
 import { AnimatePresence, motion } from "framer-motion";
 import Footer from "./Footer";
 
-export default function IphoneReparatur() {
+export default function KonsolenReparatur() {
   const [navOpen, setNavOpen] = useState(false);
 
   return (
     <main className="min-h-screen text-green-900 overflow-x-hidden scroll-smooth bg-white">
       <Helmet>
-        <title>iPhone Reparatur St. Pölten | Display, Akku & mehr | One 1 Shop</title>
+        <title>Konsolen Reparatur St. Pölten | HDMI, Überhitzung & mehr | One 1 Shop</title>
         <meta
           name="description"
-          content="iPhone Reparatur in St. Pölten: Displaytausch, Akkutausch, Ladeprobleme, Wasserschäden und Datenrettung. Schnell, professionell und persönlich bei One 1 Shop."
+          content="Konsolen Reparatur in St. Pölten: HDMI-Probleme, Überhitzung, Abschalten, Reinigung und neue Wärmeleitpaste. Persönlich und professionell bei One 1 Shop."
         />
         <meta
           name="keywords"
-          content="iPhone Reparatur St. Pölten, iPhone Display Reparatur St. Pölten, iPhone Akku tauschen St. Pölten, iPhone Wasserschaden St. Pölten, One 1 Shop"
+          content="Konsolen Reparatur St. Pölten, HDMI Reparatur Konsole St. Pölten, PS5 Reparatur St. Pölten, Xbox Reparatur St. Pölten, Wärmeleitpaste Konsole St. Pölten, One 1 Shop"
         />
-        <link rel="canonical" href="https://www.one1shop.at/iphone-reparatur-st-poelten" />
+        <meta name="robots" content="index, follow" />
+        <link rel="canonical" href="https://www.one1shop.at/konsolen-reparatur-st-poelten" />
       </Helmet>
 
-      {/* Navigation */}
       <nav className="sticky top-0 z-50 bg-white/90 backdrop-blur-md shadow-md">
         <div className="max-w-7xl mx-auto flex justify-between items-center px-6 py-4">
           <a href="/" className="flex items-center">
@@ -134,7 +134,6 @@ export default function IphoneReparatur() {
         </div>
       </nav>
 
-      {/* Hero */}
       <section className="bg-gradient-to-r from-green-800 to-green-500 text-white px-6 py-16 md:py-24">
         <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-10 items-center">
           <div className="text-center md:text-left">
@@ -143,13 +142,15 @@ export default function IphoneReparatur() {
             </p>
 
             <h1 className="text-4xl md:text-5xl font-bold leading-tight mb-6">
-              iPhone Reparatur in St. Pölten
+              Konsolen Reparatur in St. Pölten
             </h1>
 
-            <p className="text-lg md:text-xl text-green-50 mb-8 leading-relaxed">
-              Ob Displaybruch, schwacher Akku, Ladeprobleme oder Wasserschaden –
-              wir helfen dir schnell, professionell und persönlich direkt vor Ort.
-            </p>
+<p className="text-lg text-white leading-8">
+  Besonders oft geht es um HDMI-Probleme, Überhitzung, starkes Lüftergeräusch,
+  plötzliches Abschalten, Joystick-Drift, Kurzschlüsse oder Wartung durch
+  Reinigung und neue Wärmeleitpaste. Wir unterstützen dich rund um PlayStation,
+  Xbox und weitere Konsolen persönlich direkt in St. Pölten.
+</p>
 
             <div className="flex flex-wrap justify-center md:justify-start gap-4">
               <a
@@ -170,92 +171,109 @@ export default function IphoneReparatur() {
             </div>
           </div>
 
-          <div>
-            <img
-  src="/images/iphone-reparatur.jpg"
-  alt="iPhone Reparatur in St. Pölten"
-  loading="lazy"
-  className="w-full h-[240px] md:h-[380px] object-cover rounded-xl shadow-xl hover:scale-105 transition duration-500"
-/>
-          </div>
+<motion.div
+  whileHover={{ scale: 1.03 }}
+  transition={{ duration: 0.3 }}
+  className="overflow-hidden rounded-xl"
+>
+  <img
+    src="/images/konsolen-reparatur.jpg"
+    alt="Konsolen Reparatur in St. Pölten"
+    loading="lazy"
+    className="w-full h-[240px] md:h-[380px] object-cover shadow-xl"
+  />
+</motion.div>
         </div>
       </section>
 
-      {/* Intro */}
       <section className="py-20 px-6 bg-white">
         <div className="max-w-5xl mx-auto">
           <h2 className="text-3xl md:text-4xl font-bold mb-6">
-            Schnelle iPhone Reparaturen vom Profi
+            Hilfe bei typischen Konsolen-Problemen
           </h2>
           <p className="text-lg text-green-800 leading-8 mb-6">
-            Wenn du eine zuverlässige iPhone Reparatur in St. Pölten suchst,
-            bist du bei One 1 Shop richtig. Wir reparieren häufige Schäden und
-            Probleme schnell und sauber, damit du dein Gerät so bald wie möglich
-            wieder nutzen kannst.
+            Wenn deine Konsole Probleme macht, nicht mehr richtig funktioniert oder
+            sich ungewöhnlich verhält, bist du bei One 1 Shop in St. Pölten richtig.
+            Wir helfen bei häufigen Defekten und kümmern uns um eine saubere,
+            professionelle Prüfung.
           </p>
           <p className="text-lg text-green-800 leading-8">
-            Besonders oft helfen wir bei kaputten Displays, schwachen Akkus,
-            Ladeproblemen, Wasserschäden und allgemeinen Defekten. Auch wenn du
-            dir unsicher bist, was genau kaputt ist, schauen wir uns dein iPhone
-            gerne an und beraten dich persönlich.
+            Besonders oft geht es um HDMI-Probleme, Überhitzung, starkes Lüftergeräusch,
+            plötzliche Abschaltungen oder Wartung durch Reinigung und neue Wärmeleitpaste.
           </p>
         </div>
       </section>
 
-      {/* Leistungen */}
       <section className="py-20 px-6 bg-green-50">
         <div className="max-w-6xl mx-auto">
           <h2 className="text-3xl md:text-4xl font-bold text-center mb-12">
-            Häufige iPhone Reparaturen
+            Häufige Konsolen Reparaturen
           </h2>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            <div className="bg-white rounded-2xl shadow p-6">
-              <h3 className="text-xl font-semibold mb-3">Display Reparatur</h3>
-              <p className="text-green-700 leading-7">
-                Ein gesprungenes oder defektes Display gehört zu den häufigsten
-                Schäden. Wir helfen dir bei der iPhone Display Reparatur in
-                St. Pölten schnell und zuverlässig.
-              </p>
-            </div>
+<div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+  <div className="bg-white rounded-2xl shadow p-6 hover:shadow-lg hover:scale-105 transition-all duration-300">
+    <h3 className="text-xl font-semibold mb-3">HDMI-Probleme</h3>
+    <p className="text-green-700 leading-7">
+      Wenn deine Konsole kein Bild mehr liefert oder der HDMI-Anschluss
+      beschädigt ist, prüfen wir die Ursache und kümmern uns um eine
+      passende Lösung.
+    </p>
+  </div>
 
-            <div className="bg-white rounded-2xl shadow p-6">
-              <h3 className="text-xl font-semibold mb-3">Akkutausch</h3>
-              <p className="text-green-700 leading-7">
-                Wenn dein Akku schnell leer wird oder dein iPhone plötzlich
-                ausgeht, kann ein Akkutausch die beste Lösung sein.
-              </p>
-            </div>
+  <div className="bg-white rounded-2xl shadow p-6 hover:shadow-lg hover:scale-105 transition-all duration-300">
+    <h3 className="text-xl font-semibold mb-3">Überhitzung</h3>
+    <p className="text-green-700 leading-7">
+      Wird die Konsole sehr heiß oder laut, kann eine Reinigung oder
+      Wartung sinnvoll sein, damit sie wieder stabil läuft.
+    </p>
+  </div>
 
-            <div className="bg-white rounded-2xl shadow p-6">
-              <h3 className="text-xl font-semibold mb-3">Ladeprobleme</h3>
-              <p className="text-green-700 leading-7">
-                Wenn dein iPhone nicht mehr richtig lädt oder die Ladebuchse
-                Probleme macht, prüfen wir die Ursache und beheben den Defekt.
-              </p>
-            </div>
+  <div className="bg-white rounded-2xl shadow p-6 hover:shadow-lg hover:scale-105 transition-all duration-300">
+    <h3 className="text-xl font-semibold mb-3">Plötzliches Abschalten</h3>
+    <p className="text-green-700 leading-7">
+      Wenn sich die Konsole einfach ausschaltet oder abstürzt, schauen
+      wir uns das Gerät genauer an und beraten dich ehrlich zu den
+      nächsten Schritten.
+    </p>
+  </div>
 
-            <div className="bg-white rounded-2xl shadow p-6">
-              <h3 className="text-xl font-semibold mb-3">Wasserschaden</h3>
-              <p className="text-green-700 leading-7">
-                Auch bei Feuchtigkeit oder Wasserschaden ist schnelles Handeln
-                wichtig. Wir schauen uns dein Gerät an und beraten dich ehrlich.
-              </p>
-            </div>
-          </div>
+  <div className="bg-white rounded-2xl shadow p-6 hover:shadow-lg hover:scale-105 transition-all duration-300">
+    <h3 className="text-xl font-semibold mb-3">Reinigung & Wärmeleitpaste</h3>
+    <p className="text-green-700 leading-7">
+      Eine professionelle Reinigung und neue Wärmeleitpaste können helfen,
+      die Temperatur zu verbessern und die Lebensdauer der Konsole zu verlängern.
+    </p>
+  </div>
+
+  <div className="bg-white rounded-2xl shadow p-6 hover:shadow-lg hover:scale-105 transition-all duration-300">
+    <h3 className="text-xl font-semibold mb-3">Joystick-Drift</h3>
+    <p className="text-green-700 leading-7">
+      Wenn dein Controller Bewegungen ausführt, obwohl du ihn gar nicht
+      berührst, prüfen wir das Problem und helfen dir bei einer passenden Lösung.
+    </p>
+  </div>
+
+  <div className="bg-white rounded-2xl shadow p-6 hover:shadow-lg hover:scale-105 transition-all duration-300">
+    <h3 className="text-xl font-semibold mb-3">Kurzschluss & Stromprobleme</h3>
+    <p className="text-green-700 leading-7">
+      Bei Kurzschlüssen oder anderen Stromproblemen ist eine genaue Analyse
+      wichtig. Wir prüfen die Konsole sorgfältig und beraten dich transparent.
+    </p>
+  </div>
+</div>
+
         </div>
       </section>
 
-      {/* Warum wir */}
       <section className="py-20 px-6 bg-white">
         <div className="max-w-5xl mx-auto text-center">
           <h2 className="text-3xl md:text-4xl font-bold mb-6">
             Warum One 1 Shop?
           </h2>
           <p className="text-lg text-green-800 leading-8 mb-8">
-            Bei uns bekommst du nicht nur eine Reparatur, sondern eine
-            persönliche Betreuung. Wir nehmen uns Zeit für dein Anliegen und
-            helfen dir in St. Pölten schnell, transparent und zuverlässig weiter.
+            Bei uns bekommst du persönliche Beratung, eine ehrliche Einschätzung
+            und professionelle Hilfe direkt in St. Pölten. Wir schauen uns dein
+            Gerät genau an und helfen dir transparent weiter.
           </p>
 
           <div className="flex flex-wrap justify-center gap-4">
@@ -263,10 +281,10 @@ export default function IphoneReparatur() {
               persönliche Beratung
             </span>
             <span className="bg-green-100 text-green-800 px-4 py-2 rounded-full">
-              schnelle Hilfe
+              ehrliche Einschätzung
             </span>
             <span className="bg-green-100 text-green-800 px-4 py-2 rounded-full">
-              professionelle Reparatur
+              professionelle Wartung
             </span>
             <span className="bg-green-100 text-green-800 px-4 py-2 rounded-full">
               direkt in St. Pölten
@@ -275,24 +293,55 @@ export default function IphoneReparatur() {
         </div>
       </section>
 
-      {/* Interne Verlinkung */}
       <section className="py-20 px-6 bg-green-50">
+  <div className="max-w-5xl mx-auto text-center">
+    <h2 className="text-3xl md:text-4xl font-bold mb-6">
+      Konsolen und Spiele direkt vor Ort
+    </h2>
+    <p className="text-lg text-green-800 leading-8 mb-8">
+      Bei One 1 Shop in St. Pölten bekommst du nicht nur Unterstützung bei der
+      Konsolen Reparatur, sondern findest bei uns auch Konsolen und Spiele direkt
+      vor Ort. So bekommst du Reparatur, Beratung und Gaming-Zubehör an einem Ort.
+    </p>
+
+    <div className="flex flex-wrap justify-center gap-4">
+      <span className="bg-green-100 text-green-800 px-4 py-2 rounded-full">
+        PlayStation
+      </span>
+      <span className="bg-green-100 text-green-800 px-4 py-2 rounded-full">
+        Xbox
+      </span>
+      <span className="bg-green-100 text-green-800 px-4 py-2 rounded-full">
+        Konsolen
+      </span>
+      <span className="bg-green-100 text-green-800 px-4 py-2 rounded-full">
+        Spiele
+      </span>
+    </div>
+  </div>
+</section>
+
+      <section className="py-20 px-6 bg-white">
         <div className="max-w-5xl mx-auto text-center">
           <h2 className="text-3xl md:text-4xl font-bold mb-6">
             Weitere Leistungen
           </h2>
           <p className="text-lg text-green-800 leading-8">
-  Neben der iPhone Reparatur in St. Pölten bieten wir auch allgemeine{" "}
-  <a href="/#leistungen" className="underline hover:text-green-600">
+  Neben der Konsolen Reparatur in St. Pölten bieten wir auch{" "}
+  <a href="/handy-reparatur-st-poelten" className="underline hover:text-green-600">
     Handy Reparaturen
   </a>
   ,{" "}
-  <a href="/#leistungen" className="underline hover:text-green-600">
+  <a href="/datenrettung-st-poelten" className="underline hover:text-green-600">
     Datenrettung
   </a>
   ,{" "}
-  <a href="/konsolen-reparatur-st-poelten" className="underline hover:text-green-600">
-    Konsolenservice
+  <a href="/iphone-reparatur-st-poelten" className="underline hover:text-green-600">
+    iPhone Reparaturen
+  </a>
+  ,{" "}
+  <a href="/samsung-reparatur-st-poelten" className="underline hover:text-green-600">
+    Samsung Reparaturen
   </a>{" "}
   sowie den{" "}
   <a href="/handy-verkauf-zubehoer-st-poelten" className="underline hover:text-green-600">
@@ -303,15 +352,14 @@ export default function IphoneReparatur() {
         </div>
       </section>
 
-      {/* CTA */}
-      <section className="py-20 px-6 bg-white">
+     <section className="py-20 px-6 bg-green-50">      
         <div className="max-w-4xl mx-auto text-center">
           <h2 className="text-3xl md:text-4xl font-bold mb-6">
-            Jetzt iPhone Reparatur anfragen
+            Jetzt Konsolen Reparatur anfragen
           </h2>
           <p className="text-lg text-green-800 leading-8 mb-8">
             Melde dich bei uns oder komm direkt vorbei. Wir helfen dir gerne
-            weiter und beraten dich persönlich zu deinem iPhone.
+            weiter und beraten dich persönlich zu deiner Konsole.
           </p>
 
           <div className="flex flex-wrap justify-center gap-4">
