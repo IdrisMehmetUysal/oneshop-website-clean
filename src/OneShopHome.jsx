@@ -86,9 +86,18 @@ const GoogleReviews = () => {
 };
 
 export default function OneShopHome() {
+  const [scrolled, setScrolled] = useState(false);
   const [navOpen, setNavOpen] = useState(false);
-
   const [showHint, setShowHint] = useState(false);
+
+  useEffect(() => {
+  const handleScroll = () => {
+    setScrolled(window.scrollY > 20);
+  };
+
+  window.addEventListener("scroll", handleScroll);
+  return () => window.removeEventListener("scroll", handleScroll);
+}, []);
 
   useEffect(() => {
     const showTimeout = setTimeout(() => {
@@ -189,15 +198,22 @@ export default function OneShopHome() {
       </Helmet>
 
       {/* Obere Leiste mit Logo und Navigation */}
-      <nav className="sticky top-0 z-50 bg-white/90 backdrop-blur-md shadow-md">
-        <div className="max-w-7xl mx-auto flex justify-between items-center px-6 py-4">
-<a href="/" className="flex items-center">
-  <img
-    src="/images/logo.png"
-    alt="One 1 Shop Logo"
-    className="h-16"
-  />
-</a>
+      <nav
+  className={`sticky top-0 z-50 transition-all duration-300 
+  ${scrolled 
+    ? "bg-white shadow-md" 
+    : "bg-white/90 backdrop-blur-md"}
+  `}
+>
+  <div className="max-w-7xl mx-auto flex justify-between items-center px-6 py-4">
+
+    <a href="/" className="flex items-center">
+      <img
+        src="/images/logo.png"
+        alt="One 1 Shop Logo"
+        className="h-16"
+      />
+    </a>
           {/* Mobile Toggle Button */}
           <div className="md:hidden">
             <button
