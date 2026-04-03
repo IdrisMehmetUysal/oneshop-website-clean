@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { Helmet } from "react-helmet-async";
 import { AnimatePresence, motion } from "framer-motion";
-import Footer from "./Footer";
+import Footer from "./components/Footer";
 
 export default function Microsoldering() {
   const [navOpen, setNavOpen] = useState(false);

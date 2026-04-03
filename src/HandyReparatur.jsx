@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { Helmet } from "react-helmet-async";
 import { AnimatePresence, motion } from "framer-motion";
-import Footer from "./Footer";
+import Footer from "./components/Footer";
 
 export default function HandyReparatur() {
   const [navOpen, setNavOpen] = useState(false);
@@ -84,7 +84,7 @@ export default function HandyReparatur() {
             Reparaturen für alle gängigen Marken
           </h2>
 
-          <div className="grid md:grid-cols-2 gap-8">
+         <div className="grid md:grid-cols-3 gap-8">
 
             {/* iPhone */}
             <a
@@ -107,6 +107,39 @@ export default function HandyReparatur() {
                 Professionelle Reparaturen für Samsung Smartphones aller Modelle.
               </p>
             </a>
+
+            {/* Xiaomi */}
+<a
+  href="/xiaomi-reparatur"
+  className="bg-white p-8 rounded-2xl shadow hover:shadow-lg transition block"
+>
+  <h3 className="text-xl font-semibold mb-3">Xiaomi Reparatur</h3>
+  <p className="text-green-700">
+    Reparatur für Xiaomi, Redmi & Poco Geräte – Display, Akku & mehr.
+  </p>
+</a>
+
+            {/* Pixel */}
+<a
+  href="/pixel-reparatur"
+  className="bg-white p-8 rounded-2xl shadow hover:shadow-lg transition block"
+>
+  <h3 className="text-xl font-semibold mb-3">Google Pixel Reparatur</h3>
+  <p className="text-green-700">
+    Reparatur für Google Pixel Geräte – Display, Akku & mehr.
+  </p>
+</a>
+
+{/* Huawei */}
+<a
+  href="/huawei-reparatur"
+  className="bg-white p-8 rounded-2xl shadow hover:shadow-lg transition block"
+>
+  <h3 className="text-xl font-semibold mb-3">Huawei Reparatur</h3>
+  <p className="text-green-700">
+    Reparatur für Huawei Geräte – Display, Akku & mehr.
+  </p>
+</a>
 
           </div>
         </div>

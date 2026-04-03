@@ -8,7 +8,8 @@ import { Helmet } from "react-helmet-async";
 import CookieConsent from "react-cookie-consent";
 import { useEffect } from "react";
 import { AnimatePresence, motion } from "framer-motion";
-import Footer from "./Footer";
+import Footer from "./components/Footer";
+import Navbar from "./components/Navbar";
 
 const GoogleReviews = () => {
   const reviews = [
@@ -148,7 +149,7 @@ export default function OneShopHome() {
   ];
 
   return (
-    <main className="min-h-screen text-green-900 overflow-x-hidden scroll-smooth">
+    <main className="min-h-screen text-green-900 scroll-smooth">
       {/* Geraete Retter Premie Banner*/}
 <motion.div
   initial={{ y: -50, opacity: 0 }}
@@ -197,130 +198,7 @@ export default function OneShopHome() {
         <meta property="og:type" content="website" />
       </Helmet>
 
-      {/* Obere Leiste mit Logo und Navigation */}
-      <nav
-  className={`sticky top-0 z-50 transition-all duration-300 
-  ${scrolled 
-    ? "bg-white shadow-md" 
-    : "bg-white/90 backdrop-blur-md"}
-  `}
->
-  <div className="max-w-7xl mx-auto flex justify-between items-center px-6 py-4">
-
-    <a href="/" className="flex items-center">
-      <img
-        src="/images/logo.png"
-        alt="One 1 Shop Logo"
-        className="h-16"
-      />
-    </a>
-          {/* Mobile Toggle Button */}
-          <div className="md:hidden">
-            <button
-              onClick={() => setNavOpen(!navOpen)}
-              className="text-green-800 focus:outline-none"
-            >
-              {navOpen ? (
-                // X Icon
-                <svg
-                  className="w-7 h-7"
-                  fill="none"
-                  stroke="currentColor"
-                  viewBox="0 0 24 24"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth={2}
-                    d="M6 18L18 6M6 6l12 12"
-                  />
-                </svg>
-              ) : (
-                // Burger Icon
-                <svg
-                  className="w-7 h-7"
-                  fill="none"
-                  stroke="currentColor"
-                  viewBox="0 0 24 24"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth={2}
-                    d="M4 6h16M4 12h16M4 18h16"
-                  />
-                </svg>
-              )}
-            </button>
-          </div>
-
-          <div className="space-x-6 hidden md:block">
-            <a
-              href="#leistungen"
-              className="text-green-800 font-medium transition-all duration-300 hover:underline hover:text-green-600"
-            >
-              Leistungen
-            </a>
-            <a
-              href="#produkte"
-              className="text-green-800 font-medium transition-all duration-300 hover:underline hover:text-green-600"
-            >
-              Produkte
-            </a>
-            <a
-              href="#kontakt"
-              className="text-green-800 font-medium transition-all duration-300 hover:underline hover:text-green-600"
-            >
-              Kontakt
-            </a>
-          </div>
-
-          {/* Mobile Menu */}
-          <AnimatePresence>
-            {navOpen && (
-              <motion.div
-                key="mobile-menu"
-                initial={{ opacity: 0, y: -20 }}
-                animate={{ opacity: 1, y: 0 }}
-                exit={{ opacity: 0, y: -20 }}
-                transition={{ duration: 0.3, ease: "easeInOut" }}
-                className="md:hidden absolute top-full left-0 w-full bg-white shadow-md z-40 py-6 space-y-4 text-center"
-              >
-                <a
-                  href="#leistungen"
-                  onClick={() => setNavOpen(false)}
-                  className="block text-green-800 font-medium hover:underline"
-                >
-                  Leistungen
-                </a>
-                <a
-                  href="#produkte"
-                  onClick={() => setNavOpen(false)}
-                  className="block text-green-800 font-medium hover:underline"
-                >
-                  Produkte
-                </a>
-                <a
-                  href="#kontakt"
-                  onClick={() => setNavOpen(false)}
-                  className="block text-green-800 font-medium hover:underline"
-                >
-                  Kontakt
-                </a>
-                <a
-                  href="/impressum"
-                  onClick={() => setNavOpen(false)}
-                  className="block text-green-800 font-medium hover:underline"
-                >
-                  Impressum
-                </a>
-              </motion.div>
-            )}
-          </AnimatePresence>
-        </div>
-      </nav>
+<Navbar />
 
       {/* Hero-Bereich */}
       <header className="bg-gradient-to-r from-green-800 to-green-500 text-white px-6 py-16 md:py-24">
@@ -346,11 +224,18 @@ export default function OneShopHome() {
               </a>
 
               <a
-                href="https://wa.me/4369917432373"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="bg-green-900 text-white px-6 py-3 rounded-full font-semibold hover:bg-green-700 transition"
-              >
+  href="https://wa.me/4369917432373"
+  target="_blank"
+  rel="noopener noreferrer"
+  onClick={() => {
+    if (window.gtag) {
+      window.gtag("event", "whatsapp_click", {
+        event_category: "contact",
+        event_label: "whatsapp_button"
+      });
+    }
+  }}
+>
                 WhatsApp schreiben
               </a>
             </div>
@@ -779,12 +664,20 @@ export default function OneShopHome() {
 
     <div className="flex flex-col md:flex-row justify-center items-center gap-6 mt-10">
 
-  <a
-    href="tel:+4369917432373"
-    className="bg-green-800 text-white px-6 py-3 rounded-full font-medium hover:bg-green-700"
-  >
-    📞 +43 699 174 32 373
-  </a>
+<a
+  href="tel:+4369917432373"
+  onClick={() => {
+    if (window.gtag) {
+      window.gtag("event", "phone_click", {
+        event_category: "contact",
+        event_label: "phone_button"
+      });
+    }
+  }}
+  className="bg-green-800 text-white px-6 py-3 rounded-full font-medium hover:bg-green-700 transition"
+>
+  📞 +43 699 174 32 373
+</a>
 
   <a
     href="https://wa.me/4369917432373"

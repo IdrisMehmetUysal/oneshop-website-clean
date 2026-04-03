@@ -14,6 +14,13 @@ import KonsolenReparatur from "./KonsolenReparatur";
 import Microsoldering from "./Microsoldering";
 import VerkaufZubehoer from "./VerkaufZubehoer";
 import VertraegeWertgarantie from "./VertraegeWertgarantie";
+import PlaystationReparatur from "./PlaystationReparatur";
+import XboxReparatur from "./XboxReparatur";
+import XiaomiReparatur from "./XiaomiReparatur";
+import PixelReparatur from "./PixelReparatur";
+import HuaweiReparatur from "./HuaweiReparatur";
+
+
 
 ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
@@ -31,6 +38,12 @@ ReactDOM.createRoot(document.getElementById("root")).render(
           <Route path="/microsoldering-st-poelten" element={<Microsoldering />} />
           <Route path="/handy-verkauf-zubehoer-st-poelten" element={<VerkaufZubehoer />} />
           <Route path="/handyvertraege-wertgarantie-st-poelten" element={<VertraegeWertgarantie />} />
+          <Route path="/playstation-reparatur" element={<PlaystationReparatur />} />
+          <Route path="/xbox-reparatur" element={<XboxReparatur />} />
+          <Route path="/xiaomi-reparatur" element={<XiaomiReparatur />} />
+          <Route path="/pixel-reparatur" element={<PixelReparatur />} />
+          <Route path="/huawei-reparatur" element={<HuaweiReparatur />} />
+
         </Routes>
       </BrowserRouter>
     </HelmetProvider>

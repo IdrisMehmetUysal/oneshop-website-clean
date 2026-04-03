@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { Helmet } from "react-helmet-async";
 import { AnimatePresence, motion } from "framer-motion";
-import Footer from "./Footer";
+import Footer from "./components/Footer";
 
 export default function KonsolenReparatur() {
   const [navOpen, setNavOpen] = useState(false);
@@ -209,6 +209,30 @@ export default function KonsolenReparatur() {
           <h2 className="text-3xl md:text-4xl font-bold text-center mb-12">
             Häufige Konsolen Reparaturen
           </h2>
+
+<div className="grid md:grid-cols-2 gap-6 mb-16">
+
+  <a
+    href="/playstation-reparatur"
+    className="block bg-white p-6 rounded-xl shadow hover:shadow-lg hover:scale-105 transition"
+  >
+    🎮 PlayStation Reparatur
+    <p className="text-sm text-green-700 mt-2">
+      PS4 & PS5 – HDMI, Überhitzung, Lüfter & mehr
+    </p>
+  </a>
+
+  <a
+    href="/xbox-reparatur"
+    className="block bg-white p-6 rounded-xl shadow hover:shadow-lg hover:scale-105 transition"
+  >
+    🎮 Xbox Reparatur
+    <p className="text-sm text-green-700 mt-2">
+      Xbox One & Series X – Reparatur & Service
+    </p>
+  </a>
+
+</div>
 
 <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
   <div className="bg-white rounded-2xl shadow p-6 hover:shadow-lg hover:scale-105 transition-all duration-300">

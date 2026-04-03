@@ -1,6 +1,6 @@
 import React from "react";
 import { Helmet } from "react-helmet-async";
-import Footer from "./Footer";
+import Footer from "./components/Footer";
 
 export default function Impressum() {
   return (
