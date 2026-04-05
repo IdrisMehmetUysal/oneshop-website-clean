@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
-import OneShopHome from "./OneShopHome";
 import Lottie from "lottie-react";
 import phoneAnim from "./loader.json";
+import { Outlet } from "react-router-dom";
 
 
 export default function App() {
@@ -20,5 +20,5 @@ export default function App() {
     );
   }
 
-  return <OneShopHome />;
+  return <Outlet />;
 }

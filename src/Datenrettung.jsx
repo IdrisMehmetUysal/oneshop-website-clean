@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import { Helmet } from "react-helmet-async";
 import { AnimatePresence, motion } from "framer-motion";
-import Footer from "./components/Footer";
 
 export default function Datenrettung() {
   const [navOpen, setNavOpen] = useState(false);
@@ -22,117 +21,7 @@ export default function Datenrettung() {
         <link rel="canonical" href="https://www.one1shop.at/datenrettung-st-poelten" />
       </Helmet>
 
-      <nav className="sticky top-0 z-50 bg-white/90 backdrop-blur-md shadow-md">
-        <div className="max-w-7xl mx-auto flex justify-between items-center px-6 py-4">
-          <a href="/" className="flex items-center">
-            <img
-              src="/images/logo.png"
-              alt="One 1 Shop Logo"
-              className="h-16"
-            />
-          </a>
-
-          <div className="md:hidden">
-            <button
-              onClick={() => setNavOpen(!navOpen)}
-              className="text-green-800 focus:outline-none"
-            >
-              {navOpen ? (
-                <svg
-                  className="w-7 h-7"
-                  fill="none"
-                  stroke="currentColor"
-                  viewBox="0 0 24 24"
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth={2}
-                    d="M6 18L18 6M6 6l12 12"
-                  />
-                </svg>
-              ) : (
-                <svg
-                  className="w-7 h-7"
-                  fill="none"
-                  stroke="currentColor"
-                  viewBox="0 0 24 24"
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth={2}
-                    d="M4 6h16M4 12h16M4 18h16"
-                  />
-                </svg>
-              )}
-            </button>
-          </div>
-
-          <div className="space-x-6 hidden md:block">
-            <a
-              href="/#leistungen"
-              className="text-green-800 font-medium transition-all duration-300 hover:underline hover:text-green-600"
-            >
-              Leistungen
-            </a>
-            <a
-              href="/#produkte"
-              className="text-green-800 font-medium transition-all duration-300 hover:underline hover:text-green-600"
-            >
-              Produkte
-            </a>
-            <a
-              href="/#kontakt"
-              className="text-green-800 font-medium transition-all duration-300 hover:underline hover:text-green-600"
-            >
-              Kontakt
-            </a>
-          </div>
-
-          <AnimatePresence>
-            {navOpen && (
-              <motion.div
-                key="mobile-menu"
-                initial={{ opacity: 0, y: -20 }}
-                animate={{ opacity: 1, y: 0 }}
-                exit={{ opacity: 0, y: -20 }}
-                transition={{ duration: 0.3, ease: "easeInOut" }}
-                className="md:hidden absolute top-full left-0 w-full bg-white shadow-md z-40 py-6 space-y-4 text-center"
-              >
-                <a
-                  href="/#leistungen"
-                  onClick={() => setNavOpen(false)}
-                  className="block text-green-800 font-medium hover:underline"
-                >
-                  Leistungen
-                </a>
-                <a
-                  href="/#produkte"
-                  onClick={() => setNavOpen(false)}
-                  className="block text-green-800 font-medium hover:underline"
-                >
-                  Produkte
-                </a>
-                <a
-                  href="/#kontakt"
-                  onClick={() => setNavOpen(false)}
-                  className="block text-green-800 font-medium hover:underline"
-                >
-                  Kontakt
-                </a>
-                <a
-                  href="/impressum"
-                  onClick={() => setNavOpen(false)}
-                  className="block text-green-800 font-medium hover:underline"
-                >
-                  Impressum
-                </a>
-              </motion.div>
-            )}
-          </AnimatePresence>
-        </div>
-      </nav>
+      
 
       <section className="bg-gradient-to-r from-green-800 to-green-500 text-white px-6 py-16 md:py-24">
         <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-10 items-center">
@@ -335,7 +224,6 @@ export default function Datenrettung() {
         </div>
       </section>
 
-      <Footer />
     </main>
   );
 }

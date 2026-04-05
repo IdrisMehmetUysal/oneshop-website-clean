@@ -1,6 +1,5 @@
 import React from "react";
 import { Helmet } from "react-helmet-async";
-import Footer from "./components/Footer";
 
 
 export default function Datenschutz() {
@@ -16,23 +15,7 @@ export default function Datenschutz() {
         <link rel="canonical" href="https://www.one1shop.at/datenschutz" />
       </Helmet>
 
-      {/* Header */}
-      <nav className="sticky top-0 z-50 bg-white/90 backdrop-blur-md shadow-md">
-        <div className="max-w-7xl mx-auto flex justify-between items-center px-6 py-4">
-          <a href="/">
-            <img
-              src="/images/logo.png"
-              alt="One 1 Shop Logo"
-              className="h-16"
-            />
-          </a>
-          <div className="space-x-6 hidden md:block">
-            <a href="/" className="text-green-800 font-medium hover:underline">
-              Startseite
-            </a>
-          </div>
-        </div>
-      </nav>
+
 
       {/* Inhalt */}
       <main className="flex-grow py-24 px-6 max-w-4xl mx-auto space-y-6">
@@ -71,8 +54,6 @@ export default function Datenschutz() {
         </p>
       </main>
 
-      {/* Footer */}
-      <Footer />
     </div>
   );
 }

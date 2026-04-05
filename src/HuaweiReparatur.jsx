@@ -18,34 +18,7 @@ export default function HuaweiReparatur() {
         <link rel="canonical" href="https://www.one1shop.at/huawei-reparatur" />
       </Helmet>
 
-      {/* NAV */}
-      <nav className="sticky top-0 z-50 bg-white/90 backdrop-blur-md shadow-md">
-        <div className="max-w-7xl mx-auto flex justify-between items-center px-6 py-4">
-          <a href="/">
-            <img src="/images/logo.png" alt="Logo" className="h-16" />
-          </a>
 
-          <div className="md:hidden">
-            <button onClick={() => setNavOpen(!navOpen)}>☰</button>
-          </div>
-
-          <div className="hidden md:flex gap-6">
-            <a href="/#leistungen">Leistungen</a>
-            <a href="/#produkte">Produkte</a>
-            <a href="/#kontakt">Kontakt</a>
-          </div>
-
-          <AnimatePresence>
-            {navOpen && (
-              <motion.div className="absolute top-full left-0 w-full bg-white text-center py-6 space-y-4">
-                <a href="/#leistungen">Leistungen</a>
-                <a href="/#produkte">Produkte</a>
-                <a href="/#kontakt">Kontakt</a>
-              </motion.div>
-            )}
-          </AnimatePresence>
-        </div>
-      </nav>
 
       {/* HERO */}
       <section className="bg-gradient-to-r from-green-800 to-green-500 text-white px-6 py-20 text-center">
@@ -156,7 +129,6 @@ export default function HuaweiReparatur() {
         </a>
       </section>
 
-      <Footer />
     </main>
   );
 }

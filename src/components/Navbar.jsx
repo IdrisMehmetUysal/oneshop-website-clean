@@ -6,17 +6,15 @@ export default function Navbar() {
 
   return (
     <nav className="sticky top-0 z-50 bg-white/90 backdrop-blur-md shadow-md">
-      <div className="max-w-7xl mx-auto flex justify-between items-center px-6 py-4">
+      <div className="max-w-7xl mx-auto flex justify-between items-center px-4 md:px-6 py-3 md:py-4">
 
         {/* LOGO */}
         <a href="/" className="flex items-center">
-          <img src="/images/logo.png" alt="Logo" className="h-16" />
+          <img src="/images/logo.png" alt="Logo" className="h-12 md:h-16" />
         </a>
 
         {/* DESKTOP NAV */}
         <div className="hidden md:flex gap-6 relative">
-
-          {/* LEISTUNGEN DROPDOWN */}
           <div className="group relative">
             <span className="cursor-pointer text-green-800 font-medium hover:text-green-600">
               Leistungen
@@ -31,7 +29,7 @@ export default function Navbar() {
                     <a href="/iphone-reparatur-st-poelten">iPhone</a>
                     <a href="/samsung-reparatur-st-poelten">Samsung</a>
                     <a href="/xiaomi-reparatur">Xiaomi</a>
-                    <a href="/pixel-reparatur">Google Pixel</a>
+                    <a href="/pixel-reparatur">Pixel</a>
                     <a href="/huawei-reparatur">Huawei</a>
                   </div>
                 </div>
@@ -60,30 +58,55 @@ export default function Navbar() {
 
         {/* MOBILE BUTTON */}
         <div className="md:hidden">
-          <button onClick={() => setNavOpen(!navOpen)}>☰</button>
+          <button
+            onClick={() => setNavOpen(!navOpen)}
+            className="text-2xl text-green-800"
+          >
+            {navOpen ? "✕" : "☰"}
+          </button>
         </div>
-
-        {/* MOBILE MENU */}
-        <AnimatePresence>
-          {navOpen && (
-            <motion.div
-              initial={{ opacity: 0, y: -20 }}
-              animate={{ opacity: 1, y: 0 }}
-              exit={{ opacity: 0, y: -20 }}
-              className="absolute top-full left-0 w-full bg-white text-center py-6"
-            >
-              <a href="/iphone-reparatur-st-poelten">iPhone</a><br />
-              <a href="/samsung-reparatur-st-poelten">Samsung</a><br />
-              <a href="/xiaomi-reparatur">Xiaomi</a><br />
-              <a href="/pixel-reparatur">Pixel</a><br />
-              <a href="/huawei-reparatur">Huawei</a><br />
-              <a href="/konsolen-reparatur-st-poelten">Konsolen</a><br />
-              <a href="/#kontakt">Kontakt</a>
-            </motion.div>
-          )}
-        </AnimatePresence>
-
       </div>
+
+      {/* MOBILE MENU */}
+      <AnimatePresence>
+        {navOpen && (
+          <motion.div
+            initial={{ opacity: 0, y: -20 }}
+            animate={{ opacity: 1, y: 0 }}
+            exit={{ opacity: 0, y: -20 }}
+            className="md:hidden bg-white px-6 py-6 space-y-4 shadow-lg"
+          >
+
+            <p className="font-semibold text-green-900">Leistungen</p>
+
+            <a href="/iphone-reparatur-st-poelten" className="block text-green-800">iPhone Reparatur</a>
+            <a href="/samsung-reparatur-st-poelten" className="block text-green-800">Samsung Reparatur</a>
+            <a href="/xiaomi-reparatur" className="block text-green-800">Xiaomi</a>
+            <a href="/pixel-reparatur" className="block text-green-800">Pixel</a>
+            <a href="/huawei-reparatur" className="block text-green-800">Huawei</a>
+
+            <div className="border-t pt-3">
+              <a href="/konsolen-reparatur-st-poelten" className="block text-green-800">Konsolen</a>
+              <a href="/microsoldering-st-poelten" className="block text-green-800">Microsoldering</a>
+              <a href="/datenrettung-st-poelten" className="block text-green-800">Datenrettung</a>
+            </div>
+
+            <div className="border-t pt-3">
+              <a href="/#produkte" className="block text-green-800">Produkte</a>
+              <a href="/#kontakt" className="block text-green-800">Kontakt</a>
+            </div>
+
+            {/* 🔥 CTA BUTTON */}
+            <a
+              href="https://wa.me/4369917432373"
+              className="block bg-green-600 text-white text-center py-3 rounded-full font-semibold mt-4"
+            >
+              💬 WhatsApp schreiben
+            </a>
+
+          </motion.div>
+        )}
+      </AnimatePresence>
     </nav>
   );
 }

@@ -1,25 +1,11 @@
 import React from "react";
 import { Helmet } from "react-helmet-async";
-import Footer from "./components/Footer";
 
 export default function XiaomiReparatur() {
   return (
     <main className="min-h-screen text-green-900">
 
-      {/* NAVBAR */}
-      <nav className="sticky top-0 z-50 bg-white/90 backdrop-blur-md shadow-md">
-        <div className="max-w-7xl mx-auto flex justify-between items-center px-6 py-4">
-          <a href="/" className="flex items-center">
-            <img src="/images/logo.png" alt="One 1 Shop Logo" className="h-16" />
-          </a>
 
-          <div className="space-x-6 hidden md:block">
-            <a href="/#leistungen" className="text-green-800 font-medium hover:underline">Leistungen</a>
-            <a href="/#produkte" className="text-green-800 font-medium hover:underline">Produkte</a>
-            <a href="/#kontakt" className="text-green-800 font-medium hover:underline">Kontakt</a>
-          </div>
-        </div>
-      </nav>
 
       {/* SEO */}
       <Helmet>
@@ -179,8 +165,6 @@ export default function XiaomiReparatur() {
         </a>
       </section>
 
-      {/* FOOTER */}
-      <Footer />
 
     </main>
   );
