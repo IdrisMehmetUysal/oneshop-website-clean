@@ -18,7 +18,7 @@ export default function Microsoldering() {
           content="Microsoldering St. Pölten, Platinen Reparatur St. Pölten, Motherboard Reparatur St. Pölten, Handy Platine reparieren St. Pölten, One 1 Shop"
         />
         <meta name="robots" content="index, follow" />
-        <link rel="canonical" href="https://www.one1shop.at/microsoldering-st-poelten" />
+        <link rel="canonical" href="https://www.one1shop.at/microsoldering" />
       </Helmet>
 
       
@@ -173,23 +173,23 @@ export default function Microsoldering() {
     Handy Reparaturen
   </a>
   ,{" "}
-  <a href="/datenrettung-st-poelten" className="underline hover:text-green-600">
+  <a href="/datenrettung" className="underline hover:text-green-600">
     Datenrettung
   </a>
   ,{" "}
-  <a href="/konsolen-reparatur-st-poelten" className="underline hover:text-green-600">
+  <a href="/konsolen-reparatur" className="underline hover:text-green-600">
     Konsolen Reparatur
   </a>
   ,{" "}
-  <a href="/iphone-reparatur-st-poelten" className="underline hover:text-green-600">
+  <a href="/iphone-reparatur" className="underline hover:text-green-600">
     iPhone Reparaturen
   </a>
   ,{" "}
-  <a href="/samsung-reparatur-st-poelten" className="underline hover:text-green-600">
+  <a href="/samsung-reparatur" className="underline hover:text-green-600">
     Samsung Reparaturen
   </a>{" "}
   sowie den{" "}
-  <a href="/handy-verkauf-zubehoer-st-poelten" className="underline hover:text-green-600">
+  <a href="/handy-verkauf-zubehoer" className="underline hover:text-green-600">
     Verkauf von Geräten und Zubehör
   </a>{" "}
   an.

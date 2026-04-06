@@ -17,7 +17,7 @@ export default function SamsungReparatur() {
           name="keywords"
           content="Samsung Reparatur St. Pölten, Samsung Display Reparatur St. Pölten, Samsung Akku tauschen St. Pölten, Samsung Wasserschaden St. Pölten, Handy Reparatur St. Pölten, One 1 Shop"
         />
-        <link rel="canonical" href="https://www.one1shop.at/samsung-reparatur-st-poelten" />
+        <link rel="canonical" href="https://www.one1shop.at/samsung-reparatur" />
       </Helmet>
 
       
@@ -179,15 +179,15 @@ export default function SamsungReparatur() {
     Handy Reparaturen
   </a>
   ,{" "}
-  <a href="/datenrettung-st-poelten" className="underline hover:text-green-600">
+  <a href="/datenrettung" className="underline hover:text-green-600">
     Datenrettung
   </a>
   ,{" "}
-  <a href="/konsolen-reparatur-st-poelten" className="underline hover:text-green-600">
+  <a href="/konsolen-reparatur" className="underline hover:text-green-600">
     Konsolenservice
   </a>{" "}
   sowie den{" "}
-  <a href="/handy-verkauf-zubehoer-st-poelten" className="underline hover:text-green-600">
+  <a href="/handy-verkauf-zubehoer" className="underline hover:text-green-600">
     Verkauf von Geräten und Zubehör
   </a>{" "}
   an.

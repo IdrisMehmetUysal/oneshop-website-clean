@@ -18,7 +18,7 @@ export default function KonsolenReparatur() {
           content="Konsolen Reparatur St. Pölten, HDMI Reparatur Konsole St. Pölten, PS5 Reparatur St. Pölten, Xbox Reparatur St. Pölten, Wärmeleitpaste Konsole St. Pölten, One 1 Shop"
         />
         <meta name="robots" content="index, follow" />
-        <link rel="canonical" href="https://www.one1shop.at/konsolen-reparatur-st-poelten" />
+        <link rel="canonical" href="https://www.one1shop.at/konsolen-reparatur" />
       </Helmet>
 
      
@@ -120,6 +120,26 @@ export default function KonsolenReparatur() {
       Xbox One & Series X – Reparatur & Service
     </p>
   </a>
+
+<a
+  href="/switch-reparatur"
+  className="block bg-white p-6 rounded-xl shadow hover:shadow-lg hover:scale-105 transition"
+>
+  🎮 Nintendo Switch Reparatur
+  <p className="text-sm text-green-700 mt-2">
+    Joy-Con Drift, Display, Akku & Ladeprobleme
+  </p>
+</a>
+
+<a
+  href="/konsolen-reparatur"
+  className="block bg-white p-6 rounded-xl shadow hover:shadow-lg hover:scale-105 transition"
+>
+  🎮 Weitere Konsolen
+  <p className="text-sm text-green-700 mt-2">
+    Nintendo, ältere Modelle & Spezialfälle – wir helfen weiter
+  </p>
+</a>
 
 </div>
 
@@ -245,19 +265,19 @@ export default function KonsolenReparatur() {
     Handy Reparaturen
   </a>
   ,{" "}
-  <a href="/datenrettung-st-poelten" className="underline hover:text-green-600">
+  <a href="/datenrettung" className="underline hover:text-green-600">
     Datenrettung
   </a>
   ,{" "}
-  <a href="/iphone-reparatur-st-poelten" className="underline hover:text-green-600">
+  <a href="/iphone-reparatur" className="underline hover:text-green-600">
     iPhone Reparaturen
   </a>
   ,{" "}
-  <a href="/samsung-reparatur-st-poelten" className="underline hover:text-green-600">
+  <a href="/samsung-reparatur" className="underline hover:text-green-600">
     Samsung Reparaturen
   </a>{" "}
   sowie den{" "}
-  <a href="/handy-verkauf-zubehoer-st-poelten" className="underline hover:text-green-600">
+  <a href="/handy-verkauf-zubehoer" className="underline hover:text-green-600">
     Verkauf von Geräten und Zubehör
   </a>{" "}
   an.

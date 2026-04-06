@@ -18,7 +18,7 @@ export default function Datenrettung() {
           content="Datenrettung St. Pölten, Handy Daten retten St. Pölten, Fotos retten Handy St. Pölten, Smartphone Datenrettung St. Pölten, One 1 Shop"
         />
         <meta name="robots" content="index, follow" />
-        <link rel="canonical" href="https://www.one1shop.at/datenrettung-st-poelten" />
+        <link rel="canonical" href="https://www.one1shop.at/datenrettung" />
       </Helmet>
 
       
@@ -177,19 +177,19 @@ export default function Datenrettung() {
     Handy Reparaturen
   </a>
   ,{" "}
-  <a href="/iphone-reparatur-st-poelten" className="underline hover:text-green-600">
+  <a href="/iphone-reparatur" className="underline hover:text-green-600">
     iPhone Reparaturen
   </a>
   ,{" "}
-  <a href="/samsung-reparatur-st-poelten" className="underline hover:text-green-600">
+  <a href="/samsung-reparatur" className="underline hover:text-green-600">
     Samsung Reparaturen
   </a>
   ,{" "}
-  <a href="/konsolen-reparatur-st-poelten" className="underline hover:text-green-600">
+  <a href="/konsolen-reparatur" className="underline hover:text-green-600">
     Konsolenservice
   </a>{" "}
   sowie den{" "}
-  <a href="/handy-verkauf-zubehoer-st-poelten" className="underline hover:text-green-600">
+  <a href="/handy-verkauf-zubehoer" className="underline hover:text-green-600">
     Verkauf von Geräten und Zubehör
   </a>{" "}
   an.

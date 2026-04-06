@@ -18,7 +18,7 @@ export default function VerkaufZubehoer() {
           content="Handy Verkauf St. Pölten, Smartphone Zubehör St. Pölten, gebrauchte Handys St. Pölten, refurbished Handys St. Pölten, Handyshop St. Pölten, One 1 Shop"
         />
         <meta name="robots" content="index, follow" />
-        <link rel="canonical" href="https://www.one1shop.at/handy-verkauf-zubehoer-st-poelten" />
+        <link rel="canonical" href="https://www.one1shop.at/handy-verkauf-zubehoer" />
       </Helmet>
 
       
@@ -173,23 +173,23 @@ export default function VerkaufZubehoer() {
     Handy Reparaturen
   </a>
   ,{" "}
-  <a href="/datenrettung-st-poelten" className="underline hover:text-green-600">
+  <a href="/datenrettung" className="underline hover:text-green-600">
     Datenrettung
   </a>
   ,{" "}
-  <a href="/konsolen-reparatur-st-poelten" className="underline hover:text-green-600">
+  <a href="/konsolen-reparatur" className="underline hover:text-green-600">
     Konsolen Reparatur
   </a>
   ,{" "}
-  <a href="/microsoldering-st-poelten" className="underline hover:text-green-600">
+  <a href="/microsoldering" className="underline hover:text-green-600">
     Microsoldering
   </a>
   ,{" "}
-  <a href="/iphone-reparatur-st-poelten" className="underline hover:text-green-600">
+  <a href="/iphone-reparatur" className="underline hover:text-green-600">
     iPhone Reparaturen
   </a>{" "}
   und{" "}
-  <a href="/samsung-reparatur-st-poelten" className="underline hover:text-green-600">
+  <a href="/samsung-reparatur" className="underline hover:text-green-600">
     Samsung Reparaturen
   </a>{" "}
   an.

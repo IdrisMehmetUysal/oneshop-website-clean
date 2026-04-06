@@ -14,32 +14,45 @@ export default function Navbar() {
         </a>
 
         {/* DESKTOP NAV */}
-        <div className="hidden md:flex gap-6 relative">
+        <div className="hidden md:flex gap-6 items-center relative">
+
+          {/* DROPDOWN */}
           <div className="group relative">
             <span className="cursor-pointer text-green-800 font-medium hover:text-green-600">
               Leistungen
             </span>
 
             <div className="absolute left-0 top-full mt-2 w-64 bg-white shadow-lg rounded-xl opacity-0 group-hover:opacity-100 invisible group-hover:visible transition-all duration-200 z-50">
-              <div className="p-4 space-y-3 text-sm">
+              <div className="p-4 space-y-4 text-sm">
 
+                {/* HANDY */}
                 <div>
                   <p className="font-semibold text-green-900 mb-2">Handy</p>
                   <div className="flex flex-col gap-1">
-                    <a href="/iphone-reparatur-st-poelten">iPhone</a>
-                    <a href="/samsung-reparatur-st-poelten">Samsung</a>
-                    <a href="/xiaomi-reparatur">Xiaomi</a>
-                    <a href="/pixel-reparatur">Pixel</a>
-                    <a href="/huawei-reparatur">Huawei</a>
+                    <a href="/iphone-reparatur" className="hover:text-green-600">iPhone</a>
+                    <a href="/samsung-reparatur" className="hover:text-green-600">Samsung</a>
+                    <a href="/xiaomi-reparatur" className="hover:text-green-600">Xiaomi</a>
+                    <a href="/pixel-reparatur" className="hover:text-green-600">Pixel</a>
+                    <a href="/huawei-reparatur" className="hover:text-green-600">Huawei</a>
                   </div>
                 </div>
 
+                {/* COMPUTER */}
+                <div className="border-t pt-2">
+                  <p className="font-semibold text-green-900 mb-2">Computer</p>
+                  <div className="flex flex-col gap-1">
+                    <a href="/laptop-reparatur" className="hover:text-green-600">Laptop</a>
+                    <a href="/macbook-reparatur" className="hover:text-green-600">MacBook</a>
+                  </div>
+                </div>
+
+                {/* WEITERE */}
                 <div className="border-t pt-2">
                   <p className="font-semibold text-green-900 mb-2">Weitere</p>
                   <div className="flex flex-col gap-1">
-                    <a href="/konsolen-reparatur-st-poelten">Konsolen</a>
-                    <a href="/microsoldering-st-poelten">Microsoldering</a>
-                    <a href="/datenrettung-st-poelten">Datenrettung</a>
+                    <a href="/konsolen-reparatur" className="hover:text-green-600">Konsolen</a>
+                    <a href="/datenrettung" className="hover:text-green-600">Datenrettung</a>
+                    <a href="/microsoldering" className="hover:text-green-600">Microsoldering</a>
                   </div>
                 </div>
 
@@ -47,13 +60,23 @@ export default function Navbar() {
             </div>
           </div>
 
+          {/* LINKS */}
           <a href="/#produkte" className="text-green-800 font-medium hover:text-green-600">
             Produkte
+          </a>
+
+          <a href="/ueber-uns" className="text-green-800 font-medium hover:text-green-600">
+            Über uns
+          </a>
+
+          <a href="/faq" className="text-green-800 font-medium hover:text-green-600">
+            FAQ
           </a>
 
           <a href="/#kontakt" className="text-green-800 font-medium hover:text-green-600">
             Kontakt
           </a>
+
         </div>
 
         {/* MOBILE BUTTON */}
@@ -79,30 +102,37 @@ export default function Navbar() {
 
             <p className="font-semibold text-green-900">Leistungen</p>
 
-            <a href="/iphone-reparatur-st-poelten" className="block text-green-800">iPhone Reparatur</a>
-            <a href="/samsung-reparatur-st-poelten" className="block text-green-800">Samsung Reparatur</a>
+            {/* HANDY */}
+            <a href="/iphone-reparatur" className="block text-green-800">iPhone</a>
+            <a href="/samsung-reparatur" className="block text-green-800">Samsung</a>
             <a href="/xiaomi-reparatur" className="block text-green-800">Xiaomi</a>
             <a href="/pixel-reparatur" className="block text-green-800">Pixel</a>
             <a href="/huawei-reparatur" className="block text-green-800">Huawei</a>
 
+            {/* COMPUTER */}
             <div className="border-t pt-3">
-              <a href="/konsolen-reparatur-st-poelten" className="block text-green-800">Konsolen</a>
-              <a href="/microsoldering-st-poelten" className="block text-green-800">Microsoldering</a>
-              <a href="/datenrettung-st-poelten" className="block text-green-800">Datenrettung</a>
+              <a href="/laptop-reparatur" className="block text-green-800">Laptop</a>
+              <a href="/macbook-reparatur" className="block text-green-800">MacBook</a>
             </div>
 
+            {/* WEITERE */}
+            <div className="border-t pt-3">
+              <a href="/konsolen-reparatur" className="block text-green-800">Konsolen</a>
+              <a href="/datenrettung" className="block text-green-800">Datenrettung</a>
+              <a href="/microsoldering" className="block text-green-800">Microsoldering</a>
+            </div>
+
+            {/* EXTRA PAGES */}
+            <div className="border-t pt-3">
+              <a href="/ueber-uns" className="block text-green-800">Über uns</a>
+              <a href="/faq" className="block text-green-800">FAQ</a>
+            </div>
+
+            {/* NAV */}
             <div className="border-t pt-3">
               <a href="/#produkte" className="block text-green-800">Produkte</a>
               <a href="/#kontakt" className="block text-green-800">Kontakt</a>
             </div>
-
-            {/* 🔥 CTA BUTTON */}
-            <a
-              href="https://wa.me/4369917432373"
-              className="block bg-green-600 text-white text-center py-3 rounded-full font-semibold mt-4"
-            >
-              💬 WhatsApp schreiben
-            </a>
 
           </motion.div>
         )}

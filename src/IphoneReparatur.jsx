@@ -18,7 +18,7 @@ export default function IphoneReparatur() {
           name="keywords"
           content="iPhone Reparatur St. Pölten, iPhone Display Reparatur St. Pölten, iPhone Akku tauschen St. Pölten, iPhone Wasserschaden St. Pölten, One 1 Shop"
         />
-        <link rel="canonical" href="https://www.one1shop.at/iphone-reparatur-st-poelten" />
+        <link rel="canonical" href="https://www.one1shop.at/iphone-reparatur" />
       </Helmet>
 
 
@@ -180,11 +180,11 @@ export default function IphoneReparatur() {
     Datenrettung
   </a>
   ,{" "}
-  <a href="/konsolen-reparatur-st-poelten" className="underline hover:text-green-600">
+  <a href="/konsolen-reparatur" className="underline hover:text-green-600">
     Konsolenservice
   </a>{" "}
   sowie den{" "}
-  <a href="/handy-verkauf-zubehoer-st-poelten" className="underline hover:text-green-600">
+  <a href="/handy-verkauf-zubehoer" className="underline hover:text-green-600">
     Verkauf von Geräten und Zubehör
   </a>{" "}
   an.

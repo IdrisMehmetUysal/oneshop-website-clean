@@ -141,8 +141,8 @@ export default function PixelReparatur() {
         <h2 className="text-2xl font-bold mb-6">Weitere Reparaturen</h2>
 
         <div className="flex flex-wrap justify-center gap-4">
-          <a href="/iphone-reparatur-st-poelten" className="underline">iPhone Reparatur</a>
-          <a href="/samsung-reparatur-st-poelten" className="underline">Samsung Reparatur</a>
+          <a href="/iphone-reparatur" className="underline">iPhone Reparatur</a>
+          <a href="/samsung-reparatur" className="underline">Samsung Reparatur</a>
           <a href="/xiaomi-reparatur" className="underline">Xiaomi Reparatur</a>
         </div>
       </section>

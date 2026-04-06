@@ -60,7 +60,7 @@ export default function HandyReparatur() {
 
             {/* iPhone */}
             <a
-              href="/iphone-reparatur-st-poelten"
+              href="/iphone-reparatur"
               className="bg-white p-8 rounded-2xl shadow hover:shadow-lg transition block"
             >
               <h3 className="text-xl font-semibold mb-3">iPhone Reparatur</h3>
@@ -71,7 +71,7 @@ export default function HandyReparatur() {
 
             {/* Samsung */}
             <a
-              href="/samsung-reparatur-st-poelten"
+              href="/samsung-reparatur"
               className="bg-white p-8 rounded-2xl shadow hover:shadow-lg transition block"
             >
               <h3 className="text-xl font-semibold mb-3">Samsung Reparatur</h3>
