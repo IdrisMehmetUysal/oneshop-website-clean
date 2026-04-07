@@ -272,54 +272,44 @@ export default function KonsolenReparatur() {
           <h2 className="text-3xl md:text-4xl font-bold mb-6">
             Weitere Leistungen
           </h2>
-<p className="text-lg text-green-800 leading-8">
-  Neben der Konsolen Reparatur in St. Pölten bieten wir auch{" "}
-
-  <Link
-    to="/handy-reparatur-st-poelten"
-    className="underline hover:text-green-600"
-  >
-    Handy Reparaturen
-  </Link>
-
-  ,{" "}
-
-  <Link
-    to="/datenrettung-st-poelten"
-    className="underline hover:text-green-600"
-  >
-    Datenrettung
-  </Link>
-
-  ,{" "}
-
-  <Link
-    to="/iphone-reparatur"
-    className="underline hover:text-green-600"
-  >
-    iPhone Reparaturen
-  </Link>
-
-  ,{" "}
-
-  <Link
-    to="/samsung-reparatur"
-    className="underline hover:text-green-600"
-  >
-    Samsung Reparaturen
-  </Link>{" "}
-
-  sowie den{" "}
-
-  <Link
-    to="/handy-verkauf-zubehoer"
-    className="underline hover:text-green-600"
-  >
-    Verkauf von Geräten und Zubehör
-  </Link>{" "}
-
-  an.
-</p>
+          <p className="text-lg text-green-800 leading-8">
+            Neben der Konsolen Reparatur in St. Pölten bieten wir auch{" "}
+            <Link
+              to="/handy-reparatur-st-poelten"
+              className="underline hover:text-green-600"
+            >
+              Handy Reparaturen
+            </Link>
+            ,{" "}
+            <Link
+              to="/datenrettung-st-poelten"
+              className="underline hover:text-green-600"
+            >
+              Datenrettung
+            </Link>
+            ,{" "}
+            <Link
+              to="/iphone-reparatur"
+              className="underline hover:text-green-600"
+            >
+              iPhone Reparaturen
+            </Link>
+            ,{" "}
+            <Link
+              to="/samsung-reparatur"
+              className="underline hover:text-green-600"
+            >
+              Samsung Reparaturen
+            </Link>{" "}
+            sowie den{" "}
+            <Link
+              to="/handy-verkauf-zubehoer"
+              className="underline hover:text-green-600"
+            >
+              Verkauf von Geräten und Zubehör
+            </Link>{" "}
+            an.
+          </p>
         </div>
       </section>
 

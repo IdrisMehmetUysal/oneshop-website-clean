@@ -736,24 +736,24 @@ export default function OneShopHome() {
         </motion.div>
       )}
 
-<a
-  href="https://wa.me/4369917432373"
-  target="_blank"
-  rel="noopener noreferrer"
-  onClick={() => {
-    if (window.gtag) {
-      window.gtag("event", "whatsapp_click", {
-        event_category: "contact",
-        event_label: "floating_button",
-        value: 1,
-        page: window.location.pathname,
-      });
-    }
-  }}
-  className="fixed bottom-6 right-6 bg-green-600 text-white px-5 py-3 rounded-full shadow-lg z-50 hover:bg-green-500 transition"
->
-  💬 WhatsApp
-</a>
+      <a
+        href="https://wa.me/4369917432373"
+        target="_blank"
+        rel="noopener noreferrer"
+        onClick={() => {
+          if (window.gtag) {
+            window.gtag("event", "whatsapp_click", {
+              event_category: "contact",
+              event_label: "floating_button",
+              value: 1,
+              page: window.location.pathname,
+            });
+          }
+        }}
+        className="fixed bottom-6 right-6 bg-green-600 text-white px-5 py-3 rounded-full shadow-lg z-50 hover:bg-green-500 transition"
+      >
+        💬 WhatsApp
+      </a>
     </main>
   );
 }

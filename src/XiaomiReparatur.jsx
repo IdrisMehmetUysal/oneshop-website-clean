@@ -5,12 +5,11 @@ import { Link } from "react-router-dom";
 export default function XiaomiReparatur() {
   return (
     <main className="min-h-screen text-green-900">
-
-
-
       {/* SEO */}
       <Helmet>
-        <title>Xiaomi Reparatur St. Pölten | Mi, Redmi & Poco Service | One 1 Shop</title>
+        <title>
+          Xiaomi Reparatur St. Pölten | Mi, Redmi & Poco Service | One 1 Shop
+        </title>
         <meta
           name="description"
           content="Xiaomi Reparatur in St. Pölten für Mi, Redmi & Poco Geräte. Display, Akku, Ladeprobleme und Ersatzteile schnell & zuverlässig bei One 1 Shop."
@@ -30,8 +29,9 @@ export default function XiaomiReparatur() {
           </h1>
 
           <p className="text-lg text-green-100 mb-8">
-            Dein Xiaomi ist kaputt? Display gebrochen, Akku schwach oder lädt nicht mehr?
-            Wir reparieren dein Gerät schnell und zuverlässig – egal ob Mi, Redmi oder Poco.
+            Dein Xiaomi ist kaputt? Display gebrochen, Akku schwach oder lädt
+            nicht mehr? Wir reparieren dein Gerät schnell und zuverlässig – egal
+            ob Mi, Redmi oder Poco.
           </p>
 
           <a
@@ -53,12 +53,15 @@ export default function XiaomiReparatur() {
           </h2>
 
           <p className="text-green-800 leading-8 mb-4">
-            Xiaomi Smartphones bieten viel Leistung für einen guten Preis, aber genau das bringt auch Herausforderungen mit sich.
-            Je nach Modell unterscheiden sich Aufbau und Ersatzteile stark – besonders bei Redmi und Poco Geräten.
+            Xiaomi Smartphones bieten viel Leistung für einen guten Preis, aber
+            genau das bringt auch Herausforderungen mit sich. Je nach Modell
+            unterscheiden sich Aufbau und Ersatzteile stark – besonders bei
+            Redmi und Poco Geräten.
           </p>
 
           <p className="text-green-800 leading-8">
-            Wir kennen die Unterschiede zwischen den Modellen und wissen, worauf es bei einer schnellen und sauberen Reparatur ankommt.
+            Wir kennen die Unterschiede zwischen den Modellen und wissen, worauf
+            es bei einer schnellen und sauberen Reparatur ankommt.
           </p>
         </div>
       </section>
@@ -71,20 +74,20 @@ export default function XiaomiReparatur() {
           </h2>
 
           <div className="grid md:grid-cols-2 gap-8">
-
             <div className="bg-white p-6 rounded-xl shadow">
               <h3 className="font-semibold text-xl mb-3">Displaybruch</h3>
               <p className="text-green-700">
-                Xiaomi Displays sind oft groß und empfindlich – ein Sturz reicht und sie springen.
-                Wir tauschen dein Display schnell und sauber aus.
+                Xiaomi Displays sind oft groß und empfindlich – ein Sturz reicht
+                und sie springen. Wir tauschen dein Display schnell und sauber
+                aus.
               </p>
             </div>
 
             <div className="bg-white p-6 rounded-xl shadow">
               <h3 className="font-semibold text-xl mb-3">Akku schnell leer</h3>
               <p className="text-green-700">
-                Besonders bei intensiver Nutzung verlieren Xiaomi Akkus schnell an Leistung.
-                Wir prüfen und tauschen den Akku bei Bedarf.
+                Besonders bei intensiver Nutzung verlieren Xiaomi Akkus schnell
+                an Leistung. Wir prüfen und tauschen den Akku bei Bedarf.
               </p>
             </div>
 
@@ -97,13 +100,15 @@ export default function XiaomiReparatur() {
             </div>
 
             <div className="bg-white p-6 rounded-xl shadow">
-              <h3 className="font-semibold text-xl mb-3">Ersatzteile schwer verfügbar</h3>
+              <h3 className="font-semibold text-xl mb-3">
+                Ersatzteile schwer verfügbar
+              </h3>
               <p className="text-green-700">
-                Bei manchen Xiaomi Modellen sind Ersatzteile nicht sofort verfügbar.
-                Wir beraten dich ehrlich und finden die beste Lösung für dein Gerät.
+                Bei manchen Xiaomi Modellen sind Ersatzteile nicht sofort
+                verfügbar. Wir beraten dich ehrlich und finden die beste Lösung
+                für dein Gerät.
               </p>
             </div>
-
           </div>
         </div>
       </section>
@@ -111,17 +116,16 @@ export default function XiaomiReparatur() {
       {/* ABLAUF */}
       <section className="py-20 px-6 bg-white">
         <div className="max-w-4xl mx-auto text-center">
-          <h2 className="text-3xl font-bold mb-6">
-            So läuft die Reparatur ab
-          </h2>
+          <h2 className="text-3xl font-bold mb-6">So läuft die Reparatur ab</h2>
 
           <p className="text-green-800 mb-6">
-            Komm einfach direkt zu uns nach St. Pölten.
-            Wir schauen uns dein Xiaomi Gerät an und sagen dir sofort, was möglich ist.
+            Komm einfach direkt zu uns nach St. Pölten. Wir schauen uns dein
+            Xiaomi Gerät an und sagen dir sofort, was möglich ist.
           </p>
 
           <p className="text-green-800">
-            Viele Reparaturen erledigen wir schnell – damit du dein Handy nicht lange vermisst ⚡
+            Viele Reparaturen erledigen wir schnell – damit du dein Handy nicht
+            lange vermisst ⚡
           </p>
         </div>
       </section>
@@ -134,31 +138,39 @@ export default function XiaomiReparatur() {
           </h2>
 
           <p className="text-green-800">
-            Direkt in St. Pölten für dich da – schnell, persönlich und zuverlässig.
+            Direkt in St. Pölten für dich da – schnell, persönlich und
+            zuverlässig.
           </p>
         </div>
       </section>
 
       {/* INTERNE LINKS */}
-<section className="py-20 px-6 bg-white text-center">
-  <h2 className="text-2xl font-bold mb-6">Weitere Reparaturen</h2>
+      <section className="py-20 px-6 bg-white text-center">
+        <h2 className="text-2xl font-bold mb-6">Weitere Reparaturen</h2>
 
-  <div className="flex flex-wrap justify-center gap-4">
-    
-    <Link to="/iphone-reparatur" className="underline hover:text-green-600">
-      iPhone Reparatur
-    </Link>
+        <div className="flex flex-wrap justify-center gap-4">
+          <Link
+            to="/iphone-reparatur"
+            className="underline hover:text-green-600"
+          >
+            iPhone Reparatur
+          </Link>
 
-    <Link to="/samsung-reparatur" className="underline hover:text-green-600">
-      Samsung Reparatur
-    </Link>
+          <Link
+            to="/samsung-reparatur"
+            className="underline hover:text-green-600"
+          >
+            Samsung Reparatur
+          </Link>
 
-    <Link to="/pixel-reparatur" className="underline hover:text-green-600">
-      Google Pixel Reparatur
-    </Link>
-
-  </div>
-</section>
+          <Link
+            to="/pixel-reparatur"
+            className="underline hover:text-green-600"
+          >
+            Google Pixel Reparatur
+          </Link>
+        </div>
+      </section>
 
       {/* CTA */}
       <section className="py-20 px-6 bg-green-800 text-white text-center">
@@ -175,8 +187,6 @@ export default function XiaomiReparatur() {
           💬 WhatsApp schreiben
         </a>
       </section>
-
-
     </main>
   );
 }

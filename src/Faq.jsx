@@ -8,38 +8,81 @@ export default function Faq() {
   const faqs = [
     {
       q: "Wie lange dauert eine Reparatur?",
-      a: "Viele Reparaturen erledigen wir noch am selben Tag. Komplexere Fälle können etwas länger dauern – wir informieren dich aber immer vorab."
+      a: "Viele Reparaturen erledigen wir noch am selben Tag. Komplexere Fälle können etwas länger dauern – wir informieren dich aber immer vorab.",
     },
     {
       q: "Muss ich einen Termin machen?",
-      a: "Nein, du kannst einfach vorbeikommen. Alternativ kannst du uns auch vorab auf WhatsApp schreiben."
+      a: "Nein, du kannst einfach vorbeikommen. Alternativ kannst du uns auch vorab auf WhatsApp schreiben.",
     },
     {
       q: "Was kostet eine Reparatur?",
-      a: "Der Preis hängt vom Schaden ab. Wir geben dir immer vorab eine transparente Einschätzung – ohne versteckte Kosten."
+      a: "Der Preis hängt vom Schaden ab. Wir geben dir immer vorab eine transparente Einschätzung – ohne versteckte Kosten.",
     },
     {
       q: "Werden meine Daten gelöscht?",
-      a: "In den meisten Fällen bleiben deine Daten erhalten. Trotzdem empfehlen wir immer ein Backup."
+      a: "In den meisten Fällen bleiben deine Daten erhalten. Trotzdem empfehlen wir immer ein Backup.",
     },
     {
       q: "Repariert ihr auch Laptops und MacBooks?",
-      a: "Ja, wir reparieren auch Windows Laptops und MacBooks – z.B. Display, Akku, Tastatur oder Ladeprobleme."
+      a: "Ja, wir reparieren auch Windows Laptops und MacBooks – z.B. Display, Akku, Tastatur oder Ladeprobleme.",
     },
     {
       q: "Welche Geräte repariert ihr?",
-      a: "Wir reparieren Smartphones (iPhone, Samsung & mehr), Laptops, MacBooks und Konsolen wie PlayStation, Xbox und Nintendo Switch."
-    }
+      a: "Wir reparieren Smartphones (iPhone, Samsung & mehr), Laptops, MacBooks und Konsolen wie PlayStation, Xbox und Nintendo Switch.",
+    },
   ];
 
   return (
     <main className="min-h-screen text-green-900 bg-white">
-
       <Helmet>
         <title>FAQ – Häufige Fragen | One 1 Shop</title>
         <meta
           name="description"
           content="Antworten auf häufige Fragen zu Handy, Laptop und Konsolen Reparaturen bei One 1 Shop in St. Pölten."
+        />
+
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "FAQPage",
+              mainEntity: [
+                {
+                  "@type": "Question",
+                  name: "Wie lange dauert eine Reparatur?",
+                  acceptedAnswer: {
+                    "@type": "Answer",
+                    text: "Viele Reparaturen erledigen wir noch am selben Tag.",
+                  },
+                },
+                {
+                  "@type": "Question",
+                  name: "Muss ich einen Termin machen?",
+                  acceptedAnswer: {
+                    "@type": "Answer",
+                    text: "Nein, du kannst einfach vorbeikommen oder uns auf WhatsApp schreiben.",
+                  },
+                },
+                {
+                  "@type": "Question",
+                  name: "Was kostet eine Reparatur?",
+                  acceptedAnswer: {
+                    "@type": "Answer",
+                    text: "Das hängt vom Schaden ab – wir geben dir immer vorab eine Einschätzung.",
+                  },
+                },
+                {
+                  "@type": "Question",
+                  name: "Werden meine Daten gelöscht?",
+                  acceptedAnswer: {
+                    "@type": "Answer",
+                    text: "In der Regel bleiben deine Daten erhalten.",
+                  },
+                },
+              ],
+            }),
+          }}
         />
       </Helmet>
 
@@ -56,9 +99,7 @@ export default function Faq() {
 
       {/* FAQ LIST */}
       <section className="py-14 md:py-20 px-4 max-w-3xl mx-auto">
-
         <div className="space-y-4">
-
           {faqs.map((item, index) => (
             <div
               key={index}
@@ -66,9 +107,7 @@ export default function Faq() {
             >
               {/* QUESTION */}
               <button
-                onClick={() =>
-                  setOpenIndex(openIndex === index ? null : index)
-                }
+                onClick={() => setOpenIndex(openIndex === index ? null : index)}
                 className="w-full flex justify-between items-center p-4 text-left font-semibold text-sm md:text-lg"
               >
                 {item.q}
@@ -93,16 +132,12 @@ export default function Faq() {
               </AnimatePresence>
             </div>
           ))}
-
         </div>
-
       </section>
 
       {/* CTA */}
       <section className="py-16 md:py-20 px-4 text-center bg-green-50">
-        <h2 className="text-xl md:text-3xl font-bold mb-4">
-          Noch Fragen?
-        </h2>
+        <h2 className="text-xl md:text-3xl font-bold mb-4">Noch Fragen?</h2>
 
         <p className="text-green-800 mb-6 text-sm md:text-lg">
           Schreib uns einfach – wir helfen dir sofort weiter.
@@ -115,7 +150,6 @@ export default function Faq() {
           💬 WhatsApp schreiben
         </a>
       </section>
-
     </main>
   );
 }

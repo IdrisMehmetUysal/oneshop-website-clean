@@ -5,9 +5,10 @@ import { Link } from "react-router-dom";
 export default function SwitchReparatur() {
   return (
     <main className="min-h-screen text-green-900">
-
       <Helmet>
-        <title>Nintendo Switch Reparatur St. Pölten | Joy-Con, Display & mehr</title>
+        <title>
+          Nintendo Switch Reparatur St. Pölten | Joy-Con, Display & mehr
+        </title>
         <meta
           name="description"
           content="Nintendo Switch Reparatur in St. Pölten – Joy-Con Drift, Display, Ladeprobleme & mehr. Schnell und zuverlässig direkt vor Ort."
@@ -22,8 +23,9 @@ export default function SwitchReparatur() {
           </h1>
 
           <p className="text-lg text-green-100 mb-8">
-            Deine Nintendo Switch hat ein Problem? Joy-Con Drift, Display defekt oder lädt nicht mehr?
-            Wir reparieren deine Konsole schnell und zuverlässig direkt vor Ort.
+            Deine Nintendo Switch hat ein Problem? Joy-Con Drift, Display defekt
+            oder lädt nicht mehr? Wir reparieren deine Konsole schnell und
+            zuverlässig direkt vor Ort.
           </p>
 
           <a
@@ -43,31 +45,27 @@ export default function SwitchReparatur() {
           </h2>
 
           <div className="grid md:grid-cols-2 gap-8">
-
             <div className="p-6 bg-green-50 rounded-xl">
-              <h3 className="font-semibold text-xl mb-2">
-                Joy-Con Drift
-              </h3>
+              <h3 className="font-semibold text-xl mb-2">Joy-Con Drift</h3>
               <p>
-                Deine Figur bewegt sich von alleine? Wir reparieren oder tauschen deine Joy-Cons professionell.
+                Deine Figur bewegt sich von alleine? Wir reparieren oder
+                tauschen deine Joy-Cons professionell.
               </p>
             </div>
 
             <div className="p-6 bg-green-50 rounded-xl">
-              <h3 className="font-semibold text-xl mb-2">
-                Display defekt
-              </h3>
+              <h3 className="font-semibold text-xl mb-2">Display defekt</h3>
               <p>
-                Bildschirm gesprungen oder kein Bild mehr? Wir tauschen dein Switch Display schnell aus.
+                Bildschirm gesprungen oder kein Bild mehr? Wir tauschen dein
+                Switch Display schnell aus.
               </p>
             </div>
 
             <div className="p-6 bg-green-50 rounded-xl">
-              <h3 className="font-semibold text-xl mb-2">
-                Ladeprobleme
-              </h3>
+              <h3 className="font-semibold text-xl mb-2">Ladeprobleme</h3>
               <p>
-                Deine Switch lädt nicht mehr oder nur schwer? Wir reparieren den Ladeanschluss zuverlässig.
+                Deine Switch lädt nicht mehr oder nur schwer? Wir reparieren den
+                Ladeanschluss zuverlässig.
               </p>
             </div>
 
@@ -76,10 +74,10 @@ export default function SwitchReparatur() {
                 Konsole startet nicht
               </h3>
               <p>
-                Deine Nintendo Switch bleibt schwarz oder startet nicht? Wir finden die Ursache und beheben das Problem.
+                Deine Nintendo Switch bleibt schwarz oder startet nicht? Wir
+                finden die Ursache und beheben das Problem.
               </p>
             </div>
-
           </div>
         </div>
       </section>
@@ -87,9 +85,7 @@ export default function SwitchReparatur() {
       {/* ABLAUF */}
       <section className="py-20 px-6 bg-green-50">
         <div className="max-w-4xl mx-auto text-center">
-          <h2 className="text-3xl font-bold mb-6">
-            So läuft die Reparatur ab
-          </h2>
+          <h2 className="text-3xl font-bold mb-6">So läuft die Reparatur ab</h2>
 
           <p className="text-green-800 mb-6">
             Bring deine Nintendo Switch einfach direkt zu uns nach St. Pölten.
@@ -97,7 +93,8 @@ export default function SwitchReparatur() {
           </p>
 
           <p className="text-green-800">
-            Viele Reparaturen erledigen wir schnell, damit du wieder zocken kannst 🎮
+            Viele Reparaturen erledigen wir schnell, damit du wieder zocken
+            kannst 🎮
           </p>
         </div>
       </section>
@@ -110,37 +107,43 @@ export default function SwitchReparatur() {
           </h2>
 
           <p className="text-green-800">
-            Unser Standort in St. Pölten ist schnell erreichbar und bietet dir persönliche Beratung sowie schnelle Reparaturen direkt vor Ort.
+            Unser Standort in St. Pölten ist schnell erreichbar und bietet dir
+            persönliche Beratung sowie schnelle Reparaturen direkt vor Ort.
           </p>
         </div>
       </section>
 
       {/* INTERNE LINKS */}
-<section className="py-20 px-6 bg-white text-center">
-  <h2 className="text-2xl font-bold mb-6">
-    Weitere Reparaturen
-  </h2>
+      <section className="py-20 px-6 bg-white text-center">
+        <h2 className="text-2xl font-bold mb-6">Weitere Reparaturen</h2>
 
-  <div className="flex flex-wrap justify-center gap-4">
-    
-    <Link to="/konsolen-reparatur" className="underline hover:text-green-600">
-      Konsolen Reparatur
-    </Link>
+        <div className="flex flex-wrap justify-center gap-4">
+          <Link
+            to="/konsolen-reparatur"
+            className="underline hover:text-green-600"
+          >
+            Konsolen Reparatur
+          </Link>
 
-    <Link to="/playstation-reparatur" className="underline hover:text-green-600">
-      PlayStation Reparatur
-    </Link>
+          <Link
+            to="/playstation-reparatur"
+            className="underline hover:text-green-600"
+          >
+            PlayStation Reparatur
+          </Link>
 
-    <Link to="/xbox-reparatur" className="underline hover:text-green-600">
-      Xbox Reparatur
-    </Link>
+          <Link to="/xbox-reparatur" className="underline hover:text-green-600">
+            Xbox Reparatur
+          </Link>
 
-    <Link to="/handy-reparatur-st-poelten" className="underline hover:text-green-600">
-      Handy Reparatur
-    </Link>
-
-  </div>
-</section>
+          <Link
+            to="/handy-reparatur-st-poelten"
+            className="underline hover:text-green-600"
+          >
+            Handy Reparatur
+          </Link>
+        </div>
+      </section>
 
       {/* CTA */}
       <section className="py-20 px-6 bg-green-800 text-white text-center">
@@ -155,7 +158,6 @@ export default function SwitchReparatur() {
           💬 WhatsApp schreiben
         </a>
       </section>
-
     </main>
   );
 }
