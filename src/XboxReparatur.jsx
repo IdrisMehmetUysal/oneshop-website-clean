@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { Helmet } from "react-helmet-async";
 import { AnimatePresence, motion } from "framer-motion";
+import { Link } from "react-router-dom";
 
 export default function XboxReparatur() {
   return (
@@ -106,6 +107,33 @@ export default function XboxReparatur() {
           </p>
         </div>
       </section>
+
+      {/* INTERNE LINKS */}
+<section className="py-20 px-6 bg-white text-center">
+  <h2 className="text-2xl font-bold mb-6">
+    Weitere Reparaturen
+  </h2>
+
+  <div className="flex flex-wrap justify-center gap-4">
+    
+    <Link to="/konsolen-reparatur" className="underline hover:text-green-600">
+      Konsolen Reparatur
+    </Link>
+
+    <Link to="/playstation-reparatur" className="underline hover:text-green-600">
+      PlayStation Reparatur
+    </Link>
+
+    <Link to="/switch-reparatur" className="underline hover:text-green-600">
+      Nintendo Switch Reparatur
+    </Link>
+
+    <Link to="/handy-reparatur-st-poelten" className="underline hover:text-green-600">
+      Handy Reparatur
+    </Link>
+
+  </div>
+</section>
 
       {/* CTA */}
       <section className="py-20 px-6 bg-green-800 text-white text-center">

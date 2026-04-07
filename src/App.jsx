@@ -1,24 +1,36 @@
 import React, { useState, useEffect } from "react";
 import Lottie from "lottie-react";
 import phoneAnim from "./loader.json";
-import { Outlet } from "react-router-dom";
-
+import { Outlet, useLocation } from "react-router-dom";
 
 export default function App() {
-  const [loading, setLoading] = useState(true);
+  const [loading, setLoading] = useState(false);
+  const location = useLocation();
 
+  // ✅ HASH SCROLL FIX
   useEffect(() => {
-    const timer = setTimeout(() => setLoading(false), 2000);
-    return () => clearTimeout(timer);
-  }, []);
+    if (location.hash) {
+      const el = document.querySelector(location.hash);
 
-  if (loading) {
-    return (
-      <div className="w-screen h-screen flex items-center justify-center bg-white">
-        <Lottie animationData={phoneAnim} loop style={{ height: 200 }} />
-      </div>
-    );
-  }
+      if (el) {
+        setTimeout(() => {
+          el.scrollIntoView({ behavior: "smooth" });
+        }, 100);
+      }
+    }
+  }, [location]);
 
-  return <Outlet />;
+  return (
+    <>
+      {/* LOADER OVERLAY */}
+      {loading && (
+        <div className="fixed inset-0 z-[9999] flex items-center justify-center bg-white">
+          <Lottie animationData={phoneAnim} loop style={{ height: 200 }} />
+        </div>
+      )}
+
+      {/* PAGES */}
+      <Outlet context={{ setLoading }} />
+    </>
+  );
 }

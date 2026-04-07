@@ -29,34 +29,56 @@ import LaptopReparatur from "./LaptopReparatur";
 import MacbookReparatur from "./MacbookReparatur";
 import UeberUns from "./UeberUns";
 import Faq from "./Faq";
-import Produkte from "./components/Produkte";
+import ScrollToTop from "./components/ScrollToTop";
+import Displayschutz from "./Displayschutz";
 
 ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
     <HelmetProvider>
       <BrowserRouter>
+
+        <ScrollToTop />
+
         <Routes>
           {/* Loader Layer */}
           <Route element={<App />}>
             {/* Layout Layer */}
             <Route element={<Layout />}>
-              {/* Seiten */}
+
+              {/* Hauptseiten */}
               <Route path="/" element={<OneShopHome />} />
               <Route path="/impressum" element={<Impressum />} />
               <Route path="/datenschutz" element={<Datenschutz />} />
 
-              <Route path="/iphone-reparatur" element={<IphoneReparatur />} />
-              <Route path="/samsung-reparatur" element={<SamsungReparatur />} />
+              {/* HUB */}
               <Route
                 path="/handy-reparatur-st-poelten"
                 element={<HandyReparatur />}
               />
-              <Route path="/datenrettung" element={<Datenrettung />} />
-              <Route
-                path="/konsolen-reparatur"
-                element={<KonsolenReparatur />}
-              />
-              <Route path="/microsoldering" element={<Microsoldering />} />
+
+              {/* Core Services */}
+              <Route path="/iphone-reparatur" element={<IphoneReparatur />} />
+              <Route path="/samsung-reparatur" element={<SamsungReparatur />} />
+              <Route path="/laptop-reparatur" element={<LaptopReparatur />} />
+              <Route path="/macbook-reparatur" element={<MacbookReparatur />} />
+              <Route path="/displayschutz" element={<Displayschutz />} />
+
+              {/* Zusatz Services */}
+              <Route path="/datenrettung-st-poelten" element={<Datenrettung />} />
+              <Route path="/microsoldering-st-poelten" element={<Microsoldering />} />
+              <Route path="/konsolen-reparatur" element={<KonsolenReparatur />} />
+
+              {/* Konsolen */}
+              <Route path="/playstation-reparatur" element={<PlaystationReparatur />} />
+              <Route path="/xbox-reparatur" element={<XboxReparatur />} />
+              <Route path="/switch-reparatur" element={<SwitchReparatur />} />
+
+              {/* Marken */}
+              <Route path="/xiaomi-reparatur" element={<XiaomiReparatur />} />
+              <Route path="/pixel-reparatur" element={<PixelReparatur />} />
+              <Route path="/huawei-reparatur" element={<HuaweiReparatur />} />
+
+              {/* Business */}
               <Route
                 path="/handy-verkauf-zubehoer"
                 element={<VerkaufZubehoer />}
@@ -66,26 +88,15 @@ ReactDOM.createRoot(document.getElementById("root")).render(
                 element={<VertraegeWertgarantie />}
               />
 
-              {/* Subpages */}
-              <Route
-                path="/playstation-reparatur"
-                element={<PlaystationReparatur />}
-              />
-              <Route path="/xbox-reparatur" element={<XboxReparatur />} />
-              <Route path="/switch-reparatur" element={<SwitchReparatur />} />
-              <Route path="/xiaomi-reparatur" element={<XiaomiReparatur />} />
-              <Route path="/pixel-reparatur" element={<PixelReparatur />} />
-              <Route path="/huawei-reparatur" element={<HuaweiReparatur />} />
-
-              <Route path="/laptop-reparatur" element={<LaptopReparatur />} />
-              <Route path="/macbook-reparatur" element={<MacbookReparatur />} />
-
+              {/* Info */}
               <Route path="/ueber-uns" element={<UeberUns />} />
               <Route path="/faq" element={<Faq />} />
+
             </Route>
           </Route>
         </Routes>
+
       </BrowserRouter>
     </HelmetProvider>
-  </React.StrictMode>,
+  </React.StrictMode>
 );

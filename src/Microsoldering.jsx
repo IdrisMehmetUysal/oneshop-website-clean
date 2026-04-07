@@ -18,7 +18,7 @@ export default function Microsoldering() {
           content="Microsoldering St. Pölten, Platinen Reparatur St. Pölten, Motherboard Reparatur St. Pölten, Handy Platine reparieren St. Pölten, One 1 Shop"
         />
         <meta name="robots" content="index, follow" />
-        <link rel="canonical" href="https://www.one1shop.at/microsoldering" />
+        <link rel="canonical" href="https://www.one1shop.at/microsoldering-st-poelten" />
       </Helmet>
 
       
@@ -173,7 +173,7 @@ export default function Microsoldering() {
     Handy Reparaturen
   </a>
   ,{" "}
-  <a href="/datenrettung" className="underline hover:text-green-600">
+  <a href="/datenrettung-st-poelten" className="underline hover:text-green-600">
     Datenrettung
   </a>
   ,{" "}

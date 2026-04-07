@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { Helmet } from "react-helmet-async";
 import { AnimatePresence, motion } from "framer-motion";
+import { Link } from "react-router-dom";
 
 export default function Datenrettung() {
   const [navOpen, setNavOpen] = useState(false);
@@ -18,7 +19,7 @@ export default function Datenrettung() {
           content="Datenrettung St. Pölten, Handy Daten retten St. Pölten, Fotos retten Handy St. Pölten, Smartphone Datenrettung St. Pölten, One 1 Shop"
         />
         <meta name="robots" content="index, follow" />
-        <link rel="canonical" href="https://www.one1shop.at/datenrettung" />
+        <link rel="canonical" href="https://www.one1shop.at/datenrettung-st-poelten" />
       </Helmet>
 
       
@@ -64,7 +65,7 @@ export default function Datenrettung() {
   transition={{ duration: 0.3 }}
 >
   <img
-    src="/images/datenrettung.jpg"
+    src="/images/datenrettung-st-poelten.jpg"
     alt="Datenrettung in St. Pölten"
     loading="lazy"
     className="w-full h-[240px] md:h-[380px] object-cover rounded-xl shadow-xl"
@@ -166,36 +167,62 @@ export default function Datenrettung() {
         </div>
       </section>
 
-      <section className="py-20 px-6 bg-green-50">
-        <div className="max-w-5xl mx-auto text-center">
-          <h2 className="text-3xl md:text-4xl font-bold mb-6">
-            Weitere Leistungen
-          </h2>
-<p className="text-lg text-green-800 leading-8">
-  Neben der Datenrettung in St. Pölten bieten wir auch{" "}
-  <a href="/handy-reparatur-st-poelten" className="underline hover:text-green-600">
-    Handy Reparaturen
-  </a>
-  ,{" "}
-  <a href="/iphone-reparatur" className="underline hover:text-green-600">
-    iPhone Reparaturen
-  </a>
-  ,{" "}
-  <a href="/samsung-reparatur" className="underline hover:text-green-600">
-    Samsung Reparaturen
-  </a>
-  ,{" "}
-  <a href="/konsolen-reparatur" className="underline hover:text-green-600">
-    Konsolenservice
-  </a>{" "}
-  sowie den{" "}
-  <a href="/handy-verkauf-zubehoer" className="underline hover:text-green-600">
-    Verkauf von Geräten und Zubehör
-  </a>{" "}
-  an.
-</p>
-        </div>
-      </section>
+<section className="py-20 px-6 bg-green-50">
+  <div className="max-w-5xl mx-auto text-center">
+    <h2 className="text-3xl md:text-4xl font-bold mb-6">
+      Weitere Leistungen
+    </h2>
+
+    <p className="text-lg text-green-800 leading-8">
+      Neben der Datenrettung in St. Pölten bieten wir auch{" "}
+
+      <Link
+        to="/handy-reparatur-st-poelten"
+        className="underline hover:text-green-600"
+      >
+        Handy Reparaturen
+      </Link>
+
+      ,{" "}
+
+      <Link
+        to="/iphone-reparatur"
+        className="underline hover:text-green-600"
+      >
+        iPhone Reparaturen
+      </Link>
+
+      ,{" "}
+
+      <Link
+        to="/samsung-reparatur"
+        className="underline hover:text-green-600"
+      >
+        Samsung Reparaturen
+      </Link>
+
+      ,{" "}
+
+      <Link
+        to="/konsolen-reparatur"
+        className="underline hover:text-green-600"
+      >
+        Konsolenservice
+      </Link>{" "}
+
+      sowie den{" "}
+
+      <Link
+        to="/handy-verkauf-zubehoer"
+        className="underline hover:text-green-600"
+      >
+        Verkauf von Geräten und Zubehör
+      </Link>{" "}
+
+      an.
+    </p>
+  </div>
+</section>
 
       <section className="py-20 px-6 bg-white">
         <div className="max-w-4xl mx-auto text-center">

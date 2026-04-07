@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { Helmet } from "react-helmet-async";
 import { AnimatePresence, motion } from "framer-motion";
+import { Link } from "react-router-dom";
 
 export default function VerkaufZubehoer() {
   const [navOpen, setNavOpen] = useState(false);
@@ -8,7 +9,10 @@ export default function VerkaufZubehoer() {
   return (
     <main className="min-h-screen text-green-900 overflow-x-hidden scroll-smooth bg-white">
       <Helmet>
-        <title>Handy Verkauf & Zubehör St. Pölten | Neu, gebraucht & refurbished | One 1 Shop</title>
+        <title>
+          Handy Verkauf & Zubehör St. Pölten | Neu, gebraucht & refurbished |
+          One 1 Shop
+        </title>
         <meta
           name="description"
           content="Handy Verkauf und Zubehör in St. Pölten: neue, gebrauchte und refurbished Smartphones sowie Hüllen, Ladegeräte und weiteres Zubehör bei One 1 Shop."
@@ -18,10 +22,11 @@ export default function VerkaufZubehoer() {
           content="Handy Verkauf St. Pölten, Smartphone Zubehör St. Pölten, gebrauchte Handys St. Pölten, refurbished Handys St. Pölten, Handyshop St. Pölten, One 1 Shop"
         />
         <meta name="robots" content="index, follow" />
-        <link rel="canonical" href="https://www.one1shop.at/handy-verkauf-zubehoer" />
+        <link
+          rel="canonical"
+          href="https://www.one1shop.at/handy-verkauf-zubehoer"
+        />
       </Helmet>
-
-      
 
       <section className="bg-gradient-to-r from-green-800 to-green-500 text-white px-6 py-16 md:py-24">
         <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-10 items-center">
@@ -36,8 +41,8 @@ export default function VerkaufZubehoer() {
 
             <p className="text-lg md:text-xl text-green-50 mb-8 leading-relaxed">
               Bei uns findest du neue, gebrauchte und refurbished Smartphones ♻️
-              sowie passendes Zubehör für deinen Alltag – direkt vor Ort in
-              St. Pölten.
+              sowie passendes Zubehör für deinen Alltag – direkt vor Ort in St.
+              Pölten.
             </p>
 
             <div className="flex flex-wrap justify-center md:justify-start gap-4">
@@ -59,18 +64,18 @@ export default function VerkaufZubehoer() {
             </div>
           </div>
 
-<motion.div
-  whileHover={{ scale: 1.03 }}
-  transition={{ duration: 0.3 }}
-  className="overflow-hidden rounded-xl"
->
-  <img
-    src="/images/verkauf-zubehoer.jpg"
-    alt="Handy Verkauf und Zubehör in St. Pölten"
-    loading="lazy"
-    className="w-full h-[240px] md:h-[380px] object-cover shadow-xl"
-  />
-</motion.div>
+          <motion.div
+            whileHover={{ scale: 1.03 }}
+            transition={{ duration: 0.3 }}
+            className="overflow-hidden rounded-xl"
+          >
+            <img
+              src="/images/verkauf-zubehoer.jpg"
+              alt="Handy Verkauf und Zubehör in St. Pölten"
+              loading="lazy"
+              className="w-full h-[240px] md:h-[380px] object-cover shadow-xl"
+            />
+          </motion.div>
         </div>
       </section>
 
@@ -116,7 +121,9 @@ export default function VerkaufZubehoer() {
             </div>
 
             <div className="bg-white rounded-2xl shadow p-6">
-              <h3 className="text-xl font-semibold mb-3">Refurbished Smartphones ♻️</h3>
+              <h3 className="text-xl font-semibold mb-3">
+                Refurbished Smartphones ♻️
+              </h3>
               <p className="text-green-700 leading-7">
                 Überprüfte und erneuerte Geräte für alle, die bewusster kaufen
                 möchten und trotzdem Wert auf Qualität legen.
@@ -167,33 +174,52 @@ export default function VerkaufZubehoer() {
           <h2 className="text-3xl md:text-4xl font-bold mb-6">
             Weitere Leistungen
           </h2>
-<p className="text-lg text-green-800 leading-8">
-  Neben Handy Verkauf und Zubehör in St. Pölten bieten wir auch{" "}
-  <a href="/handy-reparatur-st-poelten" className="underline hover:text-green-600">
-    Handy Reparaturen
-  </a>
-  ,{" "}
-  <a href="/datenrettung" className="underline hover:text-green-600">
-    Datenrettung
-  </a>
-  ,{" "}
-  <a href="/konsolen-reparatur" className="underline hover:text-green-600">
-    Konsolen Reparatur
-  </a>
-  ,{" "}
-  <a href="/microsoldering" className="underline hover:text-green-600">
-    Microsoldering
-  </a>
-  ,{" "}
-  <a href="/iphone-reparatur" className="underline hover:text-green-600">
-    iPhone Reparaturen
-  </a>{" "}
-  und{" "}
-  <a href="/samsung-reparatur" className="underline hover:text-green-600">
-    Samsung Reparaturen
-  </a>{" "}
-  an.
-</p>
+
+          <p className="text-lg text-green-800 leading-8">
+            Neben Handy Verkauf und Zubehör in St. Pölten bieten wir auch{" "}
+            <Link
+              to="/handy-reparatur-st-poelten"
+              className="underline hover:text-green-600"
+            >
+              Handy Reparaturen
+            </Link>
+            ,{" "}
+            <Link
+              to="/datenrettung-st-poelten"
+              className="underline hover:text-green-600"
+            >
+              Datenrettung
+            </Link>
+            ,{" "}
+            <Link
+              to="/konsolen-reparatur"
+              className="underline hover:text-green-600"
+            >
+              Konsolen Reparatur
+            </Link>
+            ,{" "}
+            <Link
+              to="/microsoldering-st-poelten"
+              className="underline hover:text-green-600"
+            >
+              Microsoldering
+            </Link>
+            ,{" "}
+            <Link
+              to="/iphone-reparatur"
+              className="underline hover:text-green-600"
+            >
+              iPhone Reparaturen
+            </Link>{" "}
+            und{" "}
+            <Link
+              to="/samsung-reparatur"
+              className="underline hover:text-green-600"
+            >
+              Samsung Reparaturen
+            </Link>{" "}
+            an.
+          </p>
         </div>
       </section>
 
@@ -223,7 +249,6 @@ export default function VerkaufZubehoer() {
           </div>
         </div>
       </section>
-
     </main>
   );
 }

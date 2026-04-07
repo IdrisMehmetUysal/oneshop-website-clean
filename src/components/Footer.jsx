@@ -1,5 +1,6 @@
 import React from "react";
 import { Phone, Mail, MapPin } from "lucide-react";
+import { Link } from "react-router-dom";
 
 export default function Footer() {
   return (
@@ -23,10 +24,10 @@ export default function Footer() {
         <div>
           <h4 className="text-lg font-semibold mb-3">Leistungen</h4>
           <div className="flex flex-col gap-2 text-green-200 text-sm">
-            <a href="/handy-reparatur" className="hover:text-white transition">Handy Reparatur</a>
-            <a href="/laptop-reparatur" className="hover:text-white transition">Laptop Reparatur</a>
-            <a href="/macbook-reparatur" className="hover:text-white transition">MacBook Reparatur</a>
-            <a href="/konsolen-reparatur" className="hover:text-white transition">Konsolen</a>
+            <Link to="/handy-reparatur-st-poelten" className="hover:text-white transition">Handy Reparatur</Link>
+            <Link to="/laptop-reparatur" className="hover:text-white transition">Laptop Reparatur</Link>
+            <Link to="/macbook-reparatur" className="hover:text-white transition">MacBook Reparatur</Link>
+            <Link to="/konsolen-reparatur" className="hover:text-white transition">Konsolen</Link>
           </div>
         </div>
 
@@ -34,10 +35,10 @@ export default function Footer() {
         <div>
           <h4 className="text-lg font-semibold mb-3">Navigation</h4>
           <div className="flex flex-col gap-2 text-green-200 text-sm">
-            <a href="/ueber-uns" className="hover:text-white transition">Über uns</a>
-            <a href="/faq" className="hover:text-white transition">FAQ</a>
-            <a href="/#produkte" className="hover:text-white transition">Produkte</a>
-            <a href="/#kontakt" className="hover:text-white transition">Kontakt</a>
+            <Link to="/ueber-uns" className="hover:text-white transition">Über uns</Link>
+            <Link to="/faq" className="hover:text-white transition">FAQ</Link>
+            <Link to="/#produkte" className="hover:text-white transition">Produkte</Link>
+            <Link to="/#kontakt" className="hover:text-white transition">Kontakt</Link>
           </div>
         </div>
 
@@ -66,49 +67,69 @@ export default function Footer() {
           </div>
 
           <div className="mt-4 flex flex-col gap-1 text-green-300 text-sm">
-            <a href="/impressum" className="hover:text-white">Impressum</a>
-            <a href="/datenschutz" className="hover:text-white">Datenschutz</a>
+            <Link to="/impressum" className="hover:text-white">Impressum</Link>
+            <Link to="/datenschutz" className="hover:text-white">Datenschutz</Link>
           </div>
         </div>
 
       </div>
 
       {/* ================= MOBILE ================= */}
-      <div className="md:hidden max-w-md mx-auto space-y-6 text-left">
+<div className="md:hidden max-w-md mx-auto space-y-6 text-left">
 
-        {/* KONTAKT (wichtigste zuerst) */}
-        <div>
-          <h4 className="text-base font-semibold mb-2">Kontakt</h4>
+  {/* KONTAKT */}
+  <div>
+    <h4 className="text-base font-semibold mb-2">Kontakt</h4>
 
-          <div className="flex flex-col gap-2 text-green-200 text-sm">
-            <p className="flex items-center gap-2">
-              <MapPin size={16} /> Bahnhofplatz 15
-            </p>
+    <div className="flex flex-col gap-2 text-green-200 text-sm">
+      <p className="flex items-center gap-2">
+        <MapPin size={16} /> Bahnhofplatz 15
+      </p>
 
-            <a href="tel:+4369917432373" className="flex items-center gap-2">
-              <Phone size={16} /> +43 699 174 32 373
-            </a>
+      <a href="tel:+4369917432373" className="flex items-center gap-2 hover:text-white transition">
+        <Phone size={16} /> +43 699 174 32 373
+      </a>
 
-            <a href="mailto:office@one1shop.at" className="flex items-center gap-2">
-              <Mail size={16} /> office@one1shop.at
-            </a>
-          </div>
-        </div>
+      <a href="mailto:office@one1shop.at" className="flex items-center gap-2 hover:text-white transition">
+        <Mail size={16} /> office@one1shop.at
+      </a>
+    </div>
+  </div>
 
-        {/* MINI NAV */}
-        <div className="flex flex-wrap gap-4 text-sm text-green-300">
-          <a href="/handy-reparatur" className="hover:text-white">Handy</a>
-          <a href="/laptop-reparatur" className="hover:text-white">Laptop</a>
-          <a href="/faq" className="hover:text-white">FAQ</a>
-          <a href="/ueber-uns" className="hover:text-white">Über uns</a>
-        </div>
+  {/* LEISTUNGEN QUICK LINKS */}
+  <div>
+    <h4 className="text-base font-semibold mb-2">Leistungen</h4>
+    <div className="grid grid-cols-2 gap-2 text-sm text-green-300">
+      <Link to="/handy-reparatur-st-poelten" className="hover:text-white">Handy</Link>
+      <Link to="/laptop-reparatur" className="hover:text-white">Laptop</Link>
+      <Link to="/konsolen-reparatur" className="hover:text-white">Konsolen</Link>
+      <Link to="/datenrettung-st-poelten" className="hover:text-white">Daten</Link>
+    </div>
+  </div>
 
-        {/* BRAND MINI */}
-        <div className="text-xs text-green-400 border-t border-green-700 pt-4">
-          © {new Date().getFullYear()} One1Shop
-        </div>
+  {/* NAVIGATION */}
+  <div>
+    <h4 className="text-base font-semibold mb-2">Navigation</h4>
+    <div className="flex flex-wrap gap-4 text-sm text-green-300">
+      <Link to="/ueber-uns" className="hover:text-white">Über uns</Link>
+      <Link to="/faq" className="hover:text-white">FAQ</Link>
+      <Link to="/#produkte" className="hover:text-white">Produkte</Link>
+      <Link to="/#kontakt" className="hover:text-white">Kontakt</Link>
+    </div>
+  </div>
 
-      </div>
+  {/* LEGAL */}
+  <div className="border-t border-green-700 pt-4 flex flex-wrap gap-4 text-sm text-green-300">
+    <Link to="/impressum" className="hover:text-white">Impressum</Link>
+    <Link to="/datenschutz" className="hover:text-white">Datenschutz</Link>
+  </div>
+
+  {/* BRAND */}
+  <div className="text-xs text-green-400 text-center">
+    © {new Date().getFullYear()} One1Shop
+  </div>
+
+</div>
 
     </footer>
   );

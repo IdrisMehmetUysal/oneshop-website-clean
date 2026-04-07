@@ -1,5 +1,6 @@
 import React from "react";
 import { Helmet } from "react-helmet-async";
+import { Link } from "react-router-dom";
 
 export default function MacbookReparatur() {
   return (
@@ -76,6 +77,73 @@ export default function MacbookReparatur() {
           </p>
         </div>
       </section>
+
+      {/* Weitere Leistungen */}
+      <section className="py-20 px-6 bg-white">
+  <div className="max-w-5xl mx-auto text-center">
+    <h2 className="text-3xl md:text-4xl font-bold mb-6">
+      Weitere Reparatur Services
+    </h2>
+
+    <p className="text-lg text-green-800 leading-8">
+      Neben der MacBook Reparatur in St. Pölten bieten wir auch{" "}
+
+      <Link
+        to="/laptop-reparatur"
+        className="underline hover:text-green-600"
+      >
+        Laptop Reparaturen
+      </Link>
+
+      ,{" "}
+
+      <Link
+        to="/handy-reparatur-st-poelten"
+        className="underline hover:text-green-600"
+      >
+        Handy Reparaturen
+      </Link>
+
+      ,{" "}
+
+      <Link
+        to="/iphone-reparatur"
+        className="underline hover:text-green-600"
+      >
+        iPhone Reparaturen
+      </Link>
+
+      ,{" "}
+
+      <Link
+        to="/samsung-reparatur"
+        className="underline hover:text-green-600"
+      >
+        Samsung Reparaturen
+      </Link>
+
+      sowie{" "}
+
+      <Link
+        to="/datenrettung-st-poelten"
+        className="underline hover:text-green-600"
+      >
+        Datenrettung
+      </Link>{" "}
+
+      und{" "}
+
+      <Link
+        to="/microsoldering-st-poelten"
+        className="underline hover:text-green-600"
+      >
+        Microsoldering
+      </Link>{" "}
+
+      an.
+    </p>
+  </div>
+</section>
 
       {/* CTA */}
       <section className="py-20 px-6 bg-green-800 text-white text-center">

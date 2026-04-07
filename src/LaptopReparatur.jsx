@@ -1,12 +1,14 @@
 import React from "react";
 import { Helmet } from "react-helmet-async";
+import { Link } from "react-router-dom";
 
 export default function LaptopReparatur() {
   return (
     <main className="min-h-screen text-green-900 bg-white">
-
       <Helmet>
-        <title>Laptop & MacBook Reparatur St. Pölten | Display, Akku & mehr</title>
+        <title>
+          Laptop & MacBook Reparatur St. Pölten | Display, Akku & mehr
+        </title>
         <meta
           name="description"
           content="Laptop & MacBook Reparatur in St. Pölten: Display, Akku, Tastatur, Ladeprobleme und Wasserschäden. Schnell und professionell bei One 1 Shop."
@@ -21,8 +23,8 @@ export default function LaptopReparatur() {
         </h1>
 
         <p className="text-lg md:text-xl max-w-2xl mx-auto">
-          Egal ob MacBook oder Windows Laptop – wir reparieren dein Gerät schnell,
-          professionell und zuverlässig direkt vor Ort.
+          Egal ob MacBook oder Windows Laptop – wir reparieren dein Gerät
+          schnell, professionell und zuverlässig direkt vor Ort.
         </p>
       </section>
 
@@ -33,8 +35,8 @@ export default function LaptopReparatur() {
         </h2>
 
         <p className="text-green-800 leading-8 mb-4">
-          Wenn dein Laptop Probleme macht, brauchst du eine schnelle Lösung.
-          Wir kümmern uns um Displayschäden, Akkuprobleme, Tastaturdefekte,
+          Wenn dein Laptop Probleme macht, brauchst du eine schnelle Lösung. Wir
+          kümmern uns um Displayschäden, Akkuprobleme, Tastaturdefekte,
           Ladeprobleme und vieles mehr.
         </p>
 
@@ -53,32 +55,35 @@ export default function LaptopReparatur() {
           </h2>
 
           <div className="grid md:grid-cols-2 gap-8">
-
             {/* MacBook */}
-            <a
-              href="/macbook-reparatur"
+            <Link
+              to="/macbook-reparatur"
               className="bg-white p-8 rounded-2xl shadow hover:shadow-lg transition block"
             >
               <h3 className="text-xl font-semibold mb-3">MacBook Reparatur</h3>
               <p className="text-green-700">
-                Display, Akku, Tastatur und Ladeprobleme bei MacBooks schnell behoben.
+                Display, Akku, Tastatur und Ladeprobleme bei MacBooks schnell
+                behoben.
               </p>
-            </a>
+            </Link>
 
             {/* Windows Laptop */}
-            <a
-              href="/laptop-reparatur"
+            <Link
+              to="/laptop-reparatur"
               className="bg-white p-8 rounded-2xl shadow hover:shadow-lg transition block"
             >
-              <h3 className="text-xl font-semibold mb-3">Windows Laptop Reparatur</h3>
+              <h3 className="text-xl font-semibold mb-3">
+                Windows Laptop Reparatur
+              </h3>
               <p className="text-green-700">
                 Reparatur für alle Laptop Marken – Hardware, Software und mehr.
               </p>
-            </a>
-
+            </Link>
           </div>
         </div>
       </section>
+
+
 
       {/* CTA */}
       <section className="py-20 px-6 text-center">
@@ -98,6 +103,53 @@ export default function LaptopReparatur() {
         </a>
       </section>
 
+            {/* Weitere Leistungen */}
+      <section className="py-20 px-6 bg-green-50">
+        <div className="max-w-5xl mx-auto text-center">
+          <h2 className="text-3xl md:text-4xl font-bold mb-6">
+            Weitere Reparatur Services
+          </h2>
+
+          <p className="text-lg text-green-800 leading-8">
+            Neben der Laptop und MacBook Reparatur in St. Pölten bieten wir auch{" "}
+            <Link
+              to="/handy-reparatur-st-poelten"
+              className="underline hover:text-green-600"
+            >
+              Handy Reparaturen
+            </Link>
+            ,{" "}
+            <Link
+              to="/iphone-reparatur"
+              className="underline hover:text-green-600"
+            >
+              iPhone Reparaturen
+            </Link>
+            ,{" "}
+            <Link
+              to="/samsung-reparatur"
+              className="underline hover:text-green-600"
+            >
+              Samsung Reparaturen
+            </Link>
+            sowie{" "}
+            <Link
+              to="/datenrettung-st-poelten"
+              className="underline hover:text-green-600"
+            >
+              Datenrettung
+            </Link>{" "}
+            und{" "}
+            <Link
+              to="/microsoldering-st-poelten"
+              className="underline hover:text-green-600"
+            >
+              Microsoldering
+            </Link>{" "}
+            an.
+          </p>
+        </div>
+      </section>
     </main>
   );
 }

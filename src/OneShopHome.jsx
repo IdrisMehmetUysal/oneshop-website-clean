@@ -12,6 +12,7 @@ import GoogleReviews from "./components/GoogleReviews";
 import Hero from "./components/Hero";
 import { Laptop } from "lucide-react";
 import Produkte from "./components/Produkte";
+import { Link } from "react-router-dom";
 
 export default function OneShopHome() {
   const [scrolled, setScrolled] = useState(false);
@@ -63,7 +64,8 @@ export default function OneShopHome() {
         transition={{ duration: 0.5 }}
         className="bg-yellow-400 text-black text-center py-2 px-3 md:py-3 md:px-6 text-xs md:text-base font-semibold shadow-md leading-tight"
       >
-        💸 Geräte Retter Prämie sichern – Spare bei Handy- & Laptop-Reparaturen!
+        💸 Geräte Retter Prämie sichern – Spare bei Laptop- &
+        Tablet-Reparaturen!
         <a
           href="https://www.xn--gerte-retter-prmie-ntbm.at/"
           target="_blank"
@@ -138,6 +140,10 @@ export default function OneShopHome() {
       {/* Hero-Bereich */}
       <Hero />
 
+      <h1 className="sr-only">
+        Handy Reparatur St. Pölten – One 1 Shop am Bahnhofplatz
+      </h1>
+
       {/* Leistungen-Bereich */}
       <section
         id="leistungen"
@@ -151,64 +157,52 @@ export default function OneShopHome() {
           className="max-w-6xl mx-auto px-4 md:px-0 text-center"
         >
           <h2 className="text-2xl md:text-4xl font-bold mb-4 md:mb-6">
-            Unsere Leistungen in St. Pölten
+            Unsere Leistungen
           </h2>
-
           <p className="text-sm md:text-base text-green-800 max-w-3xl mx-auto mb-8 md:mb-12 leading-relaxed">
-            Wir sind dein Allrounder rund um Smartphone- und Technik-Service.
-            Von{" "}
-            <a
-              href="/iphone-reparatur"
+            Wir sind dein Ansprechpartner für{" "}
+            <strong>Handy Reparatur in St. Pölten</strong>. Von{" "}
+            <Link
+              to="/iphone-reparatur"
               className="underline hover:text-green-600"
             >
               iPhone Reparatur
-            </a>{" "}
+            </Link>{" "}
             und{" "}
-            <a
-              href="/samsung-reparatur"
+            <Link
+              to="/samsung-reparatur"
               className="underline hover:text-green-600"
             >
               Samsung Reparatur
-            </a>{" "}
+            </Link>{" "}
             über{" "}
-            <a href="/datenrettung" className="underline hover:text-green-600">
+            <Link
+              to="/datenrettung-st-poelten"
+              className="underline hover:text-green-600"
+            >
               Datenrettung
-            </a>
+            </Link>
             ,{" "}
-            <a
-              href="/konsolen-reparatur"
+            <Link
+              to="/konsolen-reparatur"
               className="underline hover:text-green-600"
             >
               Konsolen Reparatur
-            </a>
-            ,{" "}
-            <a
-              href="/microsoldering"
+            </Link>
+            und{" "}
+            <Link
+              to="/laptop-reparatur"
               className="underline hover:text-green-600"
             >
-              Microsoldering
-            </a>
-            ,{" "}
-            <a
-              href="/handy-verkauf-zubehoer"
-              className="underline hover:text-green-600"
-            >
-              Handy Verkauf & Zubehör
-            </a>{" "}
-            sowie{" "}
-            <a
-              href="/handyvertraege-wertgarantie"
-              className="underline hover:text-green-600"
-            >
-              Handyverträge & Wertgarantie
-            </a>{" "}
-            – bei uns bekommst du alles aus einer Hand.
+              Laptop Reparatur
+            </Link>{" "}
+            – wir helfen dir <strong>direkt vor Ort in St. Pölten</strong>{" "}
+            schnell und zuverlässig.
           </p>
 
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 md:gap-8">
-            {/* CARD */}
-            <a
-              href="/handy-reparatur-st-poelten"
+            <Link
+              to="/handy-reparatur-st-poelten"
               className="block bg-white rounded-xl md:rounded-2xl shadow p-4 md:p-6 hover:shadow-lg hover:scale-[1.02] transition"
             >
               <Wrench className="w-10 h-10 md:w-12 md:h-12 mx-auto mb-3 md:mb-4 text-green-800" />
@@ -219,10 +213,10 @@ export default function OneShopHome() {
                 iPhone, Samsung und viele weitere Marken. Display, Akku,
                 Ladeprobleme oder Wasserschäden – wir helfen schnell.
               </p>
-            </a>
+            </Link>
 
-            <a
-              href="/datenrettung"
+            <Link
+              to="/datenrettung-st-poelten"
               className="block bg-white rounded-xl md:rounded-2xl shadow p-4 md:p-6 hover:shadow-lg hover:scale-[1.02] transition"
             >
               <Smartphone className="w-10 h-10 md:w-12 md:h-12 mx-auto mb-3 md:mb-4 text-green-800" />
@@ -231,10 +225,10 @@ export default function OneShopHome() {
                 Wir retten Fotos, Kontakte und wichtige Daten auch bei defekten
                 oder beschädigten Smartphones.
               </p>
-            </a>
+            </Link>
 
-            <a
-              href="/konsolen-reparatur"
+            <Link
+              to="/konsolen-reparatur"
               className="block bg-white rounded-xl md:rounded-2xl shadow p-4 md:p-6 hover:shadow-lg hover:scale-[1.02] transition"
             >
               <Gamepad2 className="w-10 h-10 md:w-12 md:h-12 mx-auto mb-3 md:mb-4 text-green-800" />
@@ -245,10 +239,10 @@ export default function OneShopHome() {
                 HDMI-Probleme, Überhitzung oder Abschalten – inkl. Service mit
                 neuer Wärmeleitpaste.
               </p>
-            </a>
+            </Link>
 
-            <a
-              href="/laptop-reparatur"
+            <Link
+              to="/laptop-reparatur"
               className="block bg-white rounded-xl md:rounded-2xl shadow p-4 md:p-6 hover:shadow-lg hover:scale-[1.02] transition"
             >
               <Laptop className="w-10 h-10 md:w-12 md:h-12 mx-auto mb-3 md:mb-4 text-green-800" />
@@ -258,10 +252,10 @@ export default function OneShopHome() {
               <p className="text-sm md:text-base text-green-700 mt-1 md:mt-2">
                 Windows Laptops – Display, Akku, Tastatur & mehr
               </p>
-            </a>
+            </Link>
 
-            <a
-              href="/macbook-reparatur"
+            <Link
+              to="/macbook-reparatur"
               className="block bg-white rounded-xl md:rounded-2xl shadow p-4 md:p-6 hover:shadow-lg hover:scale-[1.02] transition"
             >
               <Laptop className="w-10 h-10 md:w-12 md:h-12 mx-auto mb-3 md:mb-4 text-green-800" />
@@ -271,10 +265,10 @@ export default function OneShopHome() {
               <p className="text-sm md:text-base text-green-700 mt-1 md:mt-2">
                 Display, Akku, Tastatur & Ladeprobleme bei Apple Geräten
               </p>
-            </a>
+            </Link>
 
-            <a
-              href="/microsoldering"
+            <Link
+              to="/microsoldering-st-poelten"
               className="block bg-white rounded-xl md:rounded-2xl shadow p-4 md:p-6 hover:shadow-lg hover:scale-[1.02] transition"
             >
               <Cpu className="w-10 h-10 md:w-12 md:h-12 mx-auto mb-3 md:mb-4 text-green-800" />
@@ -284,10 +278,10 @@ export default function OneShopHome() {
               <p className="text-sm md:text-base text-green-700 mt-1 md:mt-2">
                 Präzise Lötarbeiten auf Platinen und Motherboards vom Profi.
               </p>
-            </a>
+            </Link>
 
-            <a
-              href="/handy-verkauf-zubehoer"
+            <Link
+              to="/handy-verkauf-zubehoer"
               className="block bg-white rounded-xl md:rounded-2xl shadow p-4 md:p-6 hover:shadow-lg hover:scale-[1.02] transition"
             >
               <Smartphone className="w-10 h-10 md:w-12 md:h-12 mx-auto mb-3 md:mb-4 text-green-800" />
@@ -298,10 +292,10 @@ export default function OneShopHome() {
                 Neue, gebrauchte und erneuerte Smartphones ♻️ sowie Zubehör
                 direkt vor Ort.
               </p>
-            </a>
+            </Link>
 
-            <a
-              href="/handyvertraege-wertgarantie"
+            <Link
+              to="/handyvertraege-wertgarantie"
               className="block bg-white rounded-xl md:rounded-2xl shadow p-4 md:p-6 hover:shadow-lg hover:scale-[1.02] transition"
             >
               <Wrench className="w-10 h-10 md:w-12 md:h-12 mx-auto mb-3 md:mb-4 text-green-800" />
@@ -312,7 +306,20 @@ export default function OneShopHome() {
                 Beratung als Partnershop – inklusive Absicherung über
                 Wertgarantie.
               </p>
-            </a>
+            </Link>
+            <Link
+              to="/displayschutz"
+              className="block bg-white rounded-xl md:rounded-2xl shadow p-4 md:p-6 hover:shadow-lg hover:scale-[1.02] transition"
+            >
+              <Smartphone className="w-10 h-10 md:w-12 md:h-12 mx-auto mb-3 md:mb-4 text-green-800" />
+              <h3 className="text-lg md:text-xl font-semibold">
+                Displayschutz
+              </h3>
+              <p className="text-sm md:text-base text-green-700 mt-1 md:mt-2">
+                Schutzfolie & Panzerglas – blasenfrei montiert und sofort
+                einsatzbereit.
+              </p>
+            </Link>
           </div>
         </motion.div>
       </section>
@@ -426,7 +433,9 @@ export default function OneShopHome() {
       </section>
 
       {/* Produkte-Bereich */}
-      <Produkte />
+      <section id="produkte" className="scroll-mt-24">
+        <Produkte />
+      </section>
 
       {/* Partner-Bereich */}
       <section id="partner" className="py-24 px-4 bg-green-50">
@@ -510,15 +519,6 @@ export default function OneShopHome() {
             Gerät langfristig mit einem guten Gefühl nutzen. Gerne beraten wir
             dich auch persönlich direkt bei uns in St. Pölten.
           </p>
-
-          <a
-            href="#kontakt"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="inline-block bg-green-800 text-white px-8 py-3 rounded-full font-semibold hover:bg-green-700 transition"
-          >
-            Jetzt zur Wertgarantie
-          </a>
         </div>
       </section>
 
@@ -530,8 +530,7 @@ export default function OneShopHome() {
           </h2>
 
           <p className="mb-6 text-green-800 text-sm md:text-lg">
-            Schreib uns jetzt kurz auf WhatsApp – wir sagen dir direkt, was
-            möglich ist.
+            Schreib uns jetzt kurz auf WhatsApp oder ein Mail.
           </p>
 
           {/* TRUST BOX */}
@@ -562,6 +561,14 @@ export default function OneShopHome() {
               {/* WHATSAPP MAIN */}
               <button
                 onClick={() => {
+                  if (window.gtag) {
+                    window.gtag("event", "whatsapp_click", {
+                      value: 1,
+                      location: "kontakt_form",
+                      page: window.location.pathname,
+                    });
+                  }
+
                   const name = document
                     .getElementById("kontakt-name")
                     .value.trim();
@@ -570,6 +577,7 @@ export default function OneShopHome() {
                     .value.trim();
                   const text = `Hallo, ich bin ${name || "ein Kunde"}. ${nachricht || "Ich habe eine Frage."}`;
                   const encoded = encodeURIComponent(text);
+
                   window.open(
                     `https://wa.me/4369917432373?text=${encoded}`,
                     "_blank",
@@ -620,8 +628,9 @@ export default function OneShopHome() {
               onClick={() => {
                 if (window.gtag) {
                   window.gtag("event", "phone_click", {
-                    event_category: "contact",
-                    event_label: "phone_button",
+                    value: 1,
+                    method: "phone",
+                    page: window.location.pathname,
                   });
                 }
               }}
@@ -727,14 +736,24 @@ export default function OneShopHome() {
         </motion.div>
       )}
 
-      <a
-        href="https://wa.me/4369917432373"
-        target="_blank"
-        rel="noopener noreferrer"
-        className="fixed bottom-6 right-6 bg-green-600 text-white px-5 py-3 rounded-full shadow-lg z-50 hover:bg-green-500 transition"
-      >
-        💬 WhatsApp
-      </a>
+<a
+  href="https://wa.me/4369917432373"
+  target="_blank"
+  rel="noopener noreferrer"
+  onClick={() => {
+    if (window.gtag) {
+      window.gtag("event", "whatsapp_click", {
+        event_category: "contact",
+        event_label: "floating_button",
+        value: 1,
+        page: window.location.pathname,
+      });
+    }
+  }}
+  className="fixed bottom-6 right-6 bg-green-600 text-white px-5 py-3 rounded-full shadow-lg z-50 hover:bg-green-500 transition"
+>
+  💬 WhatsApp
+</a>
     </main>
   );
 }

@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { Helmet } from "react-helmet-async";
 import { AnimatePresence, motion } from "framer-motion";
+import { Link } from "react-router-dom";
 
 export default function SamsungReparatur() {
   const [navOpen, setNavOpen] = useState(false);
@@ -168,32 +169,39 @@ export default function SamsungReparatur() {
         </div>
       </section>
 
-      <section className="py-20 px-6 bg-green-50">
-        <div className="max-w-5xl mx-auto text-center">
-          <h2 className="text-3xl md:text-4xl font-bold mb-6">
-            Weitere Leistungen
-          </h2>
-<p className="text-lg text-green-800 leading-8">
-  Neben der Samsung Reparatur in St. Pölten bieten wir auch allgemeine{" "}
-  <a href="/handy-reparatur-st-poelten" className="underline hover:text-green-600">
-    Handy Reparaturen
-  </a>
-  ,{" "}
-  <a href="/datenrettung" className="underline hover:text-green-600">
-    Datenrettung
-  </a>
-  ,{" "}
-  <a href="/konsolen-reparatur" className="underline hover:text-green-600">
-    Konsolenservice
-  </a>{" "}
-  sowie den{" "}
-  <a href="/handy-verkauf-zubehoer" className="underline hover:text-green-600">
-    Verkauf von Geräten und Zubehör
-  </a>{" "}
-  an.
-</p>
-        </div>
-      </section>
+<section className="py-20 px-6 bg-green-50">
+  <div className="max-w-5xl mx-auto text-center">
+    <h2 className="text-3xl md:text-4xl font-bold mb-6">
+      Weitere Leistungen
+    </h2>
+
+    <p className="text-lg text-green-800 leading-8">
+      Neben der Samsung Reparatur in St. Pölten bieten wir auch allgemeine{" "}
+      
+      <Link to="/handy-reparatur-st-poelten" className="underline hover:text-green-600">
+        Handy Reparaturen
+      </Link>
+      ,{" "}
+      
+      <Link to="/datenrettung-st-poelten" className="underline hover:text-green-600">
+        Datenrettung
+      </Link>
+      ,{" "}
+      
+      <Link to="/konsolen-reparatur" className="underline hover:text-green-600">
+        Konsolenservice
+      </Link>{" "}
+      
+      sowie den{" "}
+      
+      <Link to="/handy-verkauf-zubehoer" className="underline hover:text-green-600">
+        Verkauf von Geräten und Zubehör
+      </Link>{" "}
+      
+      an.
+    </p>
+  </div>
+</section>
 
       <section className="py-20 px-6 bg-white">
         <div className="max-w-4xl mx-auto text-center">

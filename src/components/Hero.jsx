@@ -1,34 +1,34 @@
-import React from "react";
-import { useState, useEffect } from "react";
+import React, { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 
 export default function Hero() {
   const heroSlides = [
     {
-      title: "Handy kaputt?",
-      highlight: "Wir reparieren es sofort.",
-      desc: "iPhone, Samsung & mehr – schnell & zuverlässig.",
+      title: "Handy Reparatur in St.\u00A0Pölten",
+      highlight: "Schnell & professionell.",
+      desc: "Display kaputt, Akku schwach oder Ladeprobleme? Wir helfen dir oft noch am selben Tag – direkt am Bahnhofplatz.",
       img: "/images/header1.png",
+      alt: "Handy Reparatur St. Pölten One 1 Shop",
     },
     {
-      title: "Display gebrochen?",
+      title: "Display kaputt?",
       highlight: "Wie neu in kurzer Zeit.",
-      desc: "Professioneller Displaytausch direkt vor Ort.",
+      desc: "Professioneller Displaytausch für iPhone, Samsung & mehr – schnell und zuverlässig.",
       img: "/images/header2.png",
+      alt: "Display Reparatur Smartphone St. Pölten",
     },
     {
       title: "Akku schwach?",
-      highlight: "Wir tauschen ihn sofort.",
-      desc: "Mehr Power für dein Smartphone.",
+      highlight: "Mehr Power sofort.",
+      desc: "Wir tauschen deinen Akku schnell aus – damit dein Smartphone wieder den ganzen Tag hält.",
       img: "/images/header3.png",
+      alt: "Akku Tausch Handy St. Pölten",
     },
   ];
 
   const [currentSlide, setCurrentSlide] = useState(0);
 
   useEffect(() => {
-    if (!heroSlides.length) return;
-
     const interval = setInterval(() => {
       setCurrentSlide((prev) => (prev + 1) % heroSlides.length);
     }, 4000);
@@ -36,34 +36,38 @@ export default function Hero() {
     return () => clearInterval(interval);
   }, []);
 
-  const slide = heroSlides[currentSlide] || heroSlides[0];
-
-  if (!slide) return null;
+  const slide = heroSlides[currentSlide];
 
   return (
     <header className="bg-gradient-to-br from-green-900 via-green-800 to-green-600 text-white px-4 py-16 md:py-24">
       <div className="max-w-7xl mx-auto grid md:grid-cols-2 gap-10 items-center">
         {/* TEXT */}
         <div className="text-center md:text-left">
+          {/* ✅ SEO H1 (unsichtbar für User) */}
+          <h1 className="sr-only">Handy Reparatur St. Pölten – One 1 Shop</h1>
+
           <p className="uppercase tracking-widest text-green-200 text-xs mb-3">
             📍 St. Pölten – Bahnhofplatz 15
           </p>
-          {/* FLOATING WRAPPER */}
+
+          {/* FLOATING */}
           <motion.div
-            animate={{ y: [0, -6, 0] }}
-            transition={{ duration: 5, repeat: Infinity }}
+            key={currentSlide}
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5 }}
           >
-            {/* TEXT ANIMATION */}
+            {/* SLIDE TEXT */}
             <motion.div
               key={currentSlide}
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5 }}
             >
-              <h1 className="text-3xl sm:text-4xl md:text-5xl font-extrabold mb-4">
+              <p className="text-3xl sm:text-4xl md:text-5xl font-extrabold mb-4 leading-tight">
                 {slide.title} <br />
                 <span className="text-green-300">{slide.highlight}</span>
-              </h1>
+              </p>
 
               <p className="text-green-100 mb-6 text-sm md:text-lg">
                 {slide.desc}
@@ -73,31 +77,31 @@ export default function Hero() {
 
           {/* TRUST */}
           <div className="flex flex-wrap justify-center md:justify-start gap-3 mb-6 text-xs md:text-sm">
-            <span className="bg-white/10 backdrop-blur-md border border-white/20 px-3 py-1 rounded-full">
-              ⭐ 5.0 Google
+            <span className="bg-white/10 border border-white/20 px-3 py-1 rounded-full">
+              ⭐ Top Bewertungen
             </span>
-            <span className="bg-white/10 backdrop-blur-md border border-white/20 px-3 py-1 rounded-full">
-              ⚡ Schnell
+            <span className="bg-white/10 border border-white/20 px-3 py-1 rounded-full">
+              ⚡ Oft am selben Tag
             </span>
-            <span className="bg-white/10 backdrop-blur-md border border-white/20 px-3 py-1 rounded-full">
-              🔧 Profi
+            <span className="bg-white/10 border border-white/20 px-3 py-1 rounded-full">
+              📍 Direkt vor Ort
             </span>
           </div>
 
-          {/* BUTTONS */}
+          {/* CTA */}
           <div className="flex flex-col sm:flex-row gap-3 justify-center md:justify-start">
             <a
               href="https://wa.me/4369917432373"
               className="bg-green-500 text-white px-6 py-4 rounded-xl font-semibold text-lg text-center hover:bg-green-400 transition"
             >
-              💬 WhatsApp schreiben
+              💬 Sofort WhatsApp schreiben
             </a>
 
             <a
               href="#kontakt"
               className="bg-white text-green-800 px-6 py-4 rounded-xl font-semibold text-lg text-center hover:bg-green-100 transition"
             >
-              Anfrage starten
+              📍 Jetzt vorbeikommen
             </a>
           </div>
         </div>
@@ -107,15 +111,16 @@ export default function Hero() {
           <motion.img
             key={slide.img}
             src={slide.img}
-            alt="Hero"
+            alt={slide.alt}
             className="w-full h-[260px] sm:h-[320px] md:h-[420px] object-cover rounded-2xl shadow-2xl"
             initial={{ opacity: 0, scale: 1.05 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.6 }}
           />
 
+          {/* BADGE */}
           <div className="absolute -bottom-4 -left-4 bg-white text-green-900 px-4 py-2 rounded-xl shadow-lg text-sm font-semibold">
-            ⚡ Viele Reparaturen am selben Tag
+            Persönliche Beratung im Shop
           </div>
         </div>
 

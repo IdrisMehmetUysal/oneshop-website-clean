@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { Helmet } from "react-helmet-async";
 import { AnimatePresence, motion } from "framer-motion";
 import Footer from "./components/Footer";
+import { Link } from "react-router-dom";
 
 export default function HuaweiReparatur() {
   const [navOpen, setNavOpen] = useState(false);
@@ -114,6 +115,66 @@ export default function HuaweiReparatur() {
           Wir nehmen uns Zeit und finden die beste Lösung für dich.
         </p>
       </section>
+
+            {/* LINKS */}
+
+            <section className="py-20 px-6 bg-green-50">
+  <div className="max-w-5xl mx-auto text-center">
+    <h2 className="text-3xl md:text-4xl font-bold mb-6">
+      Weitere Leistungen
+    </h2>
+
+    <p className="text-lg text-green-800 leading-8">
+      Neben der Huawei Reparatur in St. Pölten bieten wir auch{" "}
+
+      <Link
+        to="/iphone-reparatur"
+        className="underline hover:text-green-600"
+      >
+        iPhone Reparaturen
+      </Link>
+
+      ,{" "}
+
+      <Link
+        to="/samsung-reparatur"
+        className="underline hover:text-green-600"
+      >
+        Samsung Reparaturen
+      </Link>
+
+      ,{" "}
+
+      <Link
+        to="/datenrettung-st-poelten"
+        className="underline hover:text-green-600"
+      >
+        Datenrettung
+      </Link>
+
+      ,{" "}
+
+      <Link
+        to="/microsoldering-st-poelten"
+        className="underline hover:text-green-600"
+      >
+        Microsoldering
+      </Link>
+
+      sowie den{" "}
+
+      <Link
+        to="/handy-reparatur-st-poelten"
+        className="underline hover:text-green-600"
+      >
+        allgemeinen Handy Reparatur Service
+      </Link>{" "}
+
+      an.
+    </p>
+  </div>
+</section>
+
 
       {/* CTA */}
       <section className="py-20 px-6 bg-green-800 text-white text-center">

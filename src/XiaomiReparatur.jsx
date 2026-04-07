@@ -1,5 +1,6 @@
 import React from "react";
 import { Helmet } from "react-helmet-async";
+import { Link } from "react-router-dom";
 
 export default function XiaomiReparatur() {
   return (
@@ -139,15 +140,25 @@ export default function XiaomiReparatur() {
       </section>
 
       {/* INTERNE LINKS */}
-      <section className="py-20 px-6 bg-white text-center">
-        <h2 className="text-2xl font-bold mb-6">Weitere Reparaturen</h2>
+<section className="py-20 px-6 bg-white text-center">
+  <h2 className="text-2xl font-bold mb-6">Weitere Reparaturen</h2>
 
-        <div className="flex flex-wrap justify-center gap-4">
-          <a href="/iphone-reparatur" className="underline">iPhone Reparatur</a>
-          <a href="/samsung-reparatur" className="underline">Samsung Reparatur</a>
-          <a href="/pixel-reparatur" className="underline">Google Pixel Reparatur</a>
-        </div>
-      </section>
+  <div className="flex flex-wrap justify-center gap-4">
+    
+    <Link to="/iphone-reparatur" className="underline hover:text-green-600">
+      iPhone Reparatur
+    </Link>
+
+    <Link to="/samsung-reparatur" className="underline hover:text-green-600">
+      Samsung Reparatur
+    </Link>
+
+    <Link to="/pixel-reparatur" className="underline hover:text-green-600">
+      Google Pixel Reparatur
+    </Link>
+
+  </div>
+</section>
 
       {/* CTA */}
       <section className="py-20 px-6 bg-green-800 text-white text-center">

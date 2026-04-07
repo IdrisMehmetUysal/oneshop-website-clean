@@ -1,13 +1,11 @@
 import React, { useState } from "react";
 import { Helmet } from "react-helmet-async";
 import { AnimatePresence, motion } from "framer-motion";
+import { Link } from "react-router-dom";
 
 export default function PlaystationReparatur() {
   return (
     <main className="min-h-screen text-green-900">
-
-
-
       {/* HERO */}
       <section className="bg-gradient-to-r from-green-800 to-green-500 text-white px-6 py-16">
         <div className="max-w-5xl mx-auto text-center">
@@ -17,7 +15,8 @@ export default function PlaystationReparatur() {
 
           <p className="text-lg text-green-100 mb-8">
             Deine PlayStation hat ein Problem? Kein Bild, HDMI defekt oder laut?
-            Wir reparieren deine PS4 oder PS5 schnell und zuverlässig direkt in St. Pölten.
+            Wir reparieren deine PS4 oder PS5 schnell und zuverlässig direkt in
+            St. Pölten.
           </p>
 
           <a
@@ -37,31 +36,29 @@ export default function PlaystationReparatur() {
           </h2>
 
           <div className="grid md:grid-cols-2 gap-8">
-
             <div className="p-6 bg-green-50 rounded-xl">
               <h3 className="font-semibold text-xl mb-2">
                 HDMI Anschluss defekt
               </h3>
               <p>
-                Kein Bild oder Wackelkontakt? Wir tauschen den HDMI-Port deiner PS5 oder PS4 professionell.
+                Kein Bild oder Wackelkontakt? Wir tauschen den HDMI-Port deiner
+                PS5 oder PS4 professionell.
               </p>
             </div>
 
             <div className="p-6 bg-green-50 rounded-xl">
-              <h3 className="font-semibold text-xl mb-2">
-                Konsole überhitzt
-              </h3>
+              <h3 className="font-semibold text-xl mb-2">Konsole überhitzt</h3>
               <p>
-                Deine PlayStation wird zu heiß oder schaltet sich aus? Reinigung und neue Wärmeleitpaste helfen.
+                Deine PlayStation wird zu heiß oder schaltet sich aus? Reinigung
+                und neue Wärmeleitpaste helfen.
               </p>
             </div>
 
             <div className="p-6 bg-green-50 rounded-xl">
-              <h3 className="font-semibold text-xl mb-2">
-                Lauter Lüfter
-              </h3>
+              <h3 className="font-semibold text-xl mb-2">Lauter Lüfter</h3>
               <p>
-                Deine PS4 oder PS5 ist extrem laut? Wir reinigen sie gründlich und optimieren die Kühlung.
+                Deine PS4 oder PS5 ist extrem laut? Wir reinigen sie gründlich
+                und optimieren die Kühlung.
               </p>
             </div>
 
@@ -70,10 +67,10 @@ export default function PlaystationReparatur() {
                 Konsole startet nicht
               </h3>
               <p>
-                Kein Start möglich? Wir analysieren das Problem und finden die passende Lösung.
+                Kein Start möglich? Wir analysieren das Problem und finden die
+                passende Lösung.
               </p>
             </div>
-
           </div>
         </div>
       </section>
@@ -81,17 +78,16 @@ export default function PlaystationReparatur() {
       {/* ABLAUF */}
       <section className="py-20 px-6 bg-green-50">
         <div className="max-w-4xl mx-auto text-center">
-          <h2 className="text-3xl font-bold mb-6">
-            So läuft die Reparatur ab
-          </h2>
+          <h2 className="text-3xl font-bold mb-6">So läuft die Reparatur ab</h2>
 
           <p className="text-green-800 mb-6">
-            Bring deine PlayStation einfach direkt zu uns nach St. Pölten.
-            Wir analysieren das Problem und sagen dir sofort, was möglich ist.
+            Bring deine PlayStation einfach direkt zu uns nach St. Pölten. Wir
+            analysieren das Problem und sagen dir sofort, was möglich ist.
           </p>
 
           <p className="text-green-800">
-            Viele Reparaturen erledigen wir schnell, damit du wieder zocken kannst 🎮
+            Viele Reparaturen erledigen wir schnell, damit du wieder zocken
+            kannst 🎮
           </p>
         </div>
       </section>
@@ -104,8 +100,41 @@ export default function PlaystationReparatur() {
           </h2>
 
           <p className="text-green-800">
-            Unser Standort in St. Pölten ist schnell erreichbar und bietet dir eine persönliche Beratung sowie eine schnelle Reparatur vor Ort.
+            Unser Standort in St. Pölten ist schnell erreichbar und bietet dir
+            eine persönliche Beratung sowie eine schnelle Reparatur vor Ort.
           </p>
+        </div>
+      </section>
+
+      {/* INTERNE LINKS */}
+      <section className="py-20 px-6 bg-white text-center">
+        <h2 className="text-2xl font-bold mb-6">Weitere Reparaturen</h2>
+
+        <div className="flex flex-wrap justify-center gap-4">
+          <Link
+            to="/konsolen-reparatur"
+            className="underline hover:text-green-600"
+          >
+            Konsolen Reparatur
+          </Link>
+
+          <Link to="/xbox-reparatur" className="underline hover:text-green-600">
+            Xbox Reparatur
+          </Link>
+
+          <Link
+            to="/switch-reparatur"
+            className="underline hover:text-green-600"
+          >
+            Nintendo Switch Reparatur
+          </Link>
+
+          <Link
+            to="/handy-reparatur-st-poelten"
+            className="underline hover:text-green-600"
+          >
+            Handy Reparatur
+          </Link>
         </div>
       </section>
 
@@ -122,9 +151,6 @@ export default function PlaystationReparatur() {
           💬 WhatsApp schreiben
         </a>
       </section>
-
-
-
     </main>
   );
 }

@@ -1,15 +1,16 @@
 import React from "react";
 import { Helmet } from "react-helmet-async";
+import { Link } from "react-router-dom";
 
 export default function PixelReparatur() {
   return (
     <main className="min-h-screen text-green-900">
-
-
-
       {/* SEO */}
       <Helmet>
-        <title>Google Pixel Reparatur St. Pölten | Software, Akku & Display | One 1 Shop</title>
+        <title>
+          Google Pixel Reparatur St. Pölten | Software, Akku & Display | One 1
+          Shop
+        </title>
         <meta
           name="description"
           content="Google Pixel Reparatur in St. Pölten: Hilfe bei Software-Bugs, Akku, Display und Kamera-Problemen. Schnell & persönlich bei One 1 Shop."
@@ -29,8 +30,9 @@ export default function PixelReparatur() {
           </h1>
 
           <p className="text-lg text-green-100 mb-8">
-            Dein Google Pixel macht Probleme? Ob Software-Bugs, Akku schnell leer oder Display kaputt –  
-            wir kennen die typischen Pixel-Schwächen und helfen dir schnell direkt in St. Pölten.
+            Dein Google Pixel macht Probleme? Ob Software-Bugs, Akku schnell
+            leer oder Display kaputt – wir kennen die typischen Pixel-Schwächen
+            und helfen dir schnell direkt in St. Pölten.
           </p>
 
           <a
@@ -52,38 +54,42 @@ export default function PixelReparatur() {
           </h2>
 
           <div className="grid md:grid-cols-2 gap-8">
-
             <div className="p-6 bg-green-50 rounded-xl">
-              <h3 className="font-semibold text-xl mb-2">Software Bugs & Updates</h3>
+              <h3 className="font-semibold text-xl mb-2">
+                Software Bugs & Updates
+              </h3>
               <p>
-                Nach Updates treten bei Pixel Geräten oft Probleme auf – wir helfen bei Fehlern,
-                Abstürzen oder ungewöhnlichem Verhalten.
+                Nach Updates treten bei Pixel Geräten oft Probleme auf – wir
+                helfen bei Fehlern, Abstürzen oder ungewöhnlichem Verhalten.
               </p>
             </div>
 
             <div className="p-6 bg-green-50 rounded-xl">
               <h3 className="font-semibold text-xl mb-2">Akku schnell leer</h3>
               <p>
-                Pixel Geräte sind bekannt für schwankende Akkuleistung – wir prüfen,
-                ob ein Tausch sinnvoll ist.
+                Pixel Geräte sind bekannt für schwankende Akkuleistung – wir
+                prüfen, ob ein Tausch sinnvoll ist.
               </p>
             </div>
 
             <div className="p-6 bg-green-50 rounded-xl">
               <h3 className="font-semibold text-xl mb-2">Kamera Probleme</h3>
               <p>
-                Unscharfe Bilder oder Kamera startet nicht? Gerade bei Pixel Geräten
-                ist die Kamera ein wichtiger Punkt – wir helfen dir weiter.
+                Unscharfe Bilder oder Kamera startet nicht? Gerade bei Pixel
+                Geräten ist die Kamera ein wichtiger Punkt – wir helfen dir
+                weiter.
               </p>
             </div>
 
             <div className="p-6 bg-green-50 rounded-xl">
-              <h3 className="font-semibold text-xl mb-2">Display & Touch Probleme</h3>
+              <h3 className="font-semibold text-xl mb-2">
+                Display & Touch Probleme
+              </h3>
               <p>
-                Risse, Touch reagiert nicht oder Ghost Touch? Wir tauschen dein Display professionell aus.
+                Risse, Touch reagiert nicht oder Ghost Touch? Wir tauschen dein
+                Display professionell aus.
               </p>
             </div>
-
           </div>
         </div>
       </section>
@@ -96,10 +102,11 @@ export default function PixelReparatur() {
           </h2>
 
           <p className="text-green-800 leading-8">
-            Google Pixel Geräte setzen stark auf Software, KI-Funktionen und regelmäßige Updates.
-            Dadurch entstehen oft andere Probleme als bei klassischen Smartphones.
-            Wir kennen diese Besonderheiten und helfen dir nicht nur bei der Reparatur,
-            sondern auch bei der richtigen Nutzung und Einstellung deines Geräts.
+            Google Pixel Geräte setzen stark auf Software, KI-Funktionen und
+            regelmäßige Updates. Dadurch entstehen oft andere Probleme als bei
+            klassischen Smartphones. Wir kennen diese Besonderheiten und helfen
+            dir nicht nur bei der Reparatur, sondern auch bei der richtigen
+            Nutzung und Einstellung deines Geräts.
           </p>
         </div>
       </section>
@@ -107,13 +114,11 @@ export default function PixelReparatur() {
       {/* ABLAUF */}
       <section className="py-20 px-6 bg-white">
         <div className="max-w-4xl mx-auto text-center">
-          <h2 className="text-3xl font-bold mb-6">
-            So läuft die Reparatur ab
-          </h2>
+          <h2 className="text-3xl font-bold mb-6">So läuft die Reparatur ab</h2>
 
           <p className="text-green-800 mb-6">
-            Komm einfach direkt zu uns nach St. Pölten.  
-            Wir analysieren dein Gerät und sagen dir sofort, was möglich ist.
+            Komm einfach direkt zu uns nach St. Pölten. Wir analysieren dein
+            Gerät und sagen dir sofort, was möglich ist.
           </p>
 
           <p className="text-green-800">
@@ -130,8 +135,8 @@ export default function PixelReparatur() {
           </h2>
 
           <p className="text-green-800">
-            Direkt in St. Pölten für dich da – wir helfen dir bei typischen Google Pixel Problemen
-            schnell und persönlich vor Ort.
+            Direkt in St. Pölten für dich da – wir helfen dir bei typischen
+            Google Pixel Problemen schnell und persönlich vor Ort.
           </p>
         </div>
       </section>
@@ -141,9 +146,24 @@ export default function PixelReparatur() {
         <h2 className="text-2xl font-bold mb-6">Weitere Reparaturen</h2>
 
         <div className="flex flex-wrap justify-center gap-4">
-          <a href="/iphone-reparatur" className="underline">iPhone Reparatur</a>
-          <a href="/samsung-reparatur" className="underline">Samsung Reparatur</a>
-          <a href="/xiaomi-reparatur" className="underline">Xiaomi Reparatur</a>
+          <Link
+            to="/iphone-reparatur"
+            className="underline hover:text-green-600"
+          >
+            iPhone Reparatur
+          </Link>
+          <Link
+            to="/samsung-reparatur"
+            className="underline hover:text-green-600"
+          >
+            Samsung Reparatur
+          </Link>
+          <Link
+            to="/xiaomi-reparatur"
+            className="underline hover:text-green-600"
+          >
+            Xiaomi Reparatur
+          </Link>
         </div>
       </section>
 
@@ -162,9 +182,6 @@ export default function PixelReparatur() {
           💬 WhatsApp schreiben
         </a>
       </section>
-
-
-
     </main>
   );
 }
