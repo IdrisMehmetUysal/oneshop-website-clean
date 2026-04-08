@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { Helmet } from "react-helmet-async";
-import { AnimatePresence, motion } from "framer-motion";
+import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
 
 export default function Datenrettung() {
@@ -22,29 +22,31 @@ export default function Datenrettung() {
         <link rel="canonical" href="https://www.one1shop.at/datenrettung-st-poelten" />
       </Helmet>
 
-      
-
-      <section className="bg-gradient-to-r from-green-800 to-green-500 text-white px-6 py-16 md:py-24">
-        <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-10 items-center">
+      {/* HERO */}
+      <section className="bg-gradient-to-r from-green-800 to-green-500 text-white px-4 md:px-6 py-16 md:py-24">
+        <div className="max-w-6xl mx-auto grid gap-8 md:grid-cols-2 items-center">
+          
+          {/* TEXT */}
           <div className="text-center md:text-left">
-            <p className="uppercase tracking-[0.2em] text-green-100 text-sm mb-4">
+            <p className="uppercase tracking-[0.2em] text-green-100 text-xs md:text-sm mb-3 md:mb-4">
               One 1 Shop in St. Pölten
             </p>
 
-            <h1 className="text-4xl md:text-5xl font-bold leading-tight mb-6">
+            <h1 className="text-3xl md:text-5xl font-bold leading-tight mb-4 md:mb-6">
               Datenrettung in St. Pölten
             </h1>
 
-            <p className="text-lg md:text-xl text-green-50 mb-8 leading-relaxed">
+            <p className="text-base md:text-xl text-green-50 mb-6 md:mb-8 leading-relaxed">
               Wichtige Fotos, Kontakte oder Dateien verloren? Wir helfen dir bei
               der Datenrettung von Smartphones und defekten Geräten schnell,
               diskret und persönlich weiter.
             </p>
 
-            <div className="flex flex-wrap justify-center md:justify-start gap-4">
+            {/* BUTTONS FIXED */}
+            <div className="flex flex-col sm:flex-row gap-3 md:gap-4 justify-center md:justify-start">
               <a
                 href="/#kontakt"
-                className="bg-white text-green-800 px-6 py-3 rounded-full font-semibold hover:bg-green-100 transition"
+                className="bg-white text-green-800 px-6 py-3 rounded-full font-semibold hover:bg-green-100 transition text-center"
               >
                 Jetzt Kontakt aufnehmen
               </a>
@@ -53,19 +55,20 @@ export default function Datenrettung() {
                 href="https://wa.me/4369917432373"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="bg-green-900 text-white px-6 py-3 rounded-full font-semibold hover:bg-green-700 transition"
+                className="bg-green-900 text-white px-6 py-3 rounded-full font-semibold hover:bg-green-700 transition text-center"
               >
                 WhatsApp schreiben
               </a>
             </div>
           </div>
 
+          {/* IMAGE FIX */}
           <motion.div
   whileHover={{ scale: 1.03 }}
   transition={{ duration: 0.3 }}
 >
   <img
-    src="/images/datenrettung.jpg"
+    src="/images/datenrettung-st-poelten.jpg"
     alt="Datenrettung in St. Pölten"
     loading="lazy"
     className="w-full h-[240px] md:h-[380px] object-cover rounded-xl shadow-xl"
@@ -74,19 +77,22 @@ export default function Datenrettung() {
         </div>
       </section>
 
-      <section className="py-20 px-6 bg-white">
+      {/* INTRO */}
+      <section className="py-16 md:py-20 px-4 md:px-6 bg-white">
         <div className="max-w-5xl mx-auto">
-          <h2 className="text-3xl md:text-4xl font-bold mb-6">
+          <h2 className="text-2xl md:text-4xl font-bold mb-4 md:mb-6">
             Hilfe bei verlorenen oder nicht erreichbaren Daten
           </h2>
-          <p className="text-lg text-green-800 leading-8 mb-6">
+
+          <p className="text-base md:text-lg text-green-800 leading-7 md:leading-8 mb-4 md:mb-6">
             Wenn ein Smartphone nicht mehr startet, einen Wasserschaden hatte
             oder plötzlich wichtige Inhalte fehlen, ist schnelle Hilfe oft
             entscheidend. Bei One 1 Shop in St. Pölten unterstützen wir dich
             bei der Datenrettung von Fotos, Videos, Kontakten und anderen
             wichtigen Dateien.
           </p>
-          <p className="text-lg text-green-800 leading-8">
+
+          <p className="text-base md:text-lg text-green-800 leading-7 md:leading-8">
             Nicht jeder Fall ist gleich – deshalb schauen wir uns dein Gerät
             individuell an und beraten dich ehrlich, welche Schritte sinnvoll
             sind. Unser Ziel ist es, dir so gut wie möglich beim Retten deiner
@@ -95,152 +101,75 @@ export default function Datenrettung() {
         </div>
       </section>
 
-      <section className="py-20 px-6 bg-green-50">
+      {/* GRID FIX */}
+      <section className="py-16 md:py-20 px-4 md:px-6 bg-green-50">
         <div className="max-w-6xl mx-auto">
-          <h2 className="text-3xl md:text-4xl font-bold text-center mb-12">
+          <h2 className="text-2xl md:text-4xl font-bold text-center mb-8 md:mb-12">
             Wann Datenrettung sinnvoll sein kann
           </h2>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            <div className="bg-white rounded-2xl shadow p-6">
-              <h3 className="text-xl font-semibold mb-3">Handy startet nicht mehr</h3>
-              <p className="text-green-700 leading-7">
+          <div className="grid gap-4 md:gap-8 grid-cols-1 md:grid-cols-2">
+            <div className="bg-white rounded-xl md:rounded-2xl shadow p-5 md:p-6">
+              <h3 className="text-lg md:text-xl font-semibold mb-2 md:mb-3">
+                Handy startet nicht mehr
+              </h3>
+              <p className="text-green-700 leading-7 text-sm md:text-base">
                 Wenn dein Gerät schwarz bleibt, nicht mehr hochfährt oder sich
                 plötzlich ausgeschaltet hat, können sich wichtige Daten oft noch
                 auf dem Gerät befinden.
               </p>
             </div>
 
-            <div className="bg-white rounded-2xl shadow p-6">
-              <h3 className="text-xl font-semibold mb-3">Wasserschaden oder Feuchtigkeit</h3>
-              <p className="text-green-700 leading-7">
-                Nach Kontakt mit Wasser ist schnelles Handeln wichtig. Je früher
-                das Gerät geprüft wird, desto besser stehen die Chancen, Inhalte
-                noch zu sichern.
+            <div className="bg-white rounded-xl md:rounded-2xl shadow p-5 md:p-6">
+              <h3 className="text-lg md:text-xl font-semibold mb-2 md:mb-3">
+                Wasserschaden oder Feuchtigkeit
+              </h3>
+              <p className="text-green-700 leading-7 text-sm md:text-base">
+                Nach Kontakt mit Wasser ist schnelles Handeln wichtig.
               </p>
             </div>
 
-            <div className="bg-white rounded-2xl shadow p-6">
-              <h3 className="text-xl font-semibold mb-3">Fotos, Videos oder Kontakte wichtig</h3>
-              <p className="text-green-700 leading-7">
-                Oft geht es nicht nur um das Gerät selbst, sondern um Erinnerungen
-                und wichtige persönliche oder berufliche Daten.
+            <div className="bg-white rounded-xl md:rounded-2xl shadow p-5 md:p-6">
+              <h3 className="text-lg md:text-xl font-semibold mb-2 md:mb-3">
+                Fotos, Videos oder Kontakte wichtig
+              </h3>
+              <p className="text-green-700 leading-7 text-sm md:text-base">
+                Oft geht es nicht nur um das Gerät selbst.
               </p>
             </div>
 
-            <div className="bg-white rounded-2xl shadow p-6">
-              <h3 className="text-xl font-semibold mb-3">Defektes oder beschädigtes Smartphone</h3>
-              <p className="text-green-700 leading-7">
-                Auch bei Displaybruch, technischen Defekten oder anderen Schäden
-                kann geprüft werden, ob eine Datenrettung noch möglich ist.
+            <div className="bg-white rounded-xl md:rounded-2xl shadow p-5 md:p-6">
+              <h3 className="text-lg md:text-xl font-semibold mb-2 md:mb-3">
+                Defektes oder beschädigtes Smartphone
+              </h3>
+              <p className="text-green-700 leading-7 text-sm md:text-base">
+                Auch bei Displaybruch oder Defekten möglich.
               </p>
             </div>
           </div>
         </div>
       </section>
 
-      <section className="py-20 px-6 bg-white">
-        <div className="max-w-5xl mx-auto text-center">
-          <h2 className="text-3xl md:text-4xl font-bold mb-6">
-            Warum One 1 Shop?
-          </h2>
-          <p className="text-lg text-green-800 leading-8 mb-8">
-            Bei sensiblen Daten zählen Vertrauen, Ehrlichkeit und persönliche
-            Betreuung. Wir nehmen uns Zeit für dein Anliegen und helfen dir in
-            St. Pölten so transparent und professionell wie möglich weiter.
-          </p>
-
-          <div className="flex flex-wrap justify-center gap-4">
-            <span className="bg-green-100 text-green-800 px-4 py-2 rounded-full">
-              persönliche Beratung
-            </span>
-            <span className="bg-green-100 text-green-800 px-4 py-2 rounded-full">
-              diskrete Abwicklung
-            </span>
-            <span className="bg-green-100 text-green-800 px-4 py-2 rounded-full">
-              ehrliche Einschätzung
-            </span>
-            <span className="bg-green-100 text-green-800 px-4 py-2 rounded-full">
-              direkt in St. Pölten
-            </span>
-          </div>
-        </div>
-      </section>
-
-<section className="py-20 px-6 bg-green-50">
-  <div className="max-w-5xl mx-auto text-center">
-    <h2 className="text-3xl md:text-4xl font-bold mb-6">
-      Weitere Leistungen
-    </h2>
-
-    <p className="text-lg text-green-800 leading-8">
-      Neben der Datenrettung in St. Pölten bieten wir auch{" "}
-
-      <Link
-        to="/handy-reparatur-st-poelten"
-        className="underline hover:text-green-600"
-      >
-        Handy Reparaturen
-      </Link>
-
-      ,{" "}
-
-      <Link
-        to="/iphone-reparatur"
-        className="underline hover:text-green-600"
-      >
-        iPhone Reparaturen
-      </Link>
-
-      ,{" "}
-
-      <Link
-        to="/samsung-reparatur"
-        className="underline hover:text-green-600"
-      >
-        Samsung Reparaturen
-      </Link>
-
-      ,{" "}
-
-      <Link
-        to="/konsolen-reparatur"
-        className="underline hover:text-green-600"
-      >
-        Konsolenservice
-      </Link>{" "}
-
-      sowie den{" "}
-
-      <Link
-        to="/handy-verkauf-zubehoer"
-        className="underline hover:text-green-600"
-      >
-        Verkauf von Geräten und Zubehör
-      </Link>{" "}
-
-      an.
-    </p>
-  </div>
-</section>
-
-      <section className="py-20 px-6 bg-white">
+      {/* CTA FIX */}
+      <section className="py-16 md:py-20 px-4 md:px-6 bg-white">
         <div className="max-w-4xl mx-auto text-center">
-          <h2 className="text-3xl md:text-4xl font-bold mb-6">
+          <h2 className="text-2xl md:text-4xl font-bold mb-4 md:mb-6">
             Jetzt Datenrettung anfragen
           </h2>
-          <p className="text-lg text-green-800 leading-8 mb-8">
+
+          <p className="text-base md:text-lg text-green-800 leading-7 md:leading-8 mb-6 md:mb-8">
             Wenn dir wichtige Daten fehlen oder dein Gerät Probleme macht, melde
-            dich bei uns. Wir schauen uns deinen Fall gerne persönlich an.
+            dich bei uns.
           </p>
 
-          <div className="flex flex-wrap justify-center gap-4">
+          <div className="flex flex-col sm:flex-row gap-3 justify-center">
             <a
               href="/#kontakt"
               className="bg-green-800 text-white px-6 py-3 rounded-full font-semibold hover:bg-green-700 transition"
             >
               Kontakt aufnehmen
             </a>
+
             <a
               href="tel:+4369917432373"
               className="bg-green-600 text-white px-6 py-3 rounded-full font-semibold hover:bg-green-500 transition"

@@ -1,18 +1,31 @@
-import React, { useState } from "react";
-import { Wrench, Gamepad2, Cpu, Smartphone } from "lucide-react";
-import Modal from "./Modal"; // Produkt-Modal-Komponente
-import Slider from "react-slick"; // Slick-Import in React
-import "slick-carousel/slick/slick.css"; // Slick Carousel CSS
-import "slick-carousel/slick/slick-theme.css"; // Slick Carousel Theme CSS
+import React, { useState, useEffect } from "react";
+
+import {
+  Wrench,
+  Gamepad2,
+  Cpu,
+  Smartphone,
+  Laptop,
+  Shield,
+  FileText,
+  ShoppingBag,
+  HardDrive,
+} from "lucide-react";
+
 import { Helmet } from "react-helmet-async";
-import CookieConsent from "react-cookie-consent";
-import { useEffect } from "react";
 import { AnimatePresence, motion } from "framer-motion";
+import { Link } from "react-router-dom";
+
+import Slider from "react-slick";
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
+
+import CookieConsent from "react-cookie-consent";
+
+import Modal from "./Modal";
 import GoogleReviews from "./components/GoogleReviews";
 import Hero from "./components/Hero";
-import { Laptop } from "lucide-react";
 import Produkte from "./components/Produkte";
-import { Link } from "react-router-dom";
 
 export default function OneShopHome() {
   const [scrolled, setScrolled] = useState(false);
@@ -145,184 +158,132 @@ export default function OneShopHome() {
       </h1>
 
       {/* Leistungen-Bereich */}
-      <section
-        id="leistungen"
-        className="py-16 md:py-24 px-4 bg-gradient-to-b from-white to-green-50"
-      >
-        <motion.div
-          initial={{ opacity: 0, y: 50 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, amount: 0.2 }}
-          transition={{ duration: 0.6 }}
-          className="max-w-6xl mx-auto px-4 md:px-0 text-center"
-        >
-          <h2 className="text-2xl md:text-4xl font-bold mb-4 md:mb-6">
-            Unsere Leistungen
-          </h2>
-          <p className="text-sm md:text-base text-green-800 max-w-3xl mx-auto mb-8 md:mb-12 leading-relaxed">
-            Wir sind dein Ansprechpartner für{" "}
-            <strong>Handy Reparatur in St. Pölten</strong>. Von{" "}
-            <Link
-              to="/iphone-reparatur"
-              className="underline hover:text-green-600"
-            >
-              iPhone Reparatur
-            </Link>{" "}
-            und{" "}
-            <Link
-              to="/samsung-reparatur"
-              className="underline hover:text-green-600"
-            >
-              Samsung Reparatur
-            </Link>{" "}
-            über{" "}
-            <Link
-              to="/datenrettung-st-poelten"
-              className="underline hover:text-green-600"
-            >
-              Datenrettung
-            </Link>
-            ,{" "}
-            <Link
-              to="/konsolen-reparatur"
-              className="underline hover:text-green-600"
-            >
-              Konsolen Reparatur
-            </Link>
-            und{" "}
-            <Link
-              to="/laptop-reparatur"
-              className="underline hover:text-green-600"
-            >
-              Laptop Reparatur
-            </Link>{" "}
-            – wir helfen dir <strong>direkt vor Ort in St. Pölten</strong>{" "}
-            schnell und zuverlässig.
-          </p>
+<section
+  id="leistungen"
+  className="py-16 md:py-24 px-4 bg-gradient-to-b from-white to-green-50"
+>
+  <motion.div
+    initial={{ opacity: 0, y: 50 }}
+    whileInView={{ opacity: 1, y: 0 }}
+    viewport={{ once: true, amount: 0.2 }}
+    transition={{ duration: 0.6 }}
+    className="max-w-6xl mx-auto text-center"
+  >
+    <h2 className="text-2xl md:text-4xl font-bold mb-4 md:mb-6">
+      Unsere Leistungen
+    </h2>
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 md:gap-8">
-            <Link
-              to="/handy-reparatur-st-poelten"
-              className="block bg-white rounded-xl md:rounded-2xl shadow p-4 md:p-6 hover:shadow-lg hover:scale-[1.02] transition"
-            >
-              <Wrench className="w-10 h-10 md:w-12 md:h-12 mx-auto mb-3 md:mb-4 text-green-800" />
-              <h3 className="text-lg md:text-xl font-semibold">
-                Handy Reparatur
-              </h3>
-              <p className="text-sm md:text-base text-green-700 mt-1 md:mt-2">
-                iPhone, Samsung und viele weitere Marken. Display, Akku,
-                Ladeprobleme oder Wasserschäden – wir helfen schnell.
-              </p>
-            </Link>
+    <p className="text-sm md:text-base text-green-800 max-w-3xl mx-auto mb-8 md:mb-12 leading-relaxed px-2">
+      Wir sind dein Ansprechpartner für{" "}
+      <strong>Handy Reparatur in St. Pölten</strong>. Von{" "}
+      <Link to="/iphone-reparatur" className="underline hover:text-green-600">
+        iPhone Reparatur
+      </Link>{" "}
+      und{" "}
+      <Link to="/samsung-reparatur" className="underline hover:text-green-600">
+        Samsung Reparatur
+      </Link>{" "}
+      über{" "}
+      <Link to="/datenrettung-st-poelten" className="underline hover:text-green-600">
+        Datenrettung
+      </Link>
+      ,{" "}
+      <Link to="/konsolen-reparatur" className="underline hover:text-green-600">
+        Konsolen Reparatur
+      </Link>{" "}
+      und{" "}
+      <Link to="/laptop-reparatur" className="underline hover:text-green-600">
+        Laptop Reparatur
+      </Link>{" "}
+      – wir helfen dir <strong>direkt vor Ort in St. Pölten</strong>.
+    </p>
 
-            <Link
-              to="/datenrettung-st-poelten"
-              className="block bg-white rounded-xl md:rounded-2xl shadow p-4 md:p-6 hover:shadow-lg hover:scale-[1.02] transition"
-            >
-              <Smartphone className="w-10 h-10 md:w-12 md:h-12 mx-auto mb-3 md:mb-4 text-green-800" />
-              <h3 className="text-lg md:text-xl font-semibold">Datenrettung</h3>
-              <p className="text-sm md:text-base text-green-700 mt-1 md:mt-2">
-                Wir retten Fotos, Kontakte und wichtige Daten auch bei defekten
-                oder beschädigten Smartphones.
-              </p>
-            </Link>
+    <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 md:gap-8">
+      
+      {/* HANDY */}
+      <Link to="/handy-reparatur-st-poelten" className="block bg-white rounded-xl md:rounded-2xl shadow p-5 md:p-6 hover:shadow-lg hover:scale-[1.02] transition">
+        <Smartphone className="w-10 h-10 md:w-12 md:h-12 mx-auto mb-3 text-green-800" />
+        <h3 className="text-lg md:text-xl font-semibold">Handy Reparatur</h3>
+        <p className="text-sm text-green-700 mt-2">
+          Display, Akku, Ladeprobleme oder Wasserschäden.
+        </p>
+      </Link>
 
-            <Link
-              to="/konsolen-reparatur"
-              className="block bg-white rounded-xl md:rounded-2xl shadow p-4 md:p-6 hover:shadow-lg hover:scale-[1.02] transition"
-            >
-              <Gamepad2 className="w-10 h-10 md:w-12 md:h-12 mx-auto mb-3 md:mb-4 text-green-800" />
-              <h3 className="text-lg md:text-xl font-semibold">
-                Konsolen Reparatur
-              </h3>
-              <p className="text-sm md:text-base text-green-700 mt-1 md:mt-2">
-                HDMI-Probleme, Überhitzung oder Abschalten – inkl. Service mit
-                neuer Wärmeleitpaste.
-              </p>
-            </Link>
+      {/* DATEN */}
+      <Link to="/datenrettung-st-poelten" className="block bg-white rounded-xl md:rounded-2xl shadow p-5 md:p-6 hover:shadow-lg hover:scale-[1.02] transition">
+        <HardDrive className="w-10 h-10 md:w-12 md:h-12 mx-auto mb-3 text-green-800" />
+        <h3 className="text-lg md:text-xl font-semibold">Datenrettung</h3>
+        <p className="text-sm text-green-700 mt-2">
+          Fotos, Kontakte & wichtige Daten retten.
+        </p>
+      </Link>
 
-            <Link
-              to="/laptop-reparatur"
-              className="block bg-white rounded-xl md:rounded-2xl shadow p-4 md:p-6 hover:shadow-lg hover:scale-[1.02] transition"
-            >
-              <Laptop className="w-10 h-10 md:w-12 md:h-12 mx-auto mb-3 md:mb-4 text-green-800" />
-              <h3 className="text-lg md:text-xl font-semibold">
-                Laptop Reparatur
-              </h3>
-              <p className="text-sm md:text-base text-green-700 mt-1 md:mt-2">
-                Windows Laptops – Display, Akku, Tastatur & mehr
-              </p>
-            </Link>
+      {/* KONSOLE */}
+      <Link to="/konsolen-reparatur" className="block bg-white rounded-xl md:rounded-2xl shadow p-5 md:p-6 hover:shadow-lg hover:scale-[1.02] transition">
+        <Gamepad2 className="w-10 h-10 md:w-12 md:h-12 mx-auto mb-3 text-green-800" />
+        <h3 className="text-lg md:text-xl font-semibold">Konsolen</h3>
+        <p className="text-sm text-green-700 mt-2">
+          HDMI, Überhitzung & technische Probleme.
+        </p>
+      </Link>
 
-            <Link
-              to="/macbook-reparatur"
-              className="block bg-white rounded-xl md:rounded-2xl shadow p-4 md:p-6 hover:shadow-lg hover:scale-[1.02] transition"
-            >
-              <Laptop className="w-10 h-10 md:w-12 md:h-12 mx-auto mb-3 md:mb-4 text-green-800" />
-              <h3 className="text-lg md:text-xl font-semibold">
-                MacBook Reparatur
-              </h3>
-              <p className="text-sm md:text-base text-green-700 mt-1 md:mt-2">
-                Display, Akku, Tastatur & Ladeprobleme bei Apple Geräten
-              </p>
-            </Link>
+      {/* LAPTOP */}
+      <Link to="/laptop-reparatur" className="block bg-white rounded-xl md:rounded-2xl shadow p-5 md:p-6 hover:shadow-lg hover:scale-[1.02] transition">
+        <Laptop className="w-10 h-10 md:w-12 md:h-12 mx-auto mb-3 text-green-800" />
+        <h3 className="text-lg md:text-xl font-semibold">Laptop</h3>
+        <p className="text-sm text-green-700 mt-2">
+          Display, Akku & Hardware Probleme.
+        </p>
+      </Link>
 
-            <Link
-              to="/microsoldering-st-poelten"
-              className="block bg-white rounded-xl md:rounded-2xl shadow p-4 md:p-6 hover:shadow-lg hover:scale-[1.02] transition"
-            >
-              <Cpu className="w-10 h-10 md:w-12 md:h-12 mx-auto mb-3 md:mb-4 text-green-800" />
-              <h3 className="text-lg md:text-xl font-semibold">
-                Microsoldering
-              </h3>
-              <p className="text-sm md:text-base text-green-700 mt-1 md:mt-2">
-                Präzise Lötarbeiten auf Platinen und Motherboards vom Profi.
-              </p>
-            </Link>
+      {/* MACBOOK */}
+      <Link to="/macbook-reparatur" className="block bg-white rounded-xl md:rounded-2xl shadow p-5 md:p-6 hover:shadow-lg hover:scale-[1.02] transition">
+        <Laptop className="w-10 h-10 md:w-12 md:h-12 mx-auto mb-3 text-green-800" />
+        <h3 className="text-lg md:text-xl font-semibold">MacBook</h3>
+        <p className="text-sm text-green-700 mt-2">
+          Apple Geräte professionell repariert.
+        </p>
+      </Link>
 
-            <Link
-              to="/handy-verkauf-zubehoer"
-              className="block bg-white rounded-xl md:rounded-2xl shadow p-4 md:p-6 hover:shadow-lg hover:scale-[1.02] transition"
-            >
-              <Smartphone className="w-10 h-10 md:w-12 md:h-12 mx-auto mb-3 md:mb-4 text-green-800" />
-              <h3 className="text-lg md:text-xl font-semibold">
-                Verkauf & Zubehör
-              </h3>
-              <p className="text-sm md:text-base text-green-700 mt-1 md:mt-2">
-                Neue, gebrauchte und erneuerte Smartphones ♻️ sowie Zubehör
-                direkt vor Ort.
-              </p>
-            </Link>
+      {/* MICRO */}
+      <Link to="/microsoldering-st-poelten" className="block bg-white rounded-xl md:rounded-2xl shadow p-5 md:p-6 hover:shadow-lg hover:scale-[1.02] transition">
+        <Cpu className="w-10 h-10 md:w-12 md:h-12 mx-auto mb-3 text-green-800" />
+        <h3 className="text-lg md:text-xl font-semibold">Microsoldering</h3>
+        <p className="text-sm text-green-700 mt-2">
+          Feinarbeit auf Platinen & Motherboards.
+        </p>
+      </Link>
 
-            <Link
-              to="/handyvertraege-wertgarantie"
-              className="block bg-white rounded-xl md:rounded-2xl shadow p-4 md:p-6 hover:shadow-lg hover:scale-[1.02] transition"
-            >
-              <Wrench className="w-10 h-10 md:w-12 md:h-12 mx-auto mb-3 md:mb-4 text-green-800" />
-              <h3 className="text-lg md:text-xl font-semibold">
-                Verträge & Wertgarantie
-              </h3>
-              <p className="text-sm md:text-base text-green-700 mt-1 md:mt-2">
-                Beratung als Partnershop – inklusive Absicherung über
-                Wertgarantie.
-              </p>
-            </Link>
-            <Link
-              to="/displayschutz"
-              className="block bg-white rounded-xl md:rounded-2xl shadow p-4 md:p-6 hover:shadow-lg hover:scale-[1.02] transition"
-            >
-              <Smartphone className="w-10 h-10 md:w-12 md:h-12 mx-auto mb-3 md:mb-4 text-green-800" />
-              <h3 className="text-lg md:text-xl font-semibold">
-                Displayschutz
-              </h3>
-              <p className="text-sm md:text-base text-green-700 mt-1 md:mt-2">
-                Schutzfolie & Panzerglas – blasenfrei montiert und sofort
-                einsatzbereit.
-              </p>
-            </Link>
-          </div>
-        </motion.div>
-      </section>
+      {/* SHOP */}
+      <Link to="/handy-verkauf-zubehoer" className="block bg-white rounded-xl md:rounded-2xl shadow p-5 md:p-6 hover:shadow-lg hover:scale-[1.02] transition">
+        <ShoppingBag className="w-10 h-10 md:w-12 md:h-12 mx-auto mb-3 text-green-800" />
+        <h3 className="text-lg md:text-xl font-semibold">Verkauf & Zubehör</h3>
+        <p className="text-sm text-green-700 mt-2">
+          Smartphones & Zubehör direkt im Shop.
+        </p>
+      </Link>
+
+      {/* VERTRÄGE */}
+      <Link to="/handyvertraege-wertgarantie" className="block bg-white rounded-xl md:rounded-2xl shadow p-5 md:p-6 hover:shadow-lg hover:scale-[1.02] transition">
+        <FileText className="w-10 h-10 md:w-12 md:h-12 mx-auto mb-3 text-green-800" />
+        <h3 className="text-lg md:text-xl font-semibold">Verträge</h3>
+        <p className="text-sm text-green-700 mt-2">
+          Tarife & Absicherung mit Wertgarantie.
+        </p>
+      </Link>
+
+      {/* DISPLAY */}
+      <Link to="/displayschutz" className="block bg-white rounded-xl md:rounded-2xl shadow p-5 md:p-6 hover:shadow-lg hover:scale-[1.02] transition">
+        <Shield className="w-10 h-10 md:w-12 md:h-12 mx-auto mb-3 text-green-800" />
+        <h3 className="text-lg md:text-xl font-semibold">Displayschutz</h3>
+        <p className="text-sm text-green-700 mt-2">
+          Folie & Panzerglas – sofort montiert.
+        </p>
+      </Link>
+
+    </div>
+  </motion.div>
+</section>
 
       <section className="py-14 md:py-20 px-4 bg-green-800 text-white">
         <div className="max-w-4xl mx-auto px-4 md:px-0 text-center">

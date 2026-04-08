@@ -1,12 +1,14 @@
 import React, { useState, useEffect } from "react";
 import { AnimatePresence, motion } from "framer-motion";
 import { Link, useOutletContext, useNavigate } from "react-router-dom";
+import { useLocation } from "react-router-dom";
 
 export default function Navbar() {
   const [navOpen, setNavOpen] = useState(false);
   const { setLoading } = useOutletContext();
   const navigate = useNavigate();
   const [scrolled, setScrolled] = useState(false);
+  const location = useLocation();
 
   // ✅ SCROLL DETECTION
   useEffect(() => {
@@ -29,6 +31,14 @@ export default function Navbar() {
         <button
           onClick={() => {
             setNavOpen(false);
+
+            if (location.pathname === "/") {
+              // 👉 schon auf startseite → nur scroll
+              window.scrollTo({ top: 0, behavior: "smooth" });
+              return;
+            }
+
+            // 👉 andere seite → loading + navigation
             setLoading(true);
 
             setTimeout(() => {
@@ -91,8 +101,7 @@ export default function Navbar() {
                     >
                       Huawei
                     </Link>
-                                        <Link to="/displayschutz">Displayschutz</Link>
-
+                    <Link to="/displayschutz">Displayschutz</Link>
                   </div>
                 </div>
 
@@ -231,14 +240,13 @@ export default function Navbar() {
             >
               Huawei
             </Link>
-                        <Link
+            <Link
               to="/displayschutz"
               onClick={() => setNavOpen(false)}
               className="block text-green-800"
             >
               Displayschutz
             </Link>
-            
 
             {/* COMPUTER */}
             <div className="border-t pt-3">
