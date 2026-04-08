@@ -65,7 +65,7 @@ export default function Datenrettung() {
   transition={{ duration: 0.3 }}
 >
   <img
-    src="/images/datenrettung-st-poelten.jpg"
+    src="/images/datenrettung.jpg"
     alt="Datenrettung in St. Pölten"
     loading="lazy"
     className="w-full h-[240px] md:h-[380px] object-cover rounded-xl shadow-xl"
